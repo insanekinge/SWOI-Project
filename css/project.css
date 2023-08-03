@@ -1,0 +1,308 @@
+
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #1E2C14;
+  color: #A39E8F;
+  margin: 0;
+}
+.wrapper{
+  margin:0 15px 0 15px;
+  place-items: center;
+  height: 100vh;
+}
+
+/*Header*/
+
+.header {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  grid-gap:1em;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #DDD0BD;
+}
+
+.header__logo{
+  align-self: start;
+  justify-self: start;
+  align-items: start;
+}
+
+.header__language{
+  align-self: end;
+  justify-self: end;
+}
+.header__menu{
+  align-self: start;
+  justify-self: end;
+}
+
+/*Container*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 60px;
+}
+
+
+
+.main {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        max-height: 681px;
+        height: 100%;
+        width: 3000px;
+        white-space: nowrap;
+      
+        /* display: inline-block; */
+      }
+      
+      .main__title{
+        font-weight: 700;
+        font-stretch: 50%;
+        font-size: 380px;
+        line-height: 304px;
+        text-transform: uppercase;
+        letter-spacing: -0.2ex;
+        margin: 0 0 260px 0;
+        padding: 20px 0 0 0;
+      }
+
+.about{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: start;
+        align-items: start;
+}
+
+.about__title{
+        font-size: 24px;
+        font-weight: 400;
+}
+
+.about__text-first{
+       font-size: 14px;
+       font-weight: 400; 
+}
+
+/* .about__text-first::after{
+        content: url(/img/project-first-pic.png);
+        padding-top: 30px;
+} */
+
+.about__text-second{
+        font-style: 14px;
+        font-weight: 400; 
+}
+
+.specification{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: start;
+        align-items: start;
+}
+
+.specification__title{
+        font-size: 24px;
+        font-weight: 400;
+}
+
+
+.specification__text{
+        font-style: 14px;
+        font-weight: 400;
+}
+
+.specification__table{
+       
+}
+
+.specification__table-tab{
+        display: flex;
+        flex-direction: column;
+        min-width: 330px;
+        width: 100%;
+        gap: 15px; 
+}
+
+.specification__table-item{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1em;
+        border-bottom: 1px solid #DDD0BD;
+        padding-bottom: 15px;
+}
+
+.specification__table-item:nth-child(1){
+        border-top: 1px solid #DDD0BD;
+        padding-top: 15px;
+}
+
+
+.specification__table-item::after{
+        content: " ";
+        position: absolute;
+        width: 17px;
+        height: 15px;
+        background-image: url("/img/swoi-project-icon-mob.svg") ;
+        right: 15px;
+}
+
+/* .specification__table-item::after{
+        content: "";
+        border: #A39E8F 1px solid;
+
+} */
+
+
+.specification__table-text{
+        max-width: 157px;
+        width: 100%;
+}
+
+.gallery{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+        justify-content: start;
+        min-width: 330px;
+        width: 100%;
+
+}
+
+.gallery__top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 330px;
+        width: 100%;
+}
+
+.gallery__top-title{
+        font-size: 24px;
+        font-weight: 400;
+}
+
+.gallery__top-number{
+        font-size: 24px;
+        font-weight: 400;
+}
+
+.gallery__slider{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+}
+
+.gallery__slider-photo{
+
+}
+
+.gallery__bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 330px;
+        width: 100%;
+        border-top: #DDD0BD 1px solid;
+        border-bottom: #DDD0BD 1px solid;
+        padding: 15px 0 15px 0;
+}
+
+.gallery__bottom-button{
+
+}
+
+.gallery__text{
+        padding: 45px 0 45px 0;
+         font-style: 14px;
+        font-weight: 400;
+}
+
+.gallery__presentation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 330px;
+        width: 100%;
+        border-top: #DDD0BD 1px solid;
+        border-bottom: #DDD0BD 1px solid;
+        padding: 15px 0 15px 0;
+}
+
+.gallery__presentation::after{
+        content: " ";
+        position: absolute;
+        width: 17px;
+        height: 15px;
+        background-image: url("/img/swoi-project-icon-mob.svg") ;
+        right: 15px;
+}
+
+.gallery__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:#1E2C14;
+        min-height: 51px;
+        min-width: 330px;
+        background-color: #A39E8F;
+        border-radius: 3px;
+        margin-bottom: 60px;
+}
+
+.gallery__next{
+         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 330px;
+        width: 100%;
+        padding: 15px 0 15px 0;
+}
+
+.gallery__next-text{
+        font-size: 15px;
+        font-weight: 400;
+}
+
+.gallery__next-name{
+        font-size: 24px;
+        font-weight: 400;
+}
+
+.footer{
+        display: grid;
+        grid-template-columns: 1fr 4fr 2fr;
+        grid-gap:1em;
+        padding: 15px 0 15px 0;
+        border-top: 1px solid #DDD0BD;
+        font-size: 12px;
+}
+
+.footer__date{}
+.footer__date::before{
+
+}
+
+
+.footer__rights{}
+
+.footer__studio{
+        align-self: end;
+        justify-self: end;
+}
