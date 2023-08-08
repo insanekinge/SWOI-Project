@@ -35,4 +35,63 @@ function updateScrollPosition() {
   // Move the main block and description block horizontally by the calculated distance
   main.style.transform = `translateX(-${moveDistance}px)`;
   description.style.transform = `translateX(-${moveDistance * 2}px)`;
+};
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+var ishidden = false;
+btn.addEventListener('click', () => {
+  if (ishidden == false) {
+    modal.style.display = "block";
+    pathes = document.querySelectorAll('.header path');
+    pathes.forEach(element => {
+      element.style.fill = "#B24201";
+    });
+    document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+
+    // document.querySelector('.header__menu-open').style.color = "#B24201";
+    document.querySelector('.header__menu-open').style.display = "none";
+    document.querySelector('.header__menu-close').style.display = "block";
+    document.querySelector('.header__menu-button-top').style.marginRight = '22px';
+    ishidden = true;
+  } else {
+    modal.style.display = "none";
+    pathes = document.querySelectorAll('.header path');
+    pathes.forEach(element => {
+      element.style.fill = "#DDD0BD";
+    });
+    document.querySelector('.header').style.borderBottom  = "1px solid #DDD0BD";
+    // document.querySelector('.header__menu-open').style.color = "#DDD0BD";
+    document.querySelector('.header__menu-open').style.display = "block";
+    document.querySelector('.header__menu-close').style.display = "none";
+    document.querySelector('.header__menu-button-top').style.marginRight = '0';
+    ishidden = false;
+  }
+
+});
+
+btn.onclick = function() {
+  
+  ;
 }
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// let slideButton = document.getElementById('myBtn');
+
+// slideButton.addEventListener('click', function() {
+//   slideButton.classList.toggle('open');
+// });
+

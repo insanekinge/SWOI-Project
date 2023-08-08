@@ -33,10 +33,11 @@ span{
 
 .header {
   display: grid;
-  grid-template-columns: 10fr 1fr 1fr;
+  grid-template-columns: 10fr 1fr;
   grid-gap:1em;
-  padding: 15px 0 15px 0;
-  background-color: #B24201;
+  z-index: 2;
+  position: relative;
+  padding: 15px 0 0;
   border-bottom: 1px solid #DDD0BD;
 }
 
@@ -46,14 +47,280 @@ span{
   align-items: start;
 }
 
+
+
 .header__language{
   align-self: end;
   justify-self: end;
 }
+
+.header__language-left{
+  position: relative;
+  top:0px;
+}
+
+.header__language-right{
+  position: relative;
+  top: -14px;
+}
+
 .header__menu{
+  display: flex;
+  width: 100px;
+  height: 50px;
+  justify-content: end;
+  gap: 7px;
+}
+
+.header__menu-open{
+  font-size: 15px;
+  font-weight: 400;
+  color: #DDD0BD;
+  transition: 1s all;
+}
+.header__menu-close{
+  display: none;
+  color: #B24201;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 1s all;
+}
+
+.header__menu-button {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+svg {
+  transition: 0.7s all;
+}
+.header__menu-button-down {
+  display: flex;
+  margin: 0 0 0 auto;
+  transform: translateY(-15px);
+}
+
+/*Modal*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  color: #B24201;
+  transition: opacity 1s ease-in-out;
+
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #DDD0BD;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  animation-timing-function: ease-in-out;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+  padding:0 15px 0 15px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {  background-color: #B24201;
+    opacity:0} 
+  to {background-color: #DDD0BD; opacity:1;  transition: 0.7s all;
+  }
+}
+
+@keyframes animatetop {
+  from {background-color: #B24201; opacity:0}
+  to {background-color: #DDD0BD; opacity:1}
+}
+
+/* The Close Button */
+.close {
   align-self: start;
   justify-self: end;
+  font-size: 16px;
 }
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  grid-gap:1em;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #B24201;
+}
+
+.modal-header__logo{
+  background-color: inherit;
+  align-self: start;
+  justify-self: start;
+  align-items: start;
+}
+
+.modal-header__language{
+  align-self: end;
+  justify-self: end;
+}
+
+.modal-header__language-left{
+  height: 23px;
+  top: 15px;
+  position: absolute;
+}
+
+.modal-header__language-right{
+  position: relative;
+  top: -3px;
+}
+
+
+.modal-tab{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-tab__text-top{
+  position: relative;
+  font-family: "DrukCyr-Bold";  
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 80%;
+  animation-duration: 0.6s;
+  animation-name: slidein-top;
+
+}
+
+@keyframes slidein-top {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+.modal-tab__text-top__slower{
+  position: relative;
+  font-family: "DrukCyr-Bold";  
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 80%;
+  animation-duration: 1s;
+  animation-name: slidein-top__slower;
+
+}
+
+@keyframes slidein-top__slower {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+.modal-tab__text-bottom{
+  position: relative;
+  font-family: "DrukCyr-Bold";  
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 80%;
+  animation-duration: 0.6s;
+  animation-name: slidein-bottom;
+
+}
+
+@keyframes slidein-bottom {
+  from {
+    bottom: -100%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0%;
+    opacity: 1;
+  }
+}
+
+.modal-tab__text-bottom__slower{
+  position: relative;
+  font-family: "DrukCyr-Bold";  
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 80%;
+  animation-duration: 1s;
+  animation-name: slidein-bottom__slower;
+
+}
+
+@keyframes slidein-bottom__slower {
+  from {
+    bottom: -100%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0%;
+    opacity: 1;
+  }
+}
+
+
+.modal-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 14px;
+  animation-duration: 1.3s;
+  animation-name: slidein-text;
+}
+
+@keyframes slidein-text {
+  from {
+    bottom: -100%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0%;
+    opacity: 1;
+  }
+}
+
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -66,7 +333,7 @@ span{
   display: flex;
   align-items: start;
   justify-content: start;
-  max-height: 681px;
+  max-height: 566px;
   height: 100%;
   width: 3000px;
   white-space: nowrap;
@@ -82,7 +349,7 @@ span{
   line-height: 304px;
   text-transform: uppercase;
   letter-spacing: -0.01ex;
-  margin: 0 0 317px 0;
+  margin: 0 0 116px 0;
   
 }
 
@@ -95,30 +362,47 @@ span{
   list-style-type:none;
   height: auto;
   padding: 0;
-  margin:0;
-}
-
-.description__scroll{
-  display: flex;
-  gap: 100px;
+  margin:0 0 15px 0;  
 }
 
 
-.description__scroll-title{
-  display: flex;
-  align-items: end;
-  justify-content: start;
+.description__scroll {
+  display: grid;
+  color: #DDD0BD;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 245px;
+  gap: 20px;
+  column-gap: 105px;
+
+
+}
+
+.description__scroll-title {
+  align-self: end;
   font-weight:100;
   font-size: 24px;
   padding: 0;
   margin: 0;
+  grid-row: 2 / 2;
+  grid-column: 1 / 2;
 }
-.description__scroll-text{
+
+.description__scroll-num {
+  align-self: end;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.description__scroll-text {
   width:330px;
   overflow: hidden;
+  font-weight: 400;
   font-size: 14px;
   padding: 0;
   margin: 0;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .description__button{
@@ -155,88 +439,18 @@ span{
   margin-left: -5px;
 }
 
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden; }
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.has-scroll-smooth body {
-  overflow: hidden; }
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh; }
-
-[data-scroll-direction="horizontal"] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap; }
-
-[data-scroll-direction="horizontal"] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%; }
-
-.c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0; }
-  .c-scrollbar:hover {
-    transform: scaleX(1.45); }
-  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
-    opacity: 1; }
-  [data-scroll-direction="horizontal"] .c-scrollbar {
-    width: 100%;
-    height: 10px;
-    top: auto;
-    bottom: 0;
-    transform: scaleY(1); }
-    [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-      transform: scaleY(1.3); }
-
-.c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab; }
-  .has-scroll-dragging .c-scrollbar_thumb {
-    cursor: -webkit-grabbing;
-    cursor: grabbing; }
-  [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-    right: auto;
-    bottom: 0; 
-}
-
-
 .footer{
   display: grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-gap:1em;
   padding: 15px 0 15px 0;
   border-top: 1px solid #DDD0BD;
-  font-size: 12px;
+  font-size: 14px;
+  height: 37px;
 }
 
 .footer__date{}
-.footer__date::before{
 
-}
 
 
 .footer__rights{}
@@ -245,3 +459,5 @@ html.has-scroll-dragging {
   align-self: end;
   justify-self: end;
 }
+
+
