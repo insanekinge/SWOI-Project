@@ -135,6 +135,12 @@ svg {
   padding:0 15px 0 15px;
 }
 
+.modal-content-hide {
+  animation-timing-function: ease-in-out;
+  animation-name: animatehide;
+  animation-duration: 0.5s;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {  background-color: #B24201;
@@ -143,11 +149,26 @@ svg {
   }
 }
 
+
 @keyframes animatetop {
   from {background-color: #B24201; opacity:0}
   to {background-color: #DDD0BD; opacity:1}
 }
 
+@-webkit-keyframes animatehide {
+  from {  background-color: #DDD0BD;
+    opacity:1;} 
+  to {background-color: #B24201; opacity:0;  transition: 0.7s all;
+  }
+}
+
+
+@keyframes animatehide {
+  from {  background-color: #DDD0BD;
+    opacity:1;} 
+  to {background-color: #B24201; opacity:0;
+  }
+}
 /* The Close Button */
 .close {
   align-self: start;
@@ -216,6 +237,21 @@ svg {
 
 }
 
+.modal-tab__text-top-hide{
+  animation-duration: 1s;
+  animation-name: slidein-top-hide;
+}
+
+@keyframes slidein-top-hide {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: -100%;
+  }
+}
+
 @keyframes slidein-top {
   from {
     top: -100%;
@@ -247,6 +283,24 @@ svg {
   }
 }
 
+.modal-tab__text-top__slower-hide{
+  
+  animation-duration: 0.6s;
+  animation-name: slidein-top__slower-hide;
+
+}
+
+@keyframes slidein-top__slower-hide {
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: -100%;
+
+  }
+}
+
 .modal-tab__text-bottom{
   position: relative;
   font-family: "DrukCyr-Bold";  
@@ -270,6 +324,26 @@ svg {
   }
 }
 
+.modal-tab__text-bottom-hide{
+  animation-duration: 1s;
+  animation-name: slidein-bottom-hide;
+
+}
+
+@keyframes slidein-bottom-hide {
+  from {
+    bottom: 0%;
+    opacity: 1;
+    
+  }
+
+  to {
+    bottom: -100%;
+    opacity: 0;
+  }
+}
+
+
 .modal-tab__text-bottom__slower{
   position: relative;
   font-family: "DrukCyr-Bold";  
@@ -292,6 +366,26 @@ svg {
     opacity: 1;
   }
 }
+
+
+.modal-tab__text-bottom__slower-hide{
+  animation-duration: 0.6s;
+  animation-name: slidein-bottom__slower-hide;
+
+}
+
+@keyframes slidein-bottom__slower-hide {
+  from {
+    bottom: 0%;
+    opacity: 1;
+  }
+
+  to {bottom: -100%;
+    opacity: 0;
+    
+  }
+}
+
 
 
 .modal-text{
@@ -320,12 +414,31 @@ svg {
 }
 
 
+.modal-text-hide{
+  animation-duration: 1.3s;
+  animation-name: slidein-text-hide;
+}
+
+@keyframes slidein-text-hide {
+  from {
+    bottom: 0%;
+    opacity: 1;
+  }
+
+  to {
+    bottom: -100%;
+    opacity: 0;
+  }
+}
+
+
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   width: 100%;
+  height: 84vh;
   overflow-x: hidden;
 }
 
@@ -349,7 +462,6 @@ svg {
   line-height: 304px;
   text-transform: uppercase;
   letter-spacing: -0.01ex;
-  margin: 0 0 116px 0;
   
 }
 
@@ -370,8 +482,7 @@ svg {
   display: grid;
   color: #DDD0BD;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  height: 245px;
+  grid-template-rows: repeat(2, auto);
   gap: 20px;
   column-gap: 105px;
 

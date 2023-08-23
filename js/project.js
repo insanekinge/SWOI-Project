@@ -1,12 +1,3 @@
-// const container = document.querySelector(".main");
-
-// container.addEventListener("wheel", (event) => {
-//   event.preventDefault();
-  
-//   // Determines if the user scrolls left or right and adjusts the scroll value accordingly
-//   container.scrollLeft += event.deltaY + event.deltaX;
-// });
-
 //slider
 
 const sliderContainer = document.querySelector('.gallery__slider');
@@ -60,3 +51,96 @@ window.addEventListener('resize', debounce(() => {
   smoothSlideTransition();
   sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }, 250));
+
+
+
+
+let modal = document.getElementById("myModal");
+
+let btn = document.getElementById("myBtn");
+
+let span = document.getElementsByClassName("close")[0];
+
+var ishidden = false;
+
+let top_slower_text = modal.querySelector('#top-slower-text');
+let top_normal_text = modal.querySelector('#top-normal-text');
+let bottom_normal_text = modal.querySelector('#bottom-normal-text');
+let bottom_slower_text = modal.querySelector('#bottom-slower-text');
+
+let modal_text = modal.querySelector('#modal-text');
+
+
+
+btn.addEventListener('click', () => {
+  if (ishidden == false) {
+    modal.style.display = "block";
+    pathes = document.querySelectorAll('.header path');
+    pathes.forEach(element => {
+      element.style.fill = "#A39E8F";
+    });
+    document.querySelector('.header').style.borderBottom  = "1px solid #A39E8F";
+
+    // document.querySelector('.header__menu-open').style.color = "#A39E8F";
+    document.querySelector('.header__menu-open').style.display = "none";
+    document.querySelector('.header__menu-close').style.display = "block";
+    document.querySelector('.header__menu-button-top').style.marginRight = '22px';
+    ishidden = true;
+  } else {
+    modal.classList.add('modal-content-hide');
+    top_slower_text.classList.add('modal-tab__text-top__slower-hide');
+    top_normal_text.classList.add('modal-tab__text-top-hide');
+    
+    bottom_normal_text.classList.add('modal-tab__text-bottom-hide');
+    bottom_slower_text.classList.add('modal-tab__text-bottom__slower-hide');
+
+    modal_text.classList.add('modal-text-hide');
+    setTimeout(function(){
+      modal.style.display = 'none';
+      modal.classList.remove('modal-content-hide');
+      top_slower_text.classList.remove('modal-tab__text-top__slower-hide');
+      top_normal_text.classList.remove('modal-tab__text-top-hide');
+
+      
+      bottom_normal_text.classList.remove('modal-tab__text-bottom-hide');
+      bottom_slower_text.classList.remove('modal-tab__text-bottom__slower-hide');
+      modal_text.classList.remove('modal-text-hide');
+
+
+    }, 400);
+    // modal.style.display = "none";
+    pathes = document.querySelectorAll('.header path');
+    pathes.forEach(element => {
+      element.style.fill = "#A39E8F";
+    });
+    document.querySelector('.header').style.borderBottom  = "1px solid #A39E8F";
+    // document.querySelector('.header__menu-open').style.color = "#A39E8F";
+    document.querySelector('.header__menu-open').style.display = "block";
+    document.querySelector('.header__menu-close').style.display = "none";
+    document.querySelector('.header__menu-button-top').style.marginRight = '0';
+    ishidden = false;
+
+    
+  }
+
+});
+
+
+
+
+
+btn.onclick = function() {
+  
+  ;
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
