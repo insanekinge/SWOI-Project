@@ -65,6 +65,13 @@
         position: relative;
         top: -14px;
         }
+
+        .header__menu-language_en{
+                display: none;
+              }
+              .header__menu-language_ru{
+                display: none;
+              }
         .header__menu{
         display: flex;
         width: 100px;
@@ -621,4 +628,42 @@
 .footer__studio{
         align-self: end;
         justify-self: end;
+}
+
+
+@media (min-width: 1024px){
+        .header {
+                display: grid;
+                grid-template-columns: 9fr 8fr 1fr;
+                grid-gap:1em;
+                z-index: 2;
+                position: relative;
+                padding: 15px 0 0;
+                border-bottom: 1px solid #DDD0BD;
+                }
+                .header__menu {
+                        display: flex;
+                        /* width: 100px; */
+                        height: 50px;
+                        justify-content: flex-end;
+                        gap: 7px;
+                    }
+                    .header__menu-language_en{
+                      display: none;
+                    }
+                    .header__menu-language_ru{
+                      display: none;
+                    }
+                .header__tab{
+                        display: grid;
+                        grid-template-columns: 9fr 2fr 1fr;
+                        grid-gap:1em;
+                        align-self: start;
+                        justify-self: start;
+                        align-items: start;
+
+                        }
+                .header__tab-link{
+                        display: block;
+                }
 }

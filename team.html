@@ -85,7 +85,12 @@
                 <div class="video__date">&copy;&nbsp;2023</div>
                 
 
-                <video class="video__placeholder" poster=""></video>
+                <picture class="video__placeholder">
+                        <source media="(max-width: 799px)" srcset="/img/video-mob.png">
+                        <source media="(max-width: 1600px)" srcset="/img/video-tab.png">
+                        <source media="(min-width: 1600px)" srcset="/img/video-desc.png.png">
+                        <img src="/img/video-mob.png">
+                </picture>
                 <div class="video__link" href="">Смотреть видео</div>
 
         </div>
@@ -119,6 +124,7 @@
                           <div class="accordion__header-name">Egor</div>
                           <div class="accordion__header-num">1</div>
                           <div class="accordion__header-position">Учредитель</div>
+                          <div class="accordion__header-button_close">Свернуть</div>
                           <div class="accordion__header-button">
                             <svg class="accordion-icon" width="44" height="44" viewBox="0 0 44 44"  xmlns="http://www.w3.org/2000/svg">
                               <circle class="accordion-icon-circle" cx="22" cy="22" r="21" transform="rotate(180 22 22)" stroke-width="1.5"/>
@@ -130,6 +136,13 @@
                           <div class="accordion__content-title">Биография</div>
                           <div class="accordion__content-text">Современный комплекс дизайнерских таунхаусов расположен на границе двух главных туристических районов Бали: Чангу и Семиньяк. Эклектичные дизайн и архитектура, вдохновленные вулканической природой острова выгодно выделяют SWOI LOFT от привычной застройки Бали.</div>
                           <div class="accordion__content-text">Современный комплекс дизайнерских таунхаусов расположен на границе двух главных туристических районов Бали: Чангу и Семиньяк. Эклектичные дизайн и архитектура, вдохновленные вулканической природой острова выгодно выделяют SWOI LOFT от привычной застройки Бали.</div>
+                          <div class="accordion__content-video_title">Видео с Егором</div>
+                          <picture class="accordion__content-video">
+                                <source media="(max-width: 799px)" srcset="/img/team-egor-video-mob.png">
+                                <source media="(max-width: 1600px)" srcset="/img/team-egor-video-tab.png">
+                                <source media="(min-width: 1600px)" srcset="/img/team-egor-video-desc.png.png">
+                                <img src="/img/team-egor-video-mob.png">
+                               </picture>
                           <div class="accordion__content-bottom">
                             <div class="accordion__content-bottom_mail">anton@swoi-bali.com</div>
                             <div class="accordion__content-bottom_date">&copy; 2023</div>
@@ -190,7 +203,7 @@
         
         
         </div>
-        <footer class="footer">
+        <div class="footer">
         <div class="footer__date">&copy;&nbsp;2023</div>
         <div class="footer__rights">Все права защищены</div>
         <div class="footer__studio">BEK-ST22</div>
