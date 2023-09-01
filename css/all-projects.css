@@ -91,7 +91,12 @@
         font-weight: 400;
         transition: 1s all;
       }
-      
+      .header__menu-language_en{
+        display: none;
+      }
+      .header__menu-language_ru{
+        display: none;
+      }
       .header__menu-button {
         display: flex;
         flex-direction: column;
@@ -496,16 +501,6 @@
                 height: 600px;
                 
         }
-        #project-image-1{
-                background-image: url(/img/all-projects-first-main.png);
-        }
-        #project-image-2{
-                background-image: url(/img/all-projects-second-main.png);
-        }
-        #project-image-3{
-                background-image: url(/img/all-projects-third-main.png);
-        }
-      
       
       .footer{
         display: grid;
@@ -546,6 +541,12 @@
                         justify-content: flex-end;
                         gap: 7px;
                     }
+                    .header__menu-language_en{
+                      display: none;
+                    }
+                    .header__menu-language_ru{
+                      display: none;
+                    }
                 .header__tab{
                         display: grid;
                         grid-template-columns: 9fr 2fr 1fr;
@@ -566,15 +567,7 @@
                         grid-area: 1 / 1 / 2 / 3;
                         
                 }
-                #project-image-1{
-                        background-image: url(/img/all-projects-first-main-tab.png);
-                }
-                #project-image-2{
-                        background-image: url(/img/all-projects-second-main-tab.png);
-                }
-                #project-image-3{
-                        background-image: url(/img/all-projects-third-main-tab.png);
-                }
+                
                 .project-item__title{
                         line-height: 152px;
                         font-size: 190px;
@@ -606,6 +599,18 @@
                                 justify-content: flex-end;
                                 gap: 7px;
                             }
+                            .header__menu-open{
+                              display: none;
+                            }
+                            .header__menu-close{
+                              display: none;
+                            }
+                            .header__menu-language_en{
+                              display: block;
+                            }
+                            .header__menu-language_ru{
+                              display: none;
+                            }
                         .header__tab{
                                 display: grid;
                                 grid-template-columns: 9fr 2fr 1fr;
@@ -628,17 +633,18 @@
                         
                               .project-item{
                                 display: grid;
-                                grid-template-columns: repeat(12, 1fr);
+                                grid-template-columns: repeat(12, auto);
                                 grid-template-rows: repeat(2, auto);
-                                grid-column-gap:64px;
+                                grid-column-gap: 14px;
                                 grid-row-gap: 0px;
                                 border-bottom: 1px #DDD0BD solid;
                               }
                         
                               .project-item__title{
                                 line-height: 200px;
+                                width: 709px;
                                 font-size: 200px;
-                                font-family: "DrukCyr-Bold";  
+                                font-family: "DrukCyr-Bold";
                                 text-transform: uppercase;
                                 grid-area: 1 / 1 / 2 / 4;
                               }
@@ -659,6 +665,7 @@
                               .project-item__text{
                                 align-self: self-end;
                                 justify-self: self-end;
+                                width: 297px;
                                 font-size: 16px;
                                 display: block;
                                 grid-area: 2 / 7 / 3 / 9;
@@ -666,15 +673,8 @@
                               .project-item__image{
                                 width: 613px;
                                 height: 385px;
+                                object-fit:cover;
                                 grid-area: 1 / 9 / 3 / 13;
                               }
-                        #project-image-1{
-                                background-image: url(/img/all-projects-first-main-desc.png);
-                        }
-                        #project-image-2{
-                                background-image: url(/img/all-projects-second-main-desc.png);
-                        }
-                        #project-image-3{
-                                background-image: url(/img/all-projects-third-main-desc.png);
-                        }
+                        
                 }

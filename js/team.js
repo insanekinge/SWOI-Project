@@ -24,7 +24,6 @@ btn.addEventListener('click', () => {
     });
     document.querySelector('.header').style.borderBottom  = "1px solid #C1803E";
 
-    // document.querySelector('.header__menu-open').style.color = "#C1803E";
     document.querySelector('.header__menu-open').style.display = "none";
     document.querySelector('.header__menu-close').style.display = "block";
     document.querySelector('.header__menu-button-top').style.marginRight = '22px';
