@@ -706,19 +706,26 @@
         grid-gap:1em;
         padding: 15px 0 15px 0;
         border-top: 1px solid #DDD0BD;
-        font-size: 12px;
-}
-
-.footer__date{}
-
-
-
-.footer__rights{}
-
-.footer__studio{
+        font-size: 14px;
+        height: 37px;
+      }
+      
+      .footer__date{}
+      
+      
+      
+      .footer__rights{}
+      .footer__image{
+        display: none;
+      }
+      .footer__link{
+        display: none;
+      }
+      
+      .footer__studio{
         align-self: end;
         justify-self: end;
-}
+      }
 
 
 @media (min-width: 1024px){
@@ -877,7 +884,7 @@
 
 
                 .specification__top-text{
-                        grid-area: 1 / 4 / 2 / 7;
+                        grid-area: 1 / 2 / 2 / 7;
                         justify-self: self-end;
                         font-size: 24px;
                         font-weight: 400;
@@ -904,6 +911,7 @@
                 }
 
                 .specification__type-image{
+                        justify-self: end;
                         grid-area: 1 / 4 / 3 / 7;
                 }
 
@@ -1107,5 +1115,36 @@
                         font-size: 24px;
                         font-weight: 400;
                 }
+
+                .footer{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+      
+                      }
+                      .footer__link{
+                        display: block;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                      }
+                      .description__socials-name{
+                        font-size: 32px;
+                        font-weight: 400;
+                      }
+                      .description__socials-name_social{
+                        display: block;
+                        align-self: self-end;
+                      }
+                      .footer__rights{
+                        display: none;
+                      }
+                     .footer__studio{
+                      display: none;
+                     }
+                     .footer__image{
+                      display: block;
+                    }
 
 }
