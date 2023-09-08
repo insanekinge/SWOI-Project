@@ -384,6 +384,9 @@ overflow-x: hidden;
         padding-bottom: 15px;
 
 }
+.main::-webkit-scrollbar {
+        width: 0;
+      }
 .main__title{
         font-family: "DrukCyr-Bold";
         grid-area: 1 / 1 / 2 / 3;
@@ -954,7 +957,7 @@ transition: max-height 0.4s ease-out;
         }
 
         .main__text-description{
-                max-width: 455px;
+                max-width: 658px;
                 width: 100%;
                 grid-area: 1 / 4 / 2 / 6;
                 letter-spacing: -2%;
@@ -980,7 +983,7 @@ transition: max-height 0.4s ease-out;
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
                 grid-template-rows: auto;
-                grid-column-gap: 178px;
+                grid-column-gap: 0px;
                 grid-row-gap: 0px;
         
         }
@@ -1007,6 +1010,7 @@ transition: max-height 0.4s ease-out;
                 max-width: 455px;
                 font-size: 24px;
                 align-self: self-start;
+                justify-self: self-start;
                 grid-area: 1 / 4 / 2 / 6;
         }
 
