@@ -611,6 +611,9 @@
         justify-self: end;
       }
       @media (min-width: 1024px){
+        .wrapper{
+          margin:0 20px 0 20px;
+        }
         .header {
                 display: grid;
                 grid-template-columns: 9fr 8fr 1fr;
@@ -751,6 +754,8 @@
                   flex-direction: row;
                   justify-content: space-between;
                   align-items: center;
+                  width: 100%;
+                  height: 67px;
 
                 }
                 .footer__link{
