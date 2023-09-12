@@ -907,7 +907,7 @@ transition: max-height 0.4s ease-out; /* Плавное открытие */
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         grid-template-rows: repeat(3, auto);
-                        grid-column-gap: 20px;
+                        grid-column-gap: 0px;
                         grid-row-gap: 30px;
                         font-size: 24px;
                 }
@@ -1329,7 +1329,7 @@ transition: max-height 0.4s ease-out; /* Плавное открытие */
                                 display: grid;
                                 grid-template-columns: repeat(12, 1fr);
                                 grid-template-rows: repeat(3, auto);
-                                grid-column-gap: 20px;
+                                grid-column-gap: 0px;
                                 grid-row-gap: 40px;
                         }
                         .development__top-title{
@@ -1507,7 +1507,7 @@ transition: max-height 0.4s ease-out; /* Плавное открытие */
                                 display: grid;
                                 grid-template-columns: repeat(12, 1fr);
                                 grid-template-rows: repeat(3, auto);
-                                grid-column-gap: 20px;
+                                grid-column-gap: 0px;
                                 grid-row-gap: 20px;
                         }
                         .group__title{
