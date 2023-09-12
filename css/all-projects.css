@@ -647,7 +647,7 @@
                                 display: grid;
                                 grid-template-columns: repeat(12, auto);
                                 grid-template-rows: repeat(2, auto);
-                                grid-column-gap: 14px;
+                                grid-column-gap: 0px;
                                 grid-row-gap: 0px;
                                 border-bottom: 1px #DDD0BD solid;
                               }
