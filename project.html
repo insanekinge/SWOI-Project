@@ -88,20 +88,27 @@
                 <section class="about">
                         <div class="about__title">О проекте</div>
                         <div class="about__text-first">Современный комплекс дизайнерских таунхаусов расположен на&nbsp;границе двух главных туристических районов Бали: Чангу и&nbsp;Семиньяк. Эклектичные дизайн и&nbsp;архитектура, вдохновленные вулканической природой острова выгодно выделяют SWOI LOFT от&nbsp;привычной застройки Бали.</div>
+                        
                         <div class="about__slider">
-                                <picture class="about__image">
-                                        <source media="(max-width: 799px)" srcset="/img/project-first-pic.png">
-                                        <source media="(max-width: 1600px)" srcset="/img/project-first-pic-tab.png">
-                                        <source media="(min-width: 1600px)" srcset="/img/project-first-pic-desc.png">
-                                        <img src="/img/project-first-pic.png">
-                                </picture>
-                        </div>
-                        <div class="about__image-title">Фотографии</div>
-                        <div class="about__image-count">01/05</div>
-                        <div class="about__button">
+                                <div class="slider-wrapper">
+                                  <div class="slide">
+                                    <img src="/img/project-first-pic-desc.png">
+                                  </div>
+                                  <div class="slide">
+                                        <img src="/img/project-first-pic-desc.png">
+                                </div>
+                                  <div class="slide">
+                                        <img src="/img/project-first-pic-desc.png">
+                                </div>
+                                  <!-- Add more slides as needed -->
+                                </div>
+                              </div>
+                              <div class="about__image-title">Фотографии</div>
+                              <div class="about__image-count">01/05</div>
+                              <div class="about__button">
                                 <div class="about__button-prev">Пред</div>
                                 <div class="about__button-next">След</div>
-                        </div>
+                              </div>
 
                         <div class="about__text-second">В&nbsp;непосредственной близости от&nbsp;комплекса располагаются международные школы, супермаркеты, спортивные клубы и&nbsp;рестораны. Внутренняя инфраструктура комплекса делает пребывание в&nbsp;нем максимально комфортным.</div>
                         <div class="about__text-third">В&nbsp;непосредственной близости от&nbsp;комплекса располагаются международные школы, супермаркеты, спортивные клубы и&nbsp;рестораны. Внутренняя инфраструктура комплекса делает пребывание в&nbsp;нем максимально комфортным.</div>
@@ -189,13 +196,14 @@
                 
                 <section class="gallery">
 
-                        <div class="gallery__text">Физическая охрана комплекса и&nbsp;система видеонаблюдения обеспечивают наш важнейший приоритет&nbsp;&mdash; безопасность. Особой привилегией комплекса является развлекательный центр для детей JOY, который будет построен в&nbsp;едином архитектурном ансамбле с&nbsp;таунхаусами. Все жильцы SWOI LOFT будут иметь приоритетную возможность пользоваться его радушием и&nbsp;интересным форматом.</div>
+                        <div class="gallery__text">Современный комплекс дизайнерских таунхаусов расположен на границе двух главных туристических районов Бали: Чангу и Семиньяк. Эклектичные дизайн и архитектура, вдохновленные вулканической природой острова выгодно выделяют SWOI LOFT от  привычной застройки Бали.</div>
+                        <div class="gallery__text-second">Современный комплекс дизайнерских таунхаусов расположен на границе двух главных туристических районов Бали: Чангу и Семиньяк. Эклектичные дизайн и архитектура, вдохновленные вулканической природой острова выгодно выделяют SWOI LOFT от  привычной застройки Бали.</div>
                         <div class="gallery__question">Понравился проект?</div>
 
                         <div class="gallery__request">
-                                <div class="gallery__request-presentation">Скачать презентацию</div>
+                                <div class="gallery__request-presentation">Стать партнером</div>
                                 <div class="gallery__request-model">Скачать финансовую модель</div>
-                                <div class="gallery__request-button">Инвестировать в проект</div>
+                                <div class="gallery__request-button">Приобрести</div>
                         </div>
                        
 
@@ -247,6 +255,7 @@
     </div>
 
     <script src="js/project.js"></script>
+    <script src="js/project-count-slider.js"></script>
     <script src="js/slider-gallery.js"></script>
   </body>
 </html>
