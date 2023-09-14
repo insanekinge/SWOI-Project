@@ -867,6 +867,7 @@
                         justify-self: self-end;
                         grid-area: 4 / 10 / 5 / 13;
                 }
+                */
                 .about__button-prev{
                         display: flex;
                         align-items: center;
@@ -886,7 +887,7 @@
                         border: 1px #A39E8F solid;
                         border-radius: 50px;
                         
-                } */
+                } 
                 .about__slider {
                         overflow: hidden;
                       }
@@ -910,6 +911,12 @@
                       
                       .about__button {
                         /* Add your styles here */
+                        padding: 0;
+                        border-bottom: 0;
+                        border-top: 0;
+                        max-width: 170px;
+                        justify-self: self-end;
+                        grid-area: 4 / 10 / 5 / 13;
                       }
                 
                 .about__text-third{            
