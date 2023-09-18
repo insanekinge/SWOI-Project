@@ -65,3 +65,5 @@ function handleSwipe() {
 
 // Initial setup
 updateSlideCount();
+
+
