@@ -452,7 +452,9 @@
         gap: 150px;
         overflow-x: hidden;
       }
-
+      .container::-webkit-scrollbar {
+        width: 0;
+      }
       .aside{
         width: 100%;
       }
@@ -493,7 +495,23 @@
         grid-area: 2 / 2 / 3 / 4;
         
       }
-      
+      .main__title,
+      .main__num {
+        display: inline-block;
+        margin-right: 50px; /* Adjust this value to control the spacing between elements */
+        animation: slide linear infinite;
+        animation-duration: 15s; /* Adjust this value to control the animation speed */
+        animation-timing-function: linear;
+      }
+
+      @keyframes slide {
+              0% {
+                transform: translateX(150%);
+              }
+              100% {
+                transform: translateX(-170%);
+              }
+      }
       .description{
         display: flex;
         flex-direction: column;

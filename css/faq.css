@@ -379,7 +379,9 @@ width: 100%;
 height: 100vh;
 overflow-x: hidden;
 }
-
+.container::-webkit-scrollbar {
+        width: 0;
+      }
 .main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -440,65 +442,6 @@ overflow-x: hidden;
 .main__text-number_second{
         display: none;
 }
-/* Стилизация аккордеон меню */
-/* .accordion{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        
-}
-.accordion__item {
-display: grid;
-gap: 15px;
-min-width: 330px;
-width: 100%;
-border-bottom: 1px solid #A83E3E;
-padding: 0 0 15px 0;
-
-
-}
-.accordion__header {
-        align-items: start;
-        max-height: 178px;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(2, auto);
-        grid-column-gap: 0px;
-        grid-row-gap: 30px;
-
-}
-.accordion__header-name{       
-        font-size: 14px;
-        grid-area: 1 / 1 / 2 / 2; 
-}
-.accordion__header-num{
-        font-size: 14px;
-        justify-self: self-end;
-        grid-area: 1 / 2 / 2 / 3;
-}
-.accordion__header-text{
-        font-size: 24px;
-}
-
-
-
-
-.accordion__item.open .accordion__content {
-  max-height: 500px; 
-}
-
-.accordion__content {
-display: flex;
-flex-direction: column;
-gap: 47px;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease-out; 
-} */
-
 
 .how{
         display: flex;
@@ -544,11 +487,43 @@ transition: max-height 0.4s ease-out;
         grid-area: 2 / 1 / 3 / 3;
 }
 
-.answer-button{
+.collapse-button{
+        position: relative;
+        width: 100%;
         font-size: 14px;
         justify-self: self-start;
         grid-area: 3 / 1 / 4 / 3;
 }
+
+.collapse-button::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        background-image: url("/img/faq-arrow.png");
+        background-size: cover;
+      }
+
+.answer-button{
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        justify-self: self-start;
+        grid-area: 3 / 1 / 4 / 3;
+}
+
+.answer-button::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        background-image: url("/img/faq-arrow.png");
+        background-size: cover;
+      }
 
 .how__item-header_answer{
         font-size: 14px;
@@ -809,13 +784,27 @@ transition: max-height 0.4s ease-out;
                 justify-self: self-start;
                 grid-area: 1 / 2 / 2 / 5;
         }
-        
+        .collapse-button{
+                font-size: 24px;
+                font-weight: 400;
+                justify-self: self-end;
+                align-self: self-start;
+                grid-area: 1 / 6 / 2 / 7;
+        }
+
+        .collapse-button::after {
+                display: none;
+
+        }
         .answer-button{
                 font-size: 24px;
                 font-weight: 400;
                 justify-self: self-end;
                 align-self: self-start;
                 grid-area: 1 / 6 / 2 / 7;
+        }
+        .answer-button::after {
+                display: none;
         }
         .accordion {
                 display: flex;
@@ -1023,6 +1012,24 @@ transition: max-height 0.4s ease-out;
                 grid-area: 1 / 2 / 3 / 4;
         }
 
+        .collapse-button{
+                max-width: 455px;
+                font-size: 24px;
+                align-self: self-start;
+                justify-self: self-start;
+                grid-area: 1 / 4 / 2 / 6;
+        }
+
+        .collapse-button::after {
+                content: "";
+                display: inline-block;
+                
+                width: 18px;
+                height: 18px;
+                background-image: url("/img/faq-arrow.png");
+                background-size: cover;
+              }
+
         .answer-button{
                 max-width: 455px;
                 font-size: 24px;
@@ -1030,6 +1037,16 @@ transition: max-height 0.4s ease-out;
                 justify-self: self-start;
                 grid-area: 1 / 4 / 2 / 6;
         }
+
+        .answer-button::after {
+                content: "";
+                display: inline-block;
+                
+                width: 18px;
+                height: 18px;
+                background-image: url("/img/faq-arrow.png");
+                background-size: cover;
+              }
 
         .how__item-header_num-second{
                 display: block;
