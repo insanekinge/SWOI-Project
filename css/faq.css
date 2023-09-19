@@ -30,27 +30,43 @@ span{
 }
 
 .header {
-display: grid;
-grid-template-columns: 10fr 1fr;
-grid-gap:1em;
-z-index: 2;
-position: relative;
-padding: 15px 0 0;
-border-bottom: 1px solid #A83E3E;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        z-index: 2;
+        position: relative;
+        height: 7dvh;
+        padding: 15px 0 0;
+        border-bottom: 1px solid #A83E3E;
 }
 .header__logo{
 align-self: start;
 justify-self: start;
 align-items: start;
+grid-area: 1 / 1 / 2 / 2;
 }
 
 .header__tab{
 display: none;
 }
-.header__tab-link{
+.header__tab-project{
+        display: none;
+}
+.header__tab-about{
+        display: none;
+}
+.header__tab-conacts{
         display: none;
 }
 
+.header__menu-language_en{
+        display: none;
+}
+.header__menu-language_ru{
+        display: none;
+}
 
 .header__language{
 align-self: end;
@@ -64,16 +80,10 @@ top:0px;
 position: relative;
 top: -14px;
 }
-.header__menu-language_en{
-        display: none;
-      }
-.header__menu-language_ru{
-        display: none;
-}
 .header__menu{
+grid-area: 1 / 5 / 2 / 7;
 display: flex;
-width: 100px;
-height: 50px;
+justify-self: end;
 justify-content: end;
 gap: 7px;
 }
@@ -512,6 +522,7 @@ overflow-x: hidden;
         font-size: 14px;
         justify-self: self-start;
         grid-area: 3 / 1 / 4 / 3;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .answer-button::after {
@@ -640,43 +651,53 @@ overflow-x: hidden;
         }
         .header {
                 display: grid;
-                grid-template-columns: 9fr 8fr 1fr;
-                grid-gap:1em;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
                 z-index: 2;
                 position: relative;
                 padding: 15px 0 0;
                 border-bottom: 1px solid #A83E3E;
                 }
+                .header__logo{
+                        grid-area: 1 / 1 / 2 / 2;
+                }
                 .header__menu {
+                        grid-area: 1 / 6 / 2 / 7;
                         display: flex;
-                        /* width: 100px; */
                         height: 50px;
-                        justify-content: flex-end;
+                        justify-self: self-end;
                         gap: 7px;
                     }
                     .header__menu-open{
-                        display: none;
-                      }
-                      .header__menu-close{
-                        display: none;
-                      }
-                      .header__menu-language_en{
+                      display: none;
+                    }
+                    .header__menu-close{
+                      display: none;
+                    }
+                    .header__menu-language_en{
+                      display: block;
+                    }
+                    .header__menu-language_ru{
+                      display: none;
+                    }
+                    .header__tab{
                         display: block;
-                      }
-                      .header__menu-language_ru{
-                        display: none;
-                      }
-                .header__tab{
-                        display: grid;
-                        grid-template-columns: 9fr 2fr 1fr;
-                        grid-gap:1em;
+                        grid-area: 1 / 4 / 2 / 5;
                         align-self: start;
                         justify-self: start;
                         align-items: start;
 
                         }
-                .header__tab-link{
+                .header__tab-project{
                         display: block;
+                }
+                .header__tab-about{
+                        display: none;
+                }
+                .header__tab-conacts{
+                        display: none;
                 }
 
         .main {
@@ -808,11 +829,11 @@ overflow-x: hidden;
         }
         .accordion {
                 display: flex;
-                justify-content: flex-end;
+                justify-self: self-end;
         }
         .accordion.active {
                 display: flex;
-                justify-content: flex-end;
+                justify-self: self-end;
         }
         .accordion__content{
                 padding-top: 80px;
@@ -896,6 +917,64 @@ overflow-x: hidden;
 
 
 @media (min-width: 1600px){
+        .header {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                z-index: 2;
+                position: relative;
+                padding: 15px 0 0;
+                border-bottom: 1px solid #A83E3E;
+                }
+                .header__logo{
+                        grid-area: 1 / 1 / 2 / 2;
+                }
+                .header__menu {
+                        grid-area: 1 / 12 / 2 / 13;
+                        display: flex;
+                        height: 50px;
+                        justify-self: self-end;
+                        gap: 7px;
+                    }
+                    .header__menu-open{
+                      display: none;
+                    }
+                    .header__menu-close{
+                      display: none;
+                    }
+                    .header__menu-language_en{
+                      display: block;
+                    }
+                    .header__menu-language_ru{
+                      display: none;
+                    }
+                    .header__tab{
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        grid-template-rows: 1fr;
+                        gap: 20px;
+                        width: 100%;
+                        grid-area: 1 / 7 / 2 / 12; 
+                        align-self: start;
+                        justify-self: start;
+                        align-items: start;
+
+                        }
+                .header__tab-project{
+                        display: block;
+                        grid-area: 1 / 1 / 2 / 2;
+                }
+                .header__tab-about{
+                        display: block;
+                        justify-self: self-end;
+                        grid-area: 1 / 4 / 2 / 5;
+                }
+                .header__tab-conacts{
+                        display: block;
+                        grid-area: 1 / 5 / 2 / 6;
+                }
         .main {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
