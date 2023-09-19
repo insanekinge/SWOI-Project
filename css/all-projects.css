@@ -36,51 +36,62 @@
       
       .header {
         display: grid;
-        grid-template-columns: 10fr 1fr;
-        grid-gap:1em;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         z-index: 2;
         position: relative;
+        height: 7dvh;
         padding: 15px 0 0;
         border-bottom: 1px solid #DDD0BD;
       }
-      
       .header__logo{
-        align-self: start;
-        justify-self: start;
-        align-items: start;
+      align-self: start;
+      justify-self: start;
+      align-items: start;
+      grid-area: 1 / 1 / 2 / 2;
       }
-      
-      
-      
-      .header__language{
-        align-self: end;
-        justify-self: end;
-      }
-      
-      .header__language-left{
-        position: relative;
-        top:0px;
-      }
-      
-      .header__language-right{
-        position: relative;
-        top: -14px;
-      }
-      
-      .header__menu{
-        display: flex;
-        width: 100px;
-        height: 50px;
-        justify-content: end;
-        gap: 7px;
-      }
+
       .header__tab{
-        display: none;
-        }
-        .header__tab-link{
-                display: none;
-        }
-        
+      display: none;
+      }
+      .header__tab-project{
+              display: none;
+      }
+      .header__tab-about{
+              display: none;
+      }
+      .header__tab-conacts{
+              display: none;
+      }
+
+      .header__menu-language_en{
+              display: none;
+      }
+      .header__menu-language_ru{
+              display: none;
+      }
+
+      .header__language{
+      align-self: end;
+      justify-self: end;
+      }
+      .header__language-left{
+      position: relative;
+      top:0px;
+      }
+      .header__language-right{
+      position: relative;
+      top: -14px;
+      }
+      .header__menu{
+      grid-area: 1 / 5 / 2 / 7;
+      display: flex;
+      justify-self: end;
+      justify-content: end;
+      gap: 7px;
+      }
       .header__menu-open{
         font-size: 15px;
         font-weight: 400;
@@ -521,7 +532,7 @@
         grid-template-columns: 1fr 4fr 2fr;
         grid-gap:1em;
         padding: 15px 0 15px 0;
-        border-top: 1px solid #C1803E;
+        border-top: 1px solid #DDD0BD;
         font-size: 14px;
         height: 37px;
       }
@@ -549,39 +560,56 @@
           margin:0 20px 0 20px;
         }
         .header {
-                display: grid;
-                grid-template-columns: 9fr 8fr 1fr;
-                grid-gap:1em;
-                z-index: 2;
-                position: relative;
-                padding: 15px 0 0;
-                border-bottom: 1px solid #DDD0BD;
-                }
-                .header__menu {
-                        display: flex;
-                        /* width: 100px; */
-                        height: 50px;
-                        justify-content: flex-end;
-                        gap: 7px;
-                    }
-                    .header__menu-language_en{
-                      display: none;
-                    }
-                    .header__menu-language_ru{
-                      display: none;
-                    }
-                .header__tab{
-                        display: grid;
-                        grid-template-columns: 9fr 2fr 1fr;
-                        grid-gap:1em;
-                        align-self: start;
-                        justify-self: start;
-                        align-items: start;
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-template-rows: 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          z-index: 2;
+          position: relative;
+          padding: 15px 0 0;
+          border-bottom: 1px solid #DDD0BD;
+          }
+          .header__logo{
+                  grid-area: 1 / 1 / 2 / 2;
+          }
+          .header__menu {
+                  grid-area: 1 / 6 / 2 / 7;
+                  display: flex;
+                  height: 50px;
+                  justify-self: self-end;
+                  gap: 7px;
+              }
+              .header__menu-open{
+                display: none;
+              }
+              .header__menu-close{
+                display: none;
+              }
+              .header__menu-language_en{
+                display: block;
+              }
+              .header__menu-language_ru{
+                display: none;
+              }
+              .header__tab{
+                  display: block;
+                  grid-area: 1 / 4 / 2 / 5;
+                  align-self: start;
+                  justify-self: start;
+                  align-items: start;
 
-                        }
-                .header__tab-link{
-                        display: block;
-                }
+                  }
+          .header__tab-project{
+                  display: block;
+          }
+          .header__tab-about{
+                  display: none;
+          }
+          .header__tab-conacts{
+                  display: none;
+          }
+
                 .project-item__image{
                         width: 984px;
                         height: 1060px;
@@ -638,46 +666,65 @@
         }      
 
         @media (min-width: 1600px){
-                .header {
-                        display: grid;
-                        grid-template-columns: 9fr 8fr 1fr;
-                        grid-gap:1em;
-                        z-index: 2;
-                        position: relative;
-                        padding: 15px 0 0;
-                        border-bottom: 1px solid #DDD0BD;
-                        }
-                        .header__menu {
-                                display: flex;
-                                /* width: 100px; */
-                                height: 50px;
-                                justify-content: flex-end;
-                                gap: 7px;
-                            }
-                            .header__menu-open{
-                              display: none;
-                            }
-                            .header__menu-close{
-                              display: none;
-                            }
-                            .header__menu-language_en{
-                              display: block;
-                            }
-                            .header__menu-language_ru{
-                              display: none;
-                            }
-                        .header__tab{
-                                display: grid;
-                                grid-template-columns: 9fr 2fr 1fr;
-                                grid-gap:1em;
-                                align-self: start;
-                                justify-self: start;
-                                align-items: start;
-        
-                                }
-                        .header__tab-link{
-                                display: block;
-                        }
+          .header {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            z-index: 2;
+            position: relative;
+            padding: 15px 0 0;
+            border-bottom: 1px solid #DDD0BD;
+            }
+            .header__logo{
+                    grid-area: 1 / 1 / 2 / 2;
+            }
+            .header__menu {
+                    grid-area: 1 / 12 / 2 / 13;
+                    display: flex;
+                    height: 50px;
+                    justify-self: self-end;
+                    gap: 7px;
+                }
+                .header__menu-open{
+                  display: none;
+                }
+                .header__menu-close{
+                  display: none;
+                }
+                .header__menu-language_en{
+                  display: block;
+                }
+                .header__menu-language_ru{
+                  display: none;
+                }
+                .header__tab{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: 1fr;
+                    gap: 20px;
+                    width: 100%;
+                    grid-area: 1 / 7 / 2 / 12; 
+                    align-self: start;
+                    justify-self: start;
+                    align-items: start;
+
+                    }
+            .header__tab-project{
+                    display: block;
+                    grid-area: 1 / 1 / 2 / 2;
+            }
+            .header__tab-about{
+                    display: block;
+                    justify-self: self-end;
+                    grid-area: 1 / 4 / 2 / 5;
+            }
+            .header__tab-conacts{
+                    display: block;
+                    grid-area: 1 / 5 / 2 / 6;
+            }
+    
                         .project {
         
                                 padding-top: 15px;
