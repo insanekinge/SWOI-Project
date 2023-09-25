@@ -589,9 +589,29 @@ gap: 7px;
 .specification__type-table{
         grid-area: 5 / 1 / 6 / 3;
 }
-
-
-
+.specification__type-table_item{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        border-bottom: 1px solid #DDD0BD;
+        padding-bottom: 15px;
+}
+.specification__type-table_item:nth-child(1){
+        border-top: 1px solid #DDD0BD;
+        padding-top: 15px;
+}
+.specification__type-table_text{
+        font-size: 16px;
+        grid-area: 1 / 1 / 2 / 4;
+        
+}
+.specification__type-table_numb{
+        font-size: 16px;
+        grid-area: 1 / 4 / 2 / 6;
+        
+}
 .specification__type-table_tab{
         display: flex;
         flex-direction: column;
@@ -600,44 +620,22 @@ gap: 7px;
         gap: 15px; 
 }
 
-.specification__type-table_item{
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        gap: 1em;
-        border-bottom: 1px solid #DDD0BD;
-        padding-bottom: 15px;
-}
-
-.specification__type-table_item:nth-child(1){
-        border-top: 1px solid #DDD0BD;
-        padding-top: 15px;
-}
-
-
-
-
-
-
-
-
-.specification__type-table_text{
-        width: 100%;
-}
 .specification__type-table_text-maps{
         display: none;
 }
 
 .specification__type-table_text-arrow{
-        /* content: "";
+        grid-area: 1 / 6 / 2 / 7;
+        justify-self: self-end;
+        align-self: center;
+        content: "";
         position: relative;
         display: inline-block;
-        width: 36px;
-        height: 14px;
+        width: 15px;
+        height: 15px;
         background-image: url(/img/project-berava-arrow.png);
         background-size: cover;
-        margin-left: -36px;
-        right: 5px; */
+        right: 5px;
 }
 
 
@@ -814,31 +812,39 @@ gap: 7px;
 
 .footer{
         display: grid;
-        grid-template-columns: 1fr 4fr 2fr;
-        grid-gap:1em;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         padding: 15px 0 15px 0;
         border-top: 1px solid #DDD0BD;
         font-size: 14px;
-        height: 37px;
+        height: 38px;
       }
       
-      .footer__date{}
+      .footer__date{
+        grid-area: 1 / 1 / 2 / 2;
+      }
       
       
       
-      .footer__rights{}
+      .footer__rights{
+        grid-area: 1 / 2 / 2 / 5;
+      }
       .footer__image{
         display: none;
       }
       .footer__link{
         display: none;
       }
-      
+      .footer__projects{
+        display: none;
+      }
       .footer__studio{
+        grid-area: 1 / 5 / 2 / 7;
         align-self: end;
         justify-self: end;
       }
-
 
 @media (min-width: 1024px){
         .wrapper{
@@ -1087,34 +1093,63 @@ gap: 7px;
                 }
                 .specification__type-table_text{
                         font-size: 24px;
-                        min-width: 482px;
                         width: 100%;
                 }
 
 
+                .specification__type-table_item{
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                        grid-template-rows: 1fr;
+                        grid-column-gap: 20px;
+                        grid-row-gap: 0px;
+                        border-bottom: 1px solid #DDD0BD;
+                        padding-bottom: 15px;
+                }
+                .specification__type-table_item:nth-child(1){
+                        border-top: 1px solid #DDD0BD;
+                        padding-top: 15px;
+                }
+                .specification__type-table_text{
+                        grid-area: 1 / 1 / 2 / 4;
+                        font-size: 24px;
+                }
+                .specification__type-table_numb{
+                        grid-area: 1 / 4 / 2 / 5;
+                        font-size: 24px;
+                        
+                }
                 .specification__type-table_tab{
                         display: flex;
                         flex-direction: column;
                         min-width: 330px;
                         width: 100%;
-                        gap: 20px; 
+                        gap: 15px; 
+                }
+                
+                .specification__type-table_text-maps{
+                        display: block;
+                        color: #A39E8F;
+                        grid-area: 1 / 6 / 2 / 7;
+                        font-size: 18px;
+                        align-self: center;
+
+                }
+                
+                .specification__type-table_text-arrow{
+                        grid-area: 1 / 6 / 2 / 7;
+                        justify-self: self-end;
+                        align-self: center;
+                        content: "";
+                        position: relative;
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        background-image: url(/img/project-berava-arrow.png);
+                        background-size: cover;
+                        right: 5px;
                 }
 
-                .specification__type-table_item{
-                        display: grid;
-                        grid-template-columns: repeat(6, 1fr);
-                        border-bottom: 1px solid #DDD0BD;
-                        padding-bottom: 20px;
-                }
-
-                .specification__type-table_item:nth-child(1){
-                        border-top: none;
-                        padding-top: 15px;
-                }
-
-                .specification__type-table_text{
-                        width: 100%;
-                }
 
                 .gallery{
                         display: grid;
@@ -1294,34 +1329,35 @@ gap: 7px;
                 }
 
                 .footer{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                        grid-template-rows: 1fr;
+                        grid-column-gap: 20px;
+                        grid-row-gap: 0px;
                         width: 100%;
                         height: 67px;
       
                       }
+                      .footer__date{
+                        align-self: self-end;
+                        grid-area: 1 / 1 / 2 / 2;
+                      }
                       .footer__link{
                         display: block;
+                        align-self: self-end;
+                        justify-self: center;
                         display: flex;
                         flex-direction: row;
                         gap: 20px;
+                        grid-area: 1 / 3 / 2 / 5; 
+                        gap: 20px;
                       }
-                      .footer__date{
-                        font-size: 18px;
-                        font-weight: 400;
+                      .footer__image{
+                        justify-self: self-end;
+                        grid-area: 1 / 6 / 2 / 7;
                       }
                       .description__socials-name{
                         font-size: 32px;
-                        font-weight: 400;
-                      }
-                      .footer__link-documentation{
-                        font-size: 18px;
-                        font-weight: 400;
-                      }
-                      .footer__link-faq{
-                        font-size: 18px;
                         font-weight: 400;
                       }
                       .description__socials-name_social{
@@ -1650,36 +1686,59 @@ gap: 7px;
         .specification__type-table{
                 grid-area: 3 / 7 / 4 / 13;
         }
-        .specification__type-table_text{
-                font-size: 24px;
-                min-width: 482px;
-                width: 100%;
+        .specification__type-table_item{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                border-bottom: 1px solid #DDD0BD;
+                padding-bottom: 15px;
         }
-
-
+        .specification__type-table_item:nth-child(1){
+                border-top: 1px solid #DDD0BD;
+                padding-top: 15px;
+        }
+        .specification__type-table_text{
+                grid-area: 1 / 1 / 2 / 4;
+                font-size: 24px;
+        }
+        .specification__type-table_numb{
+                grid-area: 1 / 4 / 2 / 5;
+                font-size: 24px;
+                
+        }
         .specification__type-table_tab{
                 display: flex;
                 flex-direction: column;
                 min-width: 330px;
                 width: 100%;
-                gap: 20px; 
+                gap: 15px; 
+        }
+        
+        .specification__type-table_text-maps{
+                display: block;
+                color: #A39E8F;
+                grid-area: 1 / 6 / 2 / 7;
+                font-size: 18px;
+                align-self: center;
+
+        }
+        
+        .specification__type-table_text-arrow{
+                grid-area: 1 / 6 / 2 / 7;
+                justify-self: self-end;
+                align-self: center;
+                content: "";
+                position: relative;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-image: url(/img/project-berava-arrow.png);
+                background-size: cover;
+                right: 5px;
         }
 
-        .specification__type-table_item{
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                border-bottom: 1px solid #DDD0BD;
-                padding-bottom: 20px;
-        }
-
-        .specification__type-table_item:nth-child(1){
-                border-top: none;
-                padding-top: 15px;
-        }
-
-        .specification__type-table_text{
-                width: 100%;
-        }
 
         .gallery{
                 display: grid;
@@ -1887,6 +1946,57 @@ gap: 7px;
                 font-size: 24px;
                 font-weight: 400;
         }
+
+        .footer{
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                width: 100%;
+                font-size: 16px;
+                height: 67px;
+
+              }
+              .footer__date{
+                align-self: center;
+                grid-area: 1 / 1 / 2 / 2;
+              }
+              .footer__rights{
+                display: block;
+                align-self: center;
+                justify-self: center;
+                grid-area: 1 / 1 / 2 / 3;
+              }
+              .footer__projects{
+                display: block;
+                align-self: self-end;
+                align-self: center;
+                grid-area: 1 / 7 / 2 / 8;
+              }
+              .footer__link{
+                display: block;
+                justify-self: self-end;
+                align-self: center;
+                grid-area: 1 / 10 / 2 / 12;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+              }
+              .footer__image{
+                grid-area: 1 / 12 / 2 / 13;
+              }
+              .description__socials-name{
+                font-size: 32px;
+                font-weight: 400;
+              }
+              .description__socials-name_social{
+                display: block;
+                align-self: self-end;
+              }
+             .footer__studio{
+              display: none;
+             }
 
 }
 @media (min-width: 2650px){
@@ -2170,36 +2280,62 @@ gap: 7px;
         .specification__type-table{
                 grid-area: 3 / 7 / 4 / 13;
         }
-        .specification__type-table_text{
-                font-size: 36px;
-                min-width: 482px;
-                width: 100%;
+        .specification__type-table_item{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                border-bottom: 1px solid #DDD0BD;
+                padding-bottom: 15px;
         }
-
-
+        .specification__type-table_item:nth-child(1){
+                border-top: 1px solid #DDD0BD;
+                padding-top: 15px;
+        }
+        .specification__type-table_text{
+                grid-area: 1 / 1 / 2 / 4;
+                font-size: 24px;
+        }
+        .specification__type-table_numb{
+                grid-area: 1 / 4 / 2 / 5;
+                font-size: 24px;
+                
+        }
         .specification__type-table_tab{
                 display: flex;
                 flex-direction: column;
                 min-width: 330px;
                 width: 100%;
-                gap: 20px; 
+                gap: 15px; 
+        }
+        
+        .specification__type-table_text-maps{
+                display: block;
+                color: #A39E8F;
+                grid-area: 1 / 6 / 2 / 7;
+                font-size: 18px;
+                align-self: center;
+                justify-self: center;
+
+
+        }
+        
+        .specification__type-table_text-arrow{
+                grid-area: 1 / 6 / 2 / 7;
+                justify-self: self-end;
+                align-self: center;
+                content: "";
+                position: relative;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-image: url(/img/project-berava-arrow.png);
+                background-size: cover;
+                right: 5px;
         }
 
-        .specification__type-table_item{
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                border-bottom: 1px solid #DDD0BD;
-                padding-bottom: 20px;
-        }
-
-        .specification__type-table_item:nth-child(1){
-                border-top: none;
-                padding-top: 15px;
-        }
-
-        .specification__type-table_text{
-                width: 100%;
-        }
+        
 
         .gallery{
                 display: grid;
@@ -2398,7 +2534,53 @@ gap: 7px;
         }
 
         .footer{
-                font-size: 20px;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                width: 100%;
                 height: 86px;
-        }
+                font-size: 20px;
+  
+              }
+              .footer__date{
+                align-self: center;
+                grid-area: 1 / 1 / 2 / 2;
+              }
+              .footer__rights{
+                display: block;
+                align-self: center;
+                justify-self: center;
+                grid-area: 1 / 1 / 2 / 3;
+              }
+              .footer__projects{
+                display: block;
+                align-self: self-end;
+                align-self: center;
+                grid-area: 1 / 7 / 2 / 8;
+              }
+              .footer__link{
+                display: block;
+                justify-self: self-end;
+                align-self: center;
+                grid-area: 1 / 10 / 2 / 12;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+              }
+              .footer__image{
+                grid-area: 1 / 12 / 2 / 13;
+              }
+              .description__socials-name{
+                font-size: 32px;
+                font-weight: 400;
+              }
+              .description__socials-name_social{
+                display: block;
+                align-self: self-end;
+              }
+             .footer__studio{
+              display: none;
+             }
 }
