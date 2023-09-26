@@ -43,15 +43,16 @@
         height: 7dvh;
         padding: 15px 0 15px;
         border-bottom: 1px solid #B24201;
+        align-items: center;
+
       }
       .header__logo{
       align-self: start;
       justify-self: start;
-      align-items: start;
-      height: 36px;
-      width: 82px;
+      width:80px;
+      height: 34px;
       grid-area: 1 / 1 / 2 / 3;
-      }
+    }
 
       .header__tab{
       display: none;
@@ -86,11 +87,11 @@
       top: -14px;
       }
       .header__menu{
-      grid-area: 1 / 5 / 2 / 7;
-      display: flex;
-      justify-self: end;
-      justify-content: end;
-      gap: 7px;
+        grid-area: 1 / 5 / 2 / 7;
+        display: flex;
+        justify-self: end;
+        justify-content: end;
+        gap: 7px;
       }
       
       .header__menu-open{
@@ -650,18 +651,22 @@
           grid-row-gap: 0px;
           z-index: 2;
           position: relative;
-          padding: 15px 0 0;
+          /* padding: 15px 0 0; */
           border-bottom: 1px solid #B24201;
+          height: 71px;
           }
           .header__logo{
-                  grid-area: 1 / 1 / 2 / 2;
+            width: 107px;
+            height: 46px;
+            grid-area: 1 / 1 / 2 / 3;
           }
           .header__menu {
-                  grid-area: 1 / 6 / 2 / 7;
-                  display: flex;
-                  height: 50px;
-                  justify-self: self-end;
-                  gap: 7px;
+              grid-area: 1 / 6 / 2 / 7;
+              display: flex;
+              height: 50px;
+              justify-self: self-end;
+              align-self: self-start;
+              gap: 7px;
               }
               .header__menu-open{
                 display: none;
@@ -850,9 +855,12 @@
             position: relative;
             padding: 15px 0 0;
             border-bottom: 1px solid #B24201;
+            height: 71px;
             }
             .header__logo{
-                    grid-area: 1 / 1 / 2 / 2;
+              width: 107px;
+              height: 46px;
+              grid-area: 1 / 1 / 2 / 3;
             }
             .header__menu {
                     grid-area: 1 / 12 / 2 / 13;
