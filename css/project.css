@@ -42,12 +42,14 @@
         height: 7dvh;
         padding: 15px 0 0;
         border-bottom: 1px solid #A39E8F;
+        align-items: center;
 }
 .header__logo{
-align-self: start;
-justify-self: start;
-align-items: start;
-grid-area: 1 / 1 / 2 / 2;
+        align-self: start;
+        justify-self: start;
+        width:80px;
+        height: 34px;
+        grid-area: 1 / 1 / 2 / 3;
 }
 
 .header__tab{
@@ -860,15 +862,19 @@ gap: 7px;
                 position: relative;
                 padding: 15px 0 0;
                 border-bottom: 1px solid #A39E8F;
+                height: 71px;
                 }
                 .header__logo{
-                        grid-area: 1 / 1 / 2 / 2;
+                        width: 107px;
+                        height: 46px;
+                        grid-area: 1 / 1 / 2 / 3;
                 }
                 .header__menu {
                         grid-area: 1 / 6 / 2 / 7;
                         display: flex;
                         height: 50px;
                         justify-self: self-end;
+                        align-self: self-start;
                         gap: 7px;
                     }
                     .header__menu-open{
