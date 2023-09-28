@@ -44,7 +44,8 @@
         z-index: 2;
         position: relative;
         height: 7dvh;
-        padding: 15px 0 0;
+        height: 66px;
+        padding: 15px 0 15px;
         border-bottom: 1px solid #DDD0BD;
         align-items: center;
       }
@@ -506,6 +507,11 @@
         align-self: self-end;
         justify-self: self-end;
         grid-area: 2 / 3 / 3 / 4;
+        text-align: end;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 15.4px */
+        letter-spacing: calc(1em/50);
         max-width: 105px;
 }
       .project-item__date{
@@ -521,7 +527,7 @@
                 justify-self: center;
                 grid-area: 1 / 1 / 2 / 4;
                 width: 330px;
-                height: 600px;
+                height: 607px;
                 transition: transform 0.5s ease-in-out;
                 transform: scale(1);   
         }
@@ -777,7 +783,7 @@
                         
                               .project-item{
                                 display: grid;
-                                grid-template-columns: repeat(12, auto);
+                                grid-template-columns: repeat(12, 1fr);
                                 grid-template-rows: repeat(2, auto);
                                 grid-column-gap: 20px;
                                 grid-row-gap: 0px;
@@ -790,31 +796,42 @@
                                 font-size: 200px;
                                 font-family: "DrukCyr-Bold";
                                 text-transform: uppercase;
-                                grid-area: 1 / 1 / 2 / 4;
+                                grid-area: 1 / 1 / 2 / 6;
                               }
                               .project-item__path{
                                 font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                letter-spacing: -0.2px;
                                 align-self: self-start;
                                 justify-self: self-start;
                                 grid-area: 1 / 6 / 2 / 7;
                                 max-width: 105px;
+                                text-align: start;
+
                         }
                               .project-item__date{
                                 align-self: self-start;
                                 justify-self: self-start;
+                                max-width: 85px;
                                 font-size: 16px;
-                                max-width: 89px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 120%; /* 19.2px */
+                                letter-spacing: -0.2px;
                                 display: block;
                                 grid-area: 1 / 7 / 2 / 8;
                               }
                               .project-item__text{
                                 align-self: self-end;
                                 justify-self: self-start;
-                                width: 297px;
+                                width: 295px;
+                                font-size: 16px;
                                 font-style: normal;
                                 font-weight: 400;
-                                line-height: 120%; /* 24px */
-                                letter-spacing: -0.4px;
+                                line-height: 120%;
+                                letter-spacing: -0.2px;
                                 display: block;
                                 grid-area: 2 / 7 / 3 / 9;
                               }
@@ -879,7 +896,7 @@
 
                 @media (min-width: 2650px){
                   .header {
-                    font-size: 20px;
+                    font-size: 24px;
                     height: 86px;
                   }
 
@@ -893,7 +910,7 @@
             
                   .project-item{
                     display: grid;
-                    grid-template-columns: repeat(12, auto);
+                    grid-template-columns: repeat(12, 1fr);
                     grid-template-rows: repeat(2, auto);
                     grid-column-gap: 20px;
                     grid-row-gap: 0px;
@@ -909,23 +926,23 @@
                     font-weight: 700;
                     line-height: 80%; /* 240px */
                     text-transform: uppercase;
-                    grid-area: 1 / 1 / 2 / 4;
+                    grid-area: 1 / 1 / 2 / 6;
                   }
                   .project-item__path{
-                    font-size: 20px;
+                    font-size: 24px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 120%; /* 24px */
                     letter-spacing: -0.4px;
                     align-self: self-start;
                     justify-self: self-start;
-                    grid-area: 1 / 5 / 2 / 7;
+                    grid-area: 1 / 6 / 2 / 7;
                     max-width: 265px;
             }
                   .project-item__date{
                     align-self: self-start;
                     justify-self: self-start;
-                    font-size: 20px;
+                    font-size: 24px;
                     max-width: 89px;
                     display: block;
                     grid-area: 1 / 7 / 2 / 8;
@@ -934,7 +951,7 @@
                     align-self: self-end;
                     justify-self: self-start;
                     width: 550px;
-                    font-size: 20px;
+                    font-size: 24px;
                     display: block;
                     grid-area: 2 / 7 / 3 / 9;
                   }
@@ -953,7 +970,7 @@
                     grid-row-gap: 0px;
                     width: 100%;
                     height: 86px;
-                    font-size: 20px;
+                    font-size: 24px;
       
                   }
                   .footer__date{
