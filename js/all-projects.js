@@ -2,8 +2,6 @@ let modal = document.getElementById("myModal");
 
 let btn = document.getElementById("myBtn");
 
-let span = document.getElementsByClassName("close")[0];
-
 var ishidden = false;
 
 let top_slower_text = modal.querySelector('#top-slower-text');
@@ -53,9 +51,9 @@ if (window.innerWidth <= 1024) {
       // modal.style.display = "none";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#B24201";
+        element.style.fill = "#DDD0BD";
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+      document.querySelector('.header').style.borderBottom  = "1px solid #DDD0BD";
       // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "block";
       document.querySelector('.header__menu-close').style.display = "none";
@@ -69,10 +67,6 @@ if (window.innerWidth <= 1024) {
 }
 
 btn.onclick = function burgerMenu() {
-}
-
-span.onclick = () => {
-  modal.style.display = "none";
 }
 
 window.onclick = function modalDisplayNone(event) {
