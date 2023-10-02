@@ -582,6 +582,7 @@ gap: 7px;
 .specification__type-image{
         align-self: center;
         justify-self: center;
+        width: 100%;
         grid-area: 2 / 1 / 3 / 3;
 }
 
@@ -1203,7 +1204,6 @@ gap: 7px;
                         height: 14px;
                         background-image: url("/img/project-berava-arrow.png");
                         background-size: cover;
-                        margin-left: 272px;
                 }
                 .gallery__request-model::after {
                         content: "";
@@ -1212,10 +1212,8 @@ gap: 7px;
                         height: 14px;
                         background-image: url("/img/project-berava-arrow.png");
                         background-size: cover;
-                        margin-left: 1px;
                 }
                 .gallery__request-presentation{
-                       display: block;
                        border-top: none;
                 }
                 
@@ -1806,7 +1804,6 @@ gap: 7px;
         }
 
         .gallery__request-presentation{
-                display: block;
                 border-top: none;
                 align-self: self-start;
                 justify-self: self-start;
@@ -1829,7 +1826,6 @@ gap: 7px;
                 height: 16px;
                 background-image: url("/img/project-berava-arrow.png");
                 background-size: cover;
-                margin-left: 294px;
         }
         .gallery__request-model::after {
                 content: "";
@@ -2391,7 +2387,6 @@ gap: 7px;
         }
 
         .gallery__request-presentation{
-                display: block;
                 border-top: none;
                 align-self: self-start;
                 justify-self: self-start;
@@ -2414,7 +2409,6 @@ gap: 7px;
                 height: 16px;
                 background-image: url("/img/project-berava-arrow.png");
                 background-size: cover;
-                margin-left: 526px;
         }
         .gallery__request-model::after {
                 content: "";

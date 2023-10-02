@@ -22,9 +22,6 @@ body{
         color: #A83E3E;
         margin: 0;
 }
-ul li {
-        list-style: disc;
-      }
 .wrapper{
         margin:0 15px 0 15px;
         place-items: center;
@@ -510,7 +507,7 @@ overflow-x: hidden;
         width: 100%;
         font-size: 14px;
         text-align: start;
-        max-width: 330px;
+        /* max-width: 330px; */
         justify-self: self-start;
         grid-area: 3 / 1 / 4 / 7;
 }
@@ -532,7 +529,7 @@ overflow-x: hidden;
         font-size: 14px;
         justify-self: self-start;
         text-align: start;
-        max-width: 330px;
+        /* max-width: 330px; */
         grid-area: 3 / 1 / 4 / 7;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -586,26 +583,16 @@ overflow-x: hidden;
 }
 
 .accordion__content-list{
-        list-style-type: disc; 
-        list-style-position: inside;
+        list-style: disc;
         padding: 0 0 15px 40px;
-
 }
 
-.accordion__content-list-item{
-        list-style-type: disc; 
-        list-style-position: inside;
+.accordion__content-list_item{
+        list-style: disc;
 }
-
-.accordion__content-list_item::before {
-        content: "\2022"; /* Код символа для точки */
-        color: #A83E3E;
-        margin-right: 5px; /* Отступ между точкой и текстом */
-      }
-
 .accordion__content-numb_first{
         list-style-position: inside;
-        padding: 0 0 0px 10px;
+        padding: 0 0 0px 15px;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -615,7 +602,7 @@ overflow-x: hidden;
 
 .accordion__content-numb_second{
         list-style-position: inside;
-        padding: 0 0 15px 10px;
+        padding: 0 0 15px 15px;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -627,8 +614,9 @@ li::marker{
         margin-right: 10px;
 }
 
-.accordion__content-numb li {
-        padding-left: 20px;
+.accordion__content-list_item-numb {
+        list-style: decimal;
+        padding-left: 10px;
       }
 
 .question{
@@ -952,15 +940,10 @@ li::marker{
                 list-style-position: inside;
         }
         
-        .accordion__content-list_item::before {
-                content: "\2022"; /* Код символа для точки */
-                color: #A83E3E;
-                margin-right: 5px; /* Отступ между точкой и текстом */
-              }
         
         .accordion__content-numb_first{
                 list-style-position: inside;
-                padding: 0 0 0px 10px;
+                padding: 0 0 0px 15px;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -970,7 +953,7 @@ li::marker{
         
         .accordion__content-numb_second{
                 list-style-position: inside;
-                padding: 0 0 15px 10px;
+                padding: 0 0 15px 15px;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -1294,15 +1277,9 @@ li::marker{
                 list-style-position: inside;
         }
         
-        .accordion__content-list_item::before {
-                content: "\2022"; /* Код символа для точки */
-                color: #A83E3E;
-                margin-right: 5px; /* Отступ между точкой и текстом */
-              }
-        
         .accordion__content-numb_first{
                 list-style-position: inside;
-                padding: 0 0 0px 10px;
+                padding: 0 0 0px 15px;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -1312,7 +1289,7 @@ li::marker{
         
         .accordion__content-numb_second{
                 list-style-position: inside;
-                padding: 0 0 15px 10px;
+                padding: 0 0 15px 15px;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;

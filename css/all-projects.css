@@ -490,7 +490,8 @@
         grid-row-gap: 15px;
         padding-bottom: 15px;
         border-bottom: 1px #DDD0BD solid;
-        transition: transform 1s ease-in-out;
+        transition: 1s;
+        transition-timing-function: cubic-bezier(0.52, 0.02, 0.44, 1.2);
       }
       /* .project-item.shrink {
         transform: scale(0.5);
@@ -526,10 +527,12 @@
                 align-self: center;
                 justify-self: center;
                 grid-area: 1 / 1 / 2 / 4;
-                width: 330px;
-                height: 607px;
+                width: 100%;
                 transition: transform 0.5s ease-in-out;
                 transform: scale(1);   
+        }
+        .project-item__image-img {
+          width: 100%;
         }
         .project-item__image.shrink {
           transform: scale(0.5);

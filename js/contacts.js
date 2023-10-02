@@ -2,8 +2,6 @@ let modal = document.getElementById("myModal");
 
 let btn = document.getElementById("myBtn");
 
-let span = document.getElementsByClassName("close")[0];
-
 var ishidden = false;
 
 let top_slower_text = modal.querySelector('#top-slower-text');
@@ -71,9 +69,6 @@ if (window.innerWidth <= 1024) {
 btn.onclick = function burgerMenu() {
 }
 
-span.onclick = () => {
-  modal.style.display = "none";
-}
 
 window.onclick = function modalDisplayNone(event) {
   if (event.target == modal) {

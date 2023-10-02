@@ -7,10 +7,11 @@ if (window.innerWidth <= 1024) {
       projectImages.forEach((img) => img.classList.remove('shrink'));
       image.classList.add('shrink');
       
-      setTimeout(() => {
+      // setTimeout(() => {
           const nextIndex = (index + 1) % projectItems.length;
           projectItems[nextIndex].scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+          console.log(projectItems[nextIndex])
+        // }, 0);
       
       
 
