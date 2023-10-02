@@ -68,16 +68,14 @@ if (window.innerWidth <= 1024) {
   });
 }
 
-btn.onclick = function() {
-  
-  ;
+btn.onclick = function burgerMenu() {
 }
 
-span.onclick = function() {
+span.onclick = () => {
   modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function modalDisplayNone(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }

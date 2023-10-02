@@ -19,11 +19,11 @@ if (window.innerWidth <= 1024) {
       modal.style.display = "block";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#A83E3E";
+        element.style.fill = "#B24201";
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #A83E3E";
+      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
 
-      // document.querySelector('.header__menu-open').style.color = "#A83E3E";
+      // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "none";
       document.querySelector('.header__menu-close').style.display = "block";
       document.querySelector('.header__menu-button-top').style.marginRight = '22px';
@@ -53,10 +53,10 @@ if (window.innerWidth <= 1024) {
       // modal.style.display = "none";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#A83E3E";
+        element.style.fill = "#B24201";
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #A83E3E";
-      // document.querySelector('.header__menu-open').style.color = "#A83E3E";
+      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+      // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "block";
       document.querySelector('.header__menu-close').style.display = "none";
       document.querySelector('.header__menu-button-top').style.marginRight = '0';
@@ -68,16 +68,14 @@ if (window.innerWidth <= 1024) {
   });
 }
 
-btn.onclick = function() {
-  
-  ;
+btn.onclick = function burgerMenu() {
 }
 
-span.onclick = function() {
+span.onclick = () => {
   modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function modalDisplayNone(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }

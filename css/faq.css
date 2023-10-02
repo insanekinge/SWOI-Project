@@ -22,6 +22,9 @@ body{
         color: #A83E3E;
         margin: 0;
 }
+ul li {
+        list-style: disc;
+      }
 .wrapper{
         margin:0 15px 0 15px;
         place-items: center;
@@ -507,7 +510,7 @@ overflow-x: hidden;
         width: 100%;
         font-size: 14px;
         text-align: start;
-        MIN-WIDTH: 330px;
+        max-width: 330px;
         justify-self: self-start;
         grid-area: 3 / 1 / 4 / 7;
 }
@@ -529,7 +532,7 @@ overflow-x: hidden;
         font-size: 14px;
         justify-self: self-start;
         text-align: start;
-        MIN-WIDTH: 330px;
+        max-width: 330px;
         grid-area: 3 / 1 / 4 / 7;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -560,7 +563,7 @@ overflow-x: hidden;
       }
       .accordion.active {
         gap: 20px;
-        max-height: 500px; /* Задайте желаемую высоту */
+        max-height: 700px;        /* Задайте желаемую высоту */
         transition: max-height 0.4s ease-in;
         transition-duration: 0.4s;
 
@@ -569,16 +572,64 @@ overflow-x: hidden;
 .accordion__content{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         width: 100%;
-        padding-bottom: 15px;
+        padding: 30px 0 30px 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 16.1px */
+        letter-spacing: -0.28px;
 }
 .accordion__content-text{
         width: 100%;
 }
 
+.accordion__content-list{
+        list-style-type: disc; 
+        list-style-position: inside;
+        padding: 0 0 15px 40px;
 
+}
 
+.accordion__content-list-item{
+        list-style-type: disc; 
+        list-style-position: inside;
+}
+
+.accordion__content-list_item::before {
+        content: "\2022"; /* Код символа для точки */
+        color: #A83E3E;
+        margin-right: 5px; /* Отступ между точкой и текстом */
+      }
+
+.accordion__content-numb_first{
+        list-style-position: inside;
+        padding: 0 0 0px 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 16.1px */
+        letter-spacing: -0.28px;
+} 
+
+.accordion__content-numb_second{
+        list-style-position: inside;
+        padding: 0 0 15px 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 16.1px */
+        letter-spacing: -0.28px;
+}
+
+li::marker{
+        margin-right: 10px;
+}
+
+.accordion__content-numb li {
+        padding-left: 20px;
+      }
 
 .question{
         display: grid;
@@ -587,8 +638,14 @@ overflow-x: hidden;
         grid-column-gap: 15px;
         grid-row-gap: 60px;   
         margin-bottom: 20px;
+        padding-top: 15px;
 }
 .question__title{
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 25.3px */
+        letter-spacing: -0.88px;
         grid-area: 1 / 1 / 2 / 4;
         align-self:self-start;
 }
@@ -763,7 +820,7 @@ overflow-x: hidden;
                 text-transform: uppercase;
                 letter-spacing: -0.01ex;
                 display: block;
-                grid-area: 1 / 6 / 2 / 7;
+                grid-area: 1 / 5 / 2 / 7;
         }
 
         .main__text{
@@ -856,27 +913,81 @@ overflow-x: hidden;
         .accordion {
                 display: flex;
                 justify-self: self-end;
+                justify-content: end;
         }
         .accordion.active {
                 display: flex;
                 justify-self: self-end;
+                justify-content: end;
+                max-height: 725px;                /* Задайте желаемую высоту */
+                transition: max-height 0.4s ease-in;
+                transition-duration: 0.4s;
+
         }
         .accordion__content{
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: repeat(2, auto);
-                grid-column-gap: 20px;
-                grid-row-gap: 20px;
-                font-size: 18px;
+                display: flex;
+                width: 50%;
+                align-items: end;
+                justify-content: end;
                 padding-top: 80px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
         }
 
         .accordion__content-text_first{
-                grid-area: 1 / 4 / 2 / 7;
+                align-self: self-end;
         }
-        .accordion__content-text_second{
-                grid-area: 2 / 4 / 3 / 7;
+        .accordion__content-list{
+                list-style-type: disc; 
+                list-style-position: inside;
+                padding: 0 0 15px 40px;
+        
         }
+        
+        .accordion__content-list-item{
+                list-style-type: disc; 
+                list-style-position: inside;
+        }
+        
+        .accordion__content-list_item::before {
+                content: "\2022"; /* Код символа для точки */
+                color: #A83E3E;
+                margin-right: 5px; /* Отступ между точкой и текстом */
+              }
+        
+        .accordion__content-numb_first{
+                list-style-position: inside;
+                padding: 0 0 0px 10px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        } 
+        
+        .accordion__content-numb_second{
+                list-style-position: inside;
+                padding: 0 0 15px 10px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        }
+        .accordion__content-text_title{
+                align-self: self-start;
+
+        }
+        li::marker{
+                margin-right: 10px;
+        }
+        
+        .accordion__content-numb li {
+                padding-left: 20px;
+              }
 
         .how__item-header_answer{
                 font-size: 14px;
@@ -1141,22 +1252,84 @@ overflow-x: hidden;
                 align-self: self-end;
                 grid-area: 1 / 2 / 2 / 6;
         }
+        .accordion {
+                display: flex;
+                justify-self: self-end;
+                justify-content: end;
+        }
+        .accordion.active {
+                display: flex;
+                justify-self: self-end;
+                justify-content: end;
+                max-height: 725px;                /* Задайте желаемую высоту */
+                transition: max-height 0.4s ease-in;
+                transition-duration: 0.4s;
+
+        }
         .accordion__content{
-                display: grid;
-                grid-template-columns: repeat(12, 1fr);
-                grid-template-rows: repeat(1, auto);
-                grid-column-gap: 20px;
-                grid-row-gap: 20px;
-                font-size: 18px;
+                display: flex;
+                width: 50%;
+                align-items: end;
+                justify-content: end;
                 padding-top: 80px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
         }
 
         .accordion__content-text_first{
-                grid-area: 1 / 10 / 2 / 13;
+                align-self: self-end;
         }
-        .accordion__content-text_second{
-                grid-area: 1 / 7 / 2 / 10;
+        .accordion__content-list{
+                list-style-type: disc; 
+                list-style-position: inside;
+                padding: 0 0 15px 40px;
+        
         }
+        
+        .accordion__content-list-item{
+                list-style-type: disc; 
+                list-style-position: inside;
+        }
+        
+        .accordion__content-list_item::before {
+                content: "\2022"; /* Код символа для точки */
+                color: #A83E3E;
+                margin-right: 5px; /* Отступ между точкой и текстом */
+              }
+        
+        .accordion__content-numb_first{
+                list-style-position: inside;
+                padding: 0 0 0px 10px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        } 
+        
+        .accordion__content-numb_second{
+                list-style-position: inside;
+                padding: 0 0 15px 10px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        }
+        .accordion__content-text_title{
+                align-self: self-start;
+
+        }
+        li::marker{
+                margin-right: 10px;
+        }
+        
+        .accordion__content-numb li {
+                padding-left: 20px;
+              }
         .collapse-button{
                 max-width: 455px;
                 font-size: 24px;
