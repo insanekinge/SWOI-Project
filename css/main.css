@@ -26,7 +26,7 @@ body{
         margin:0 15px 0 15px;
         place-items: center;
         height: 100vh;
-        overflow: hidden;
+        /* overflow: hidden; */
 }
 span{
 }
@@ -673,7 +673,7 @@ svg {
     }
 
           .container{
-
+            
           }
 
           .main {
@@ -893,12 +893,23 @@ svg {
             display: block;
             grid-area: 1 / 5 / 2 / 6;
     }
-
+    .wrapper {
+          overflow: hidden;
+    }
+#main-container, #description-container {
+  transition: .5s;
+}
+    .container{
+     height: calc(100dvh - 66px - 67px);       
+     overflow-y: unset;
+     overflow-x: unset;
+     transition: .5s;
+    }
   .main {
     display: flex;
     align-items: start;
     justify-content: start;
-    min-height: 822px;
+    min-height: 640px;
     height: 0%;
     width: 3000px;
     white-space: nowrap;
@@ -906,12 +917,12 @@ svg {
   
   .main__title{
     font-family: "DrukCyr-Bold";
+    font-size: 496px;
+    font-style: normal;
     font-weight: 700;
-    font-stretch: 50%;
-    font-size: 570px;
-    line-height: 410px;
+    line-height: 100%; /* 496px */
+    letter-spacing: -4.96px;
     text-transform: uppercase;
-    letter-spacing: -0.01ex;
     
   }
 
