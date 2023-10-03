@@ -12,10 +12,38 @@
 </head>
 
 
-<body>
+<body class="loaded">
 
     <div class="wrapper">
+      <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+          <div class="prealoader-num ">100%</div>
+          <div class="prealoader-title">SWOI</div>
+        </div>
+      </div> 
+      <script>
+        const preloader = document.getElementById('preloader')
+        const body = document.querySelector('body')
+        const interval = 1200; // 2 секунды
+        const preloaderProgress = document.querySelector('.prealoader-num')
 
+        setTimeout(()=> {
+          body.classList.remove('loaded')
+        }, interval)
+        let counter = 0;
+        const step = 10;
+        preloaderProgress.innerHTML = counter + '%'
+
+        const incrementCounter = () => {
+          counter += step;
+          preloaderProgress.innerHTML = counter + '%'
+          if (counter >= 100) {
+            clearInterval(timer);
+          }
+        };
+
+        const timer = setInterval(incrementCounter, 100);
+      </script>
 
          <div class="header">
           <svg class="header__logo" width="80" height="34" viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +58,7 @@
             <li class="header__tab-about">О нас</li>
             <li class="header__tab-conacts">Контакты</li>
             
-    </ul>
+          </ul>
           <div class="header__menu">
             <div class="header__menu-language_en">En</div>
             <div class="header__menu-language_ru">Ru</div>
@@ -83,7 +111,7 @@
         <div class="container" >
           
           <section class="main" data-scroll data-scroll-speed="0.5" id="main-container">
-            <h2 class="main__title">Smart way of investment</h2>
+            <div class="main__title"><span>Smart</span> <div class="main-title__img"></div> <span>way</span><div class="main-title__img"></div> <span>of investment</span></div>
           </section>
 
           <ul class="description" data-scroll data-scroll-speed="1" id="description-container">
