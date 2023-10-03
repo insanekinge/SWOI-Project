@@ -38,14 +38,12 @@ span{
         grid-row-gap: 0px;
         z-index: 2;
         position: relative;
-        height: 7dvh;
-        height: 66px;
-        padding: 15px 0 15px;
+        height: 67px;
         border-bottom: 1px solid #A83E3E;
         align-items: center;
 }
 .header__logo{
-        align-self: start;
+        align-self: center;
         justify-self: start;
         width:80px;
         height: 34px;
@@ -86,6 +84,8 @@ top: -14px;
 }
 .header__menu{
 grid-area: 1 / 5 / 2 / 7;
+padding: 15px 0 0 0;
+align-self: center;
 display: flex;
 justify-self: end;
 justify-content: end;
@@ -117,280 +117,13 @@ display: flex;
 margin: 0 0 0 auto;
 transform: translateY(-15px);
 }
-/*Modal*/
-/* The Modal (background) */
-.modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-height: 100vh;
-overflow-y: hidden;
-color: #A83E3E;
-transition: opacity 1s ease-in-out;
-}
-/* Modal Content */
-.modal-content {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-position: relative;
-background-color: #0D100E;
-margin: auto;
-padding: 0;
-width: 100%;
-height: 100%;
-animation-timing-function: ease-in-out;
-animation-name: animatetop;
-animation-duration: 0.5s;
-padding:0 15px 0 15px;
-}
-.modal-content-hide {
-animation-timing-function: ease-in-out;
-animation-name: animatehide;
-animation-duration: 0.5s;
-}
-/* Add Animation */
-@-webkit-keyframes animatetop {
-from {  background-color: #A83E3E;
-opacity:0} 
-to {background-color: #0D100E; opacity:1;  transition: 0.7s all;
-}
-}
-@keyframes animatetop {
-from {background-color: #A83E3E; opacity:0}
-to {background-color: #0D100E; opacity:1}
-}
-@-webkit-keyframes animatehide {
-from {  background-color: #0D100E;
-opacity:1;} 
-to {background-color: #A83E3E; opacity:0;  transition: 0.7s all;
-}
-}
-@keyframes animatehide {
-from {  background-color: #0D100E;
-opacity:1;} 
-to {background-color: #A83E3E; opacity:0;
-}
-}
-/* The Close Button */
-.close {
-align-self: start;
-justify-self: end;
-font-size: 16px;
-}
-.close:hover,
-.close:focus {
-text-decoration: none;
-cursor: pointer;
-}
-.modal-header {
-display: grid;
-grid-template-columns: 10fr 1fr 1fr;
-grid-gap:1em;
-padding: 15px 0 15px 0;
-border-bottom: 1px solid #A83E3E;
-}
-.modal-header__logo{
-background-color: inherit;
-align-self: start;
-justify-self: start;
-align-items: start;
-}
-.modal-header__language{
-align-self: end;
-justify-self: end;
-}
-.modal-header__language-left{
-height: 23px;
-top: 15px;
-position: absolute;
-}
-.modal-header__language-right{
-position: relative;
-top: -3px;
-}
-.modal-tab{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 80%;
-gap: 15px;
-margin: 0;
-padding: 0;
-}
-.modal-tab__text-top{
-position: relative;
-font-family: "DrukCyr-Bold";  
-font-size: 96px;
-text-transform: uppercase;
-line-height: 80%;
-animation-duration: 0.6s;
-animation-name: slidein-top;
-}
-.modal-tab__text-top-hide{
-animation-duration: 1s;
-animation-name: slidein-top-hide;
-}
-@keyframes slidein-top-hide {
-from {
-top: 0%;
-}
-to {
-top: -100%;
-}
-}
-@keyframes slidein-top {
-from {
-top: -100%;
-}
-to {
-top: 0%;
-}
-}
-.modal-tab__text-top__slower{
-position: relative;
-font-family: "DrukCyr-Bold";  
-font-size: 96px;
-text-transform: uppercase;
-line-height: 80%;
-animation-duration: 1s;
-animation-name: slidein-top__slower;
-}
-@keyframes slidein-top__slower {
-from {
-top: -100%;
-}
-to {
-top: 0%;
-}
-}
-.modal-tab__text-top__slower-hide{
 
-animation-duration: 0.6s;
-animation-name: slidein-top__slower-hide;
-}
-@keyframes slidein-top__slower-hide {
-from {
-top: 0%;
-}
-to {
-top: -100%;
-}
-}
-.modal-tab__text-bottom{
-position: relative;
-font-family: "DrukCyr-Bold";  
-font-size: 96px;
-text-transform: uppercase;
-line-height: 80%;
-animation-duration: 0.6s;
-animation-name: slidein-bottom;
-}
-@keyframes slidein-bottom {
-from {
-bottom: -100%;
-opacity: 0;
-}
-to {
-bottom: 0%;
-opacity: 1;
-}
-}
-.modal-tab__text-bottom-hide{
-animation-duration: 1s;
-animation-name: slidein-bottom-hide;
-}
-@keyframes slidein-bottom-hide {
-from {
-bottom: 0%;
-opacity: 1;
-
-}
-to {
-bottom: -100%;
-opacity: 0;
-}
-}
-.modal-tab__text-bottom__slower{
-position: relative;
-font-family: "DrukCyr-Bold";  
-font-size: 96px;
-text-transform: uppercase;
-line-height: 80%;
-animation-duration: 1s;
-animation-name: slidein-bottom__slower;
-}
-@keyframes slidein-bottom__slower {
-from {
-bottom: -100%;
-opacity: 0;
-}
-to {
-bottom: 0%;
-opacity: 1;
-}
-}
-.modal-tab__text-bottom__slower-hide{
-animation-duration: 0.6s;
-animation-name: slidein-bottom__slower-hide;
-}
-@keyframes slidein-bottom__slower-hide {
-from {
-bottom: 0%;
-opacity: 1;
-}
-to {bottom: -100%;
-opacity: 0;
-
-}
-}
-.modal-text{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-position: relative;
-padding-bottom: 15px;
-font-size: 14px;
-animation-duration: 1.3s;
-animation-name: slidein-text;
-}
-@keyframes slidein-text {
-from {
-bottom: -100%;
-opacity: 0;
-}
-to {
-bottom: 0%;
-opacity: 1;
-}
-}
-.modal-text-hide{
-animation-duration: 1.3s;
-animation-name: slidein-text-hide;
-}
-@keyframes slidein-text-hide {
-from {
-bottom: 0%;
-opacity: 1;
-}
-to {
-bottom: -100%;
-opacity: 0;
-}
-}
 .container {
 display: flex;
 flex-direction: column;
 justify-content: start;
 width: 100%;
-height: 100vh;
+height: calc(100vh - 67px);
 overflow-x: hidden;
 }
 .container::-webkit-scrollbar {
@@ -720,9 +453,8 @@ li::marker{
                 grid-row-gap: 0px;
                 z-index: 2;
                 position: relative;
-                /* padding: 15px 0 0; */
                 border-bottom: 1px solid #A83E3E;
-                height: 71px;
+                height: 86px;
         }
                 .header__logo{
                         width: 107px;
@@ -730,9 +462,9 @@ li::marker{
                         grid-area: 1 / 1 / 2 / 3;
                 }
                 .header__menu {
+                        padding: 20px 0 0 0;
                         grid-area: 1 / 6 / 2 / 7;
                         display: flex;
-                        height: 50px;
                         justify-self: self-end;
                         align-self: self-start;
                         gap: 7px;
@@ -750,6 +482,7 @@ li::marker{
                       display: none;
                     }
                     .header__tab{
+                        padding-top: 20px;
                         display: block;
                         grid-area: 1 / 4 / 2 / 5;
                         align-self: start;
@@ -766,7 +499,9 @@ li::marker{
                 .header__tab-conacts{
                         display: none;
                 }
-
+                .container{
+                        height:calc(100vh - 86px);
+                }
         .main {
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
@@ -1069,8 +804,8 @@ li::marker{
                 grid-row-gap: 0px;
                 z-index: 2;
                 position: relative;
-                padding: 15px 0 0;
                 border-bottom: 1px solid #A83E3E;
+                height: 86px;
                 }
                 .header__logo{
                         grid-area: 1 / 1 / 2 / 2;
@@ -1078,7 +813,6 @@ li::marker{
                 .header__menu {
                         grid-area: 1 / 12 / 2 / 13;
                         display: flex;
-                        height: 50px;
                         justify-self: self-end;
                         gap: 7px;
                     }
@@ -1118,6 +852,9 @@ li::marker{
                 .header__tab-conacts{
                         display: block;
                         grid-area: 1 / 5 / 2 / 6;
+                }
+                .container{
+                        height: calc(100vh - 86px);
                 }
         .main {
                 display: grid;
@@ -1738,3 +1475,272 @@ li::marker{
               display: none;
              }
 }
+
+/*Modal*/
+/* The Modal (background) */
+.modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        height: 100vh;
+        overflow-y: hidden;
+        color: #A83E3E;
+        transition: opacity 1s ease-in-out;
+        }
+        /* Modal Content */
+        .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: #0D100E;
+        margin: auto;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        animation-timing-function: ease-in-out;
+        animation-name: animatetop;
+        animation-duration: 0.5s;
+        padding:0 15px 0 15px;
+        }
+        .modal-content-hide {
+        animation-timing-function: ease-in-out;
+        animation-name: animatehide;
+        animation-duration: 0.5s;
+        }
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+        from {  background-color: #A83E3E;
+        opacity:0} 
+        to {background-color: #0D100E; opacity:1;  transition: 0.7s all;
+        }
+        }
+        @keyframes animatetop {
+        from {background-color: #A83E3E; opacity:0}
+        to {background-color: #0D100E; opacity:1}
+        }
+        @-webkit-keyframes animatehide {
+        from {  background-color: #0D100E;
+        opacity:1;} 
+        to {background-color: #A83E3E; opacity:0;  transition: 0.7s all;
+        }
+        }
+        @keyframes animatehide {
+        from {  background-color: #0D100E;
+        opacity:1;} 
+        to {background-color: #A83E3E; opacity:0;
+        }
+        }
+        /* The Close Button */
+        .close {
+        align-self: start;
+        justify-self: end;
+        font-size: 16px;
+        }
+        .close:hover,
+        .close:focus {
+        text-decoration: none;
+        cursor: pointer;
+        }
+        .modal-header {
+        display: grid;
+        grid-template-columns: 10fr 1fr 1fr;
+        grid-gap:1em;
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #A83E3E;
+        }
+        .modal-header__logo{
+        background-color: inherit;
+        align-self: start;
+        justify-self: start;
+        align-items: start;
+        }
+        .modal-header__language{
+        align-self: end;
+        justify-self: end;
+        }
+        .modal-header__language-left{
+        height: 23px;
+        top: 15px;
+        position: absolute;
+        }
+        .modal-header__language-right{
+        position: relative;
+        top: -3px;
+        }
+        .modal-tab{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        }
+        .modal-tab__text-top{
+        position: relative;
+        font-family: "DrukCyr-Bold";  
+        font-size: 96px;
+        text-transform: uppercase;
+        line-height: 80%;
+        animation-duration: 0.6s;
+        animation-name: slidein-top;
+        }
+        .modal-tab__text-top-hide{
+        animation-duration: 1s;
+        animation-name: slidein-top-hide;
+        }
+        @keyframes slidein-top-hide {
+        from {
+        top: 0%;
+        }
+        to {
+        top: -100%;
+        }
+        }
+        @keyframes slidein-top {
+        from {
+        top: -100%;
+        }
+        to {
+        top: 0%;
+        }
+        }
+        .modal-tab__text-top__slower{
+        position: relative;
+        font-family: "DrukCyr-Bold";  
+        font-size: 96px;
+        text-transform: uppercase;
+        line-height: 80%;
+        animation-duration: 1s;
+        animation-name: slidein-top__slower;
+        }
+        @keyframes slidein-top__slower {
+        from {
+        top: -100%;
+        }
+        to {
+        top: 0%;
+        }
+        }
+        .modal-tab__text-top__slower-hide{
+        
+        animation-duration: 0.6s;
+        animation-name: slidein-top__slower-hide;
+        }
+        @keyframes slidein-top__slower-hide {
+        from {
+        top: 0%;
+        }
+        to {
+        top: -100%;
+        }
+        }
+        .modal-tab__text-bottom{
+        position: relative;
+        font-family: "DrukCyr-Bold";  
+        font-size: 96px;
+        text-transform: uppercase;
+        line-height: 80%;
+        animation-duration: 0.6s;
+        animation-name: slidein-bottom;
+        }
+        @keyframes slidein-bottom {
+        from {
+        bottom: -100%;
+        opacity: 0;
+        }
+        to {
+        bottom: 0%;
+        opacity: 1;
+        }
+        }
+        .modal-tab__text-bottom-hide{
+        animation-duration: 1s;
+        animation-name: slidein-bottom-hide;
+        }
+        @keyframes slidein-bottom-hide {
+        from {
+        bottom: 0%;
+        opacity: 1;
+        
+        }
+        to {
+        bottom: -100%;
+        opacity: 0;
+        }
+        }
+        .modal-tab__text-bottom__slower{
+        position: relative;
+        font-family: "DrukCyr-Bold";  
+        font-size: 96px;
+        text-transform: uppercase;
+        line-height: 80%;
+        animation-duration: 1s;
+        animation-name: slidein-bottom__slower;
+        }
+        @keyframes slidein-bottom__slower {
+        from {
+        bottom: -100%;
+        opacity: 0;
+        }
+        to {
+        bottom: 0%;
+        opacity: 1;
+        }
+        }
+        .modal-tab__text-bottom__slower-hide{
+        animation-duration: 0.6s;
+        animation-name: slidein-bottom__slower-hide;
+        }
+        @keyframes slidein-bottom__slower-hide {
+        from {
+        bottom: 0%;
+        opacity: 1;
+        }
+        to {bottom: -100%;
+        opacity: 0;
+        
+        }
+        }
+        .modal-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 14px;
+        animation-duration: 1.3s;
+        animation-name: slidein-text;
+        }
+        @keyframes slidein-text {
+        from {
+        bottom: -100%;
+        opacity: 0;
+        }
+        to {
+        bottom: 0%;
+        opacity: 1;
+        }
+        }
+        .modal-text-hide{
+        animation-duration: 1.3s;
+        animation-name: slidein-text-hide;
+        }
+        @keyframes slidein-text-hide {
+        from {
+        bottom: 0%;
+        opacity: 1;
+        }
+        to {
+        bottom: -100%;
+        opacity: 0;
+        }
+        }

@@ -17,9 +17,9 @@ if (window.innerWidth <= 1024) {
       modal.style.display = "block";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#B24201";
+        element.style.fill = "#A83E3E";
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+      document.querySelector('.header').style.borderBottom  = "1px solid #A83E3E";
 
       // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "none";
@@ -51,9 +51,9 @@ if (window.innerWidth <= 1024) {
       // modal.style.display = "none";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#B24201";
+        element.style.fill = "#A83E3E";
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+      document.querySelector('.header').style.borderBottom  = "1px solid #A83E3E";
       // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "block";
       document.querySelector('.header__menu-close').style.display = "none";
