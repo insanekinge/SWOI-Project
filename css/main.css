@@ -628,7 +628,7 @@ svg {
           overflow: hidden;
     }
 #main-container, #description-container {
-  transition: .5s;
+  transition: 1.5s;
 }
     .container{
      height: calc(100dvh - 86px - 67px);       

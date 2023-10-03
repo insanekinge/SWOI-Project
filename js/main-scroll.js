@@ -1,89 +1,52 @@
 const mainContainer = document.getElementById('main-container');
 const descriptionContainer = document.getElementById('description-container');
+const mainImgs = mainContainer.querySelectorAll('.main-title__img')
+const descItems = descriptionContainer.querySelectorAll('.description__scroll')
 
+let currentMainIndex = 0
+let currentDescIndex = 0
 let mlMain = 0;
 let mlDesc = 0;
+
 window.addEventListener('wheel', function (e) {
   if (scroll) {
-    const nextMainElement = mainContainer.querySelector('.main-title__img:not(.active)');
-    const nextDescElement = descriptionContainer.querySelector('.description__scroll:not(.active)');
-    const mainStep = nextMainElement.getBoundingClientRect().left - window.innerWidth;
-    const descStep = nextDescElement.getBoundingClientRect().left - window.innerWidth;
+    let nextMainElement = mainImgs[currentMainIndex + 1];
+    let nextDescElement = descItems[currentDescIndex + 1];
+
+    const mainStep = nextMainElement ? nextMainElement.getBoundingClientRect().x - window.pageXOffset - 20 : 0;
+    const descStep = nextDescElement ? nextDescElement.getBoundingClientRect().x - window.pageXOffset - 20 : 0;
 
     if (e.deltaY < 0) {
       // 'scroll up'
-      mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-      descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
-      mlMain -= mainStep;
-      mlDesc -= descStep;
+      if (currentMainIndex - 1 > 0) {
+        currentMainIndex -= 1
+        mlMain -= mainStep;
+        mainContainer.style.transform = `translate(-${mlMain}px,0)`;
+      } else  {
+        mlMain -= mainStep;
+        mainContainer.style.transform = `translate(0px,0)`;
+      }
+      if (currentDescIndex - 1 > 0) {
+        currentDescIndex -= 1
+        mlDesc -= descStep;
+        descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
+      } else {
+        mlDesc -= descStep;
+        descriptionContainer.style.transform = `translate(0px,0)`;
+      }
     }
-    if (e.deltaY > 0) {
+    if (e.deltaY >= 0) {
       // 'scroll down'
-      mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-      descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
-      mlMain += mainStep;
-      mlDesc += descStep;
+      if (nextMainElement) {
+        currentMainIndex += 1;
+        mlMain += mainStep;
+        mainContainer.style.transform = `translate(-${mlMain}px,0)`;
+      }
+      if (nextDescElement) {
+        currentDescIndex += 1;
+        mlDesc += descStep;
+        descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
+      }
     }
   }
 });
-
-// const mainContainer = document.getElementById('main-container')
-// const descriptionContainer = document.getElementById('description-container')
-
-// let mlMain = 0;
-// let mlDesc = 0;
-// window.addEventListener('wheel', function (e) {
-//     if (scroll) {
-//         // var content = document.querySelector('body');
-//         var speedMain = 300;
-//         var speedDesc = 600;
-//         if (e.deltaY < 0) {
-//             // 'scroll up'
-//             mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-//             descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
-//             mlMain -= speedMain
-//             mlDesc -= speedDesc
-//         }
-//         if (e.deltaY > 0) {
-//             // 'scroll down'
-//             mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-//             descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
-//             mlMain += speedMain
-//             mlDesc += speedDesc
-//         }
-//     }
-// });
-
-// const mainContainer = document.getElementById('main-container')
-//       const descriptionContainer = document.getElementById('description-container')
-//       const descriptionScroll = document.querySelectorAll('.description__scroll')
-//       let counterdescription = 0
-//       // mainContainer.scrollIntoView();
-//       let mlMain = 0;
-//       let mlDesc = 0;
-//       window.addEventListener('wheel', function (e) {
-
-//         const rect = descriptionScroll[counterdescription].getBoundingClientRect();
-//         const distanceFromLeft = rect.left + window.scrollX;
-
-//         console.log(distanceFromLeft)
-//           if (scroll) {
-//               // var content = document.querySelector('body');
-//               var speedMain = 300;
-//               var speedDesc = 600;
-//               if (e.deltaY < 0) {
-//                   // 'scroll up'
-//                   mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-//                   descriptionContainer.style.transform = `translate(${distanceFromLeft}px,0)`;
-//                   mlMain -= speedMain
-//                   mlDesc -= speedDesc
-//               }
-//               if (e.deltaY > 0) {
-//                   // 'scroll down'
-//                   mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-//                   descriptionContainer.style.transform = `translate(-${distanceFromLeft}px,0)`;
-//                   mlMain += speedMain
-//                   mlDesc += speedDesc
-//               }
-//           }
-//       });
