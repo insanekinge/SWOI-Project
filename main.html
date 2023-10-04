@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
   <link rel="icon" href="img/" type="">
   <title>SWOI</title>
 </head>
@@ -21,29 +22,6 @@
           <div class="prealoader-title">SWOI</div>
         </div>
       </div> 
-      <script>
-        const preloader = document.getElementById('preloader')
-        const body = document.querySelector('body')
-        const interval = 1200; // 2 секунды
-        const preloaderProgress = document.querySelector('.prealoader-num')
-
-        setTimeout(()=> {
-          body.classList.remove('loaded')
-        }, interval)
-        let counter = 0;
-        const step = 10;
-        preloaderProgress.innerHTML = counter + '%'
-
-        const incrementCounter = () => {
-          counter += step;
-          preloaderProgress.innerHTML = counter + '%'
-          if (counter >= 100) {
-            clearInterval(timer);
-          }
-        };
-
-        const timer = setInterval(incrementCounter, 100);
-      </script>
 
          <div class="header">
           <svg class="header__logo" width="80" height="34" viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +88,7 @@
 
         <div class="container" >
           
-          <section class="main" data-scroll data-scroll-speed="0.5" id="main-container">
+          <section class="main"  id="main-container">
             <div class="main__title"><span>Smart</span> <div class="main-title__img"></div> <span>way</span><div class="main-title__img"></div> <span>of</span><div class="main-title__img"></div> <span>investment</span></div>
           </section>
 
@@ -174,8 +152,8 @@
       
     </script>
   <script src="js/main-scroll.js"></script>
+  <script src="js/preloader-script.js"></script>
   <script src="js/main.js"></script>
-  <!-- <script src="js/locomotive-main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script> -->
+  <script src="js/element-animation.js"></script>
   </body>
 </html>
