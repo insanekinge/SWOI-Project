@@ -7,15 +7,21 @@
   <link rel="stylesheet" href="css/all-projects.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
   <link rel="icon" href="img/" type="">
   <title>All projects</title>
 </head>
 
 
-<body>
+<body class="loaded">
 
     <div class="wrapper">
-
+      <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+          <div class="prealoader-num ">100%</div>
+          <div class="prealoader-title">SWOI</div>
+        </div>
+      </div> 
 
         <div class="header">
           <svg class="header__logo" width="80" height="34" viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,5 +147,6 @@
     
   <script src="js/all-projects.js"></script>
   <script src="js/all-projects-item-animation.js"></script>
+  <script src="js/preloader-script.js"></script>
   </body>
 </html>
