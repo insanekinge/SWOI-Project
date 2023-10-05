@@ -256,7 +256,6 @@ overflow-x: hidden;
         width: 100%;
         font-size: 14px;
         text-align: start;
-        /* max-width: 330px; */
         justify-self: self-start;
         grid-area: 3 / 1 / 4 / 7;
 }
@@ -278,7 +277,6 @@ overflow-x: hidden;
         font-size: 14px;
         justify-self: self-start;
         text-align: start;
-        /* max-width: 330px; */
         grid-area: 3 / 1 / 4 / 7;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -677,7 +675,10 @@ li::marker{
         }
 
         .accordion__content-text_first{
-                align-self: self-end;
+                align-self: self-start;
+        }
+        .accordion__content-list_first{
+                align-self: self-start;
         }
         .accordion__content-list{
                 list-style-type: disc; 
@@ -940,7 +941,6 @@ li::marker{
         }
 
         .main__text-description{
-                max-width: 658px;
                 width: 100%;
                 grid-area: 1 / 7 / 2 / 10;
                 letter-spacing: -2%;
@@ -1003,20 +1003,73 @@ li::marker{
 
         }
         .accordion__content{
-                display: flex;
-                width: 50%;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(3, auto);
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                width: 100%;
                 align-items: end;
                 justify-content: end;
                 padding-top: 80px;
-                font-size: 18px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 120%; /* 21.6px */
                 letter-spacing: -0.36px;
         }
+        .accordion__content-list_first{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
+        }
+        
+        .accordion__content-text_first-stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
+        }
+        .accordion__content-text_second-stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
+        }
 
+        .accordion__content-list_stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 3 / 7 / 4 / 10;
+        }
+
+        .accordion__content-list_second{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
+        }
         .accordion__content-text_first{
-                align-self: self-end;
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 1 / 7 / 2 / 10;
+        }
+        .accordion__content-text_second{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 4 / 10;
+        }
+        .accordion__content-text_second-bottom{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 3 / 7 / 4 / 10;   
+        }
+        .accordion__content-text_third{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 1 / 10 / 2 / 13;
+        }
+        .accordion__content-text_fourth{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
         }
         .accordion__content-list{
                 list-style-type: disc; 
@@ -1031,6 +1084,8 @@ li::marker{
         }
         
         .accordion__content-numb_first{
+                align-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
                 list-style-position: inside;
                 padding: 0 0 0px 15px;
                 font-size: 18px;
@@ -1041,6 +1096,8 @@ li::marker{
         } 
         
         .accordion__content-numb_second{
+                align-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
                 list-style-position: inside;
                 padding: 0 0 15px 15px;
                 font-size: 18px;
@@ -1050,8 +1107,7 @@ li::marker{
                 letter-spacing: -0.36px;
         }
         .accordion__content-text_title{
-                align-self: self-start;
-
+                grid-area: 1 / 7 / 2 / 10;
         }
         li::marker{
                 margin-right: 10px;
@@ -1061,18 +1117,16 @@ li::marker{
                 padding-left: 20px;
               }
         .collapse-button{
-                max-width: 455px;
                 font-size: 24px;
                 text-align: start;
                 align-self: self-start;
                 justify-self: self-start;
-                grid-area: 1 / 7 / 2 / 11;
+                grid-area: 1 / 7 / 2 / 10;
         }
 
         .collapse-button::after {
                 content: "";
                 display: inline-block;
-                
                 width: 18px;
                 height: 18px;
                 background-image: url("/img/faq-arrow.png");
@@ -1080,12 +1134,11 @@ li::marker{
               }
 
         .answer-button{
-                max-width: 455px;
                 font-size: 24px;
                 text-align: start;
                 align-self: self-start;
                 justify-self: self-start;
-                grid-area: 1 / 7 / 2 / 11;
+                grid-area: 1 / 7 / 2 / 10;
         }
 
         .answer-button::after {
@@ -1206,7 +1259,7 @@ li::marker{
 
 }
 
-@media (min-width: 2650px){
+@media (min-width: 2400px){
         .header {
                 font-size: 24px;
                 height: 86px;
@@ -1283,7 +1336,6 @@ li::marker{
         }
 
         .main__text-description{
-                max-width: 835px;
                 width: 100%;
                 grid-area: 1 / 7 / 2 / 10;
                 letter-spacing: -2%;
@@ -1335,26 +1387,114 @@ li::marker{
         .accordion__content{
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
-                grid-template-rows: repeat(1, auto);
-                grid-column-gap: 20px;
-                grid-row-gap: 20px;
-                font-size: 18px;
+                grid-template-rows: repeat(3, auto);
+                width: 100%;
+                align-items: end;
+                justify-content: end;
                 padding-top: 80px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        }
+        .accordion__content-list_first{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
+        }
+        
+        .accordion__content-text_first-stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
+        }
+        .accordion__content-text_second-stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
         }
 
+        .accordion__content-list_stable{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 3 / 7 / 4 / 10;
+        }
+
+        .accordion__content-list_second{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
+        }
         .accordion__content-text_first{
-                grid-area: 1 / 10 / 2 / 13;
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 1 / 7 / 2 / 10;
         }
         .accordion__content-text_second{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 7 / 4 / 10;
+        }
+        .accordion__content-text_second-bottom{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 3 / 7 / 4 / 10;   
+        }
+        .accordion__content-text_third{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 1 / 10 / 2 / 13;
+        }
+        .accordion__content-text_fourth{
+                align-self: start;
+                justify-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
+        }
+        .accordion__content-list{
+                list-style-type: disc; 
+                list-style-position: inside;
+                padding: 0 0 15px 40px;
+        
+        }
+        
+        .accordion__content-list-item{
+                list-style-type: disc; 
+                list-style-position: inside;
+        }
+        
+        .accordion__content-numb_first{
+                align-self: self-start;
+                grid-area: 2 / 7 / 3 / 10;
+                list-style-position: inside;
+                padding: 0 0 0px 15px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        } 
+        
+        .accordion__content-numb_second{
+                align-self: self-start;
+                grid-area: 2 / 10 / 3 / 13;
+                list-style-position: inside;
+                padding: 0 0 15px 15px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%; /* 21.6px */
+                letter-spacing: -0.36px;
+        }
+        .accordion__content-text_title{
                 grid-area: 1 / 7 / 2 / 10;
         }
         .collapse-button{
-                max-width: 835px;
                 font-size: 36px;
                 text-align: start;
                 align-self: self-start;
                 justify-self: self-start;
-                grid-area: 1 / 7 / 2 / 11;
+                grid-area: 1 / 7 / 2 / 10;
         }
 
         .collapse-button::after {
@@ -1368,12 +1508,11 @@ li::marker{
               }
 
         .answer-button{
-                max-width: 835px;
                 font-size: 36px;
                 text-align: start;
                 align-self: self-start;
                 justify-self: self-start;
-                grid-area: 1 / 7 / 2 / 11;
+                grid-area: 1 / 7 / 2 / 10;
         }
 
         .answer-button::after {
@@ -1418,7 +1557,6 @@ li::marker{
         }
         
         .question__text{
-                max-width: 835px;
                 font-size: 24px;
                 grid-area: 1 / 7 / 2 / 10;
         }
@@ -1428,7 +1566,6 @@ li::marker{
                 justify-self: self-start;
                 font-size: 36px;
                 height: 86px;
-                max-width: 835px;
                 grid-area: 2 / 7 / 3 / 10;
         }
 
