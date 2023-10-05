@@ -755,7 +755,7 @@ svg {
  }
 }
 
-@media (min-width: 2650px){
+@media (min-width: 2400px){
 
   .container{
     height: calc(100vh - 86px - 67px);

@@ -164,21 +164,9 @@ gap: 7px;
                 line-height: 240px;
                 text-transform: uppercase;
                 letter-spacing: -0.01ex;
-                animation: scroll 1.5s linear infinite;
-                animation-iteration-count: 1;
         
         }
-        @keyframes scroll {
-                0% {
-                  transform: translateX(-10%);
-                }
-                50% {
-                  transform: translateX(30%);
-                }
-                100% {
-                        transform: translateX(0%);
-                      }
-              } 
+
         .main__title-prev{
                 display: none;
         
@@ -1025,12 +1013,15 @@ gap: 7px;
                 }
 
                 .gallery__slider{
-                        gap: 10px;
+                        gap: 20px;
                         grid-area: 4 / 1 / 5 / 7; 
                 }
                 
                 .gallery__slider-photo{
-                
+                        width: 100%;
+                        height: auto;
+                        width: 482px;
+                        height: 285px;
                 }
 
                 .gallery__bottom{
@@ -1211,9 +1202,6 @@ gap: 7px;
                 grid-row-gap: 581px;
                 padding-bottom: 15px;
                 white-space: nowrap;
-                transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear;
-                animation: scroll 1.7s linear infinite;
-                animation-iteration-count: 1;
         
         }
         .main__title{
@@ -1226,21 +1214,9 @@ gap: 7px;
                 text-transform: uppercase;
                 letter-spacing: -0.01ex;
                 position: relative;
-                left: -400px;
                 
         
         }
-        @keyframes scroll {
-                0% {
-                  transform: translateX(-10%);
-                }
-                50% {
-                  transform: translateX(30%);
-                }
-                100% {
-                        transform: translateX(0%);
-                      }
-              } 
         .main__title-prev{
                 display: block;
                 font-family: "DrukCyr-Bold";
@@ -1645,7 +1621,11 @@ gap: 7px;
         }
         
         .gallery__slider-photo{
-        
+                width: 100%;
+                height: auto;
+                width: 455px;
+                height: 271px;
+
         }
 
         .gallery__bottom{
@@ -1692,8 +1672,6 @@ gap: 7px;
                 font-size: 18px;
 
         }
-
-       
 
         .gallery__bottom-link{
                 display: block;
@@ -1765,7 +1743,7 @@ gap: 7px;
              }
 
 }
-@media (min-width: 2650px){
+@media (min-width: 2400px){
         .header {
                 font-size: 24px;
                 height: 86px;
@@ -1783,9 +1761,6 @@ gap: 7px;
                 grid-row-gap: 1026px;
                 padding-bottom: 15px;
                 white-space: nowrap;
-                transition-timing-function: cubic-bezier(0.1, 0.8, 0.5, 2), linear;
-                animation: scroll 1.7s linear infinite;
-                animation-iteration-count: 1;
         
         }
         .main__title{
@@ -1798,21 +1773,9 @@ gap: 7px;
                 letter-spacing: -12px;
                 text-transform: uppercase;
                 position: relative;
-                left: -400px;
                 
         
         }
-        @keyframes scroll {
-                0% {
-                  transform: translateX(-10%);
-                }
-                50% {
-                  transform: translateX(30%);
-                }
-                100% {
-                        transform: translateX(0%);
-                      }
-              } 
         .main__title-prev{
                 display: block;
                 font-family: "DrukCyr-Bold";
@@ -2230,7 +2193,10 @@ gap: 7px;
         }
         
         .gallery__slider-photo{
-        
+                width: 100%;
+                height: auto;
+                width: 835px;
+                height: 495px;
         }
 
         .gallery__bottom{
