@@ -22,6 +22,21 @@
         color: #A39E8F;
         margin: 0;
 }
+
+:root {
+        --bgColor: #1E2C14;
+        --fontColor: #A39E8F;
+      }
+      
+      .page-contacts {
+        --bgColor: #1E2C14;
+        --fontColor: #A39E8F;
+      }
+      .page-projects {
+        --bgColor: #1E2C14;
+        --fontColor: #A39E8F;
+      }
+
 .wrapper{
   margin:0 15px 0 15px;
   place-items: center;
