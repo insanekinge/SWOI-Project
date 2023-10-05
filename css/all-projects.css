@@ -150,8 +150,8 @@
         flex-direction: column;
         justify-content: start;
         width: 100%;
-        height: calc(100vh - 66px);
-        overflow-x: hidden;
+        height: calc(100dvh - 66px);
+        overflow: hidden;
       }
       .container::-webkit-scrollbar{
         width: 0;
@@ -163,6 +163,7 @@
         flex-direction: column;
         gap: 15px;
         scroll-behavior: smooth;
+        transition: 1.5s;
 }
       
       .project-item{
