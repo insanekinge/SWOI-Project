@@ -1,168 +1,179 @@
 @font-face {
-        font-family: "DrukCyr-Bold";  
-        src: url("../fonts/DrukCyr-Bold.ttf") format("truetype"); 
-        font-style: normal; 
-        font-weight: normal;
-         }
-         
-        @font-face{
-        font-family: "HelveticaNeueCyr-Roman";
-        src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
-        font-style: normal; 
-        font-weight: normal; 
-        }
-      
-      html{
-        scroll-behavior: smooth;
-      }
-      html::-webkit-scrollbar { width: 0; }
-      body{
-        font-family: "HelveticaNeueCyr-Roman";
-        background-color: #B24201;
-        color: #DDD0BD;
-        margin: 0;
-      }
-      .wrapper{
-        margin:0 15px 0 15px;
-        place-items: center;
-        height: 100vh;
-      }
-      :root {
-        --bgColor: #B24201;
-        --fontColor: #DDD0BD;
-      }
-      
-      .page-contacts {
-        --bgColor: #DDD0BD;
-        --fontColor: #B24201;
-      }
-      .page-projects {
-        --bgColor: #DDD0BD;
-        --fontColor: #B24201;
-      }
-      .wrapper::-webkit-scrollbar{
-        width: 0;
-      }
-      span{
-      }
-      
-      
-      
-      .header {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 15px;
-        grid-row-gap: 0px;
-        z-index: 2;
-        position: relative;
-        height: 66px;
-        border-bottom: 1px solid #DDD0BD;
-        align-items: center;
-      }
-      .header__logo{
-        align-self: center;
-        justify-self: start;
-        width:80px;
-        height: 34px;
-        grid-area: 1 / 1 / 2 / 3;
-      }
+  font-family: "DrukCyr-Bold";  
+  src: url("../fonts/DrukCyr-Bold.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+    }
+    
+  @font-face{
+  font-family: "HelveticaNeueCyr-Roman";
+  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-style: normal; 
+  font-weight: normal; 
+  }
 
-      .header__tab{
-      display: none;
-      }
-      .header__tab-project{
-              display: none;
-      }
-      .header__tab-about{
-              display: none;
-      }
-      .header__tab-conacts{
-              display: none;
-      }
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar { width: 0; }
+body{
+  font-family: "HelveticaNeueCyr-Roman";
+  background-color: #B24201;
+  color: #DDD0BD;
+  margin: 0;
+}
+.wrapper{
+  margin:0 15px 0 15px;
+  place-items: center;
+  height: 100vh;
+}
+:root {
+  --bgColor: #B24201;
+  --fontColor: #DDD0BD;
+}
 
-      .header__menu-language_en{
-              display: none;
-      }
-      .header__menu-language_ru{
-              display: none;
-      }
+.page-contacts {
+  --bgColor: #DDD0BD;
+  --fontColor: #B24201;
+}
+.page-projects {
+  --bgColor: #DDD0BD;
+  --fontColor: #B24201;
+}
+.wrapper::-webkit-scrollbar{
+  width: 0;
+}
+span{
+}
 
-      .header__language{
-      align-self: end;
-      justify-self: end;
-      }
-      .header__language-left{
-      position: relative;
-      top:0px;
-      }
-      .header__language-right{
-      position: relative;
-      top: -14px;
-      }
-      .header__menu{
-        padding: 15px 0 0 0;
-        grid-area: 1 / 5 / 2 / 7;
-        display: flex;
-        justify-self: end;
-        justify-content: end;
-        gap: 7px;
-      }
-      .header__menu-open{
-        font-size: 15px;
-        font-weight: 400;
-        color: #DDD0BD;
-        transition: 1s all;
-      }
-      .header__menu-close{
+.project-item .project-item__image{
+  transition: 1.5s;
+}
+
+.project-item.active .project-item__image {
+  scale: 1;
+}
+
+.project-item.next-active .project-item__image, .project-item.pre-active .project-item__image {
+  scale: .5;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+  z-index: 2;
+  position: relative;
+  height: 66px;
+  border-bottom: 1px solid #DDD0BD;
+  align-items: center;
+}
+.header__logo{
+  align-self: center;
+  justify-self: start;
+  width:80px;
+  height: 34px;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.header__tab{
+display: none;
+}
+.header__tab-project{
         display: none;
-        color: #B24201;
-        font-size: 15px;
-        font-weight: 400;
-        transition: 1s all;
-      }
-      .header__menu-language_en{
+}
+.header__tab-about{
         display: none;
-      }
-      .header__menu-language_ru{
+}
+.header__tab-conacts{
         display: none;
-      }
-      .header__menu-button {
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-      }
-      
-      svg {
-        transition: 0.7s all;
-      }
-      .header__menu-button-down {
-        display: flex;
-        margin: 0 0 0 auto;
-        transform: translateY(-15px);
-      }
-      
-      
-      
-      
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        width: 100%;
-        height: calc(100vh - 66px);
-        overflow-x: hidden;
-      }
-      .container::-webkit-scrollbar{
-        width: 0;
-      }
+}
 
-      .project {
-        padding-top: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        scroll-behavior: smooth;
+.header__menu-language_en{
+        display: none;
+}
+.header__menu-language_ru{
+        display: none;
+}
+
+.header__language{
+align-self: end;
+justify-self: end;
+}
+.header__language-left{
+position: relative;
+top:0px;
+}
+.header__language-right{
+position: relative;
+top: -14px;
+}
+.header__menu{
+  padding: 15px 0 0 0;
+  grid-area: 1 / 5 / 2 / 7;
+  display: flex;
+  justify-self: end;
+  justify-content: end;
+  gap: 7px;
+}
+.header__menu-open{
+  font-size: 15px;
+  font-weight: 400;
+  color: #DDD0BD;
+  transition: 1s all;
+}
+.header__menu-close{
+  display: none;
+  color: #B24201;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 1s all;
+}
+.header__menu-language_en{
+  display: none;
+}
+.header__menu-language_ru{
+  display: none;
+}
+.header__menu-button {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+svg {
+  transition: 0.7s all;
+}
+.header__menu-button-down {
+  display: flex;
+  margin: 0 0 0 auto;
+  transform: translateY(-15px);
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: calc(100dvh - 66px);
+  overflow: hidden;
+}
+.container::-webkit-scrollbar{
+  width: 0;
+}
+
+.project {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  scroll-behavior: smooth;
+  transition: 1.5s;
 }
       
       .project-item{

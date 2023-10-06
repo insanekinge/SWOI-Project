@@ -23,6 +23,24 @@ function mainTitleScroll() {
   let prevDescElement = null;
   let mainStep = 0;
   let descStep = 0;
+  
+  mainImgs.forEach((img, index) => {
+    if (index === currentMainIndex) {
+      img.classList.add('active');
+    } else {
+      img.classList.remove('active');
+    }
+    if (index === currentMainIndex + 1) {
+      img.classList.add('next-active');
+    } else {
+      img.classList.remove('next-active');
+    }
+    if (index === currentMainIndex - 1) {
+      img.classList.add('pre-active');
+    } else {
+      img.classList.remove('pre-active');
+    }
+  });
 
   window.addEventListener('wheel', function (e) {
     if (scroll) {
@@ -92,6 +110,25 @@ function mainTitleScroll() {
         }
       }
 
+      
+      mainImgs.forEach((img, index) => {
+        if (index === currentMainIndex) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+        if (index === currentMainIndex + 1) {
+          img.classList.add('next-active');
+        } else {
+          img.classList.remove('next-active');
+        }
+        if (index === currentMainIndex - 1) {
+          img.classList.add('pre-active');
+        } else {
+          img.classList.remove('pre-active');
+        }
+      });
+
       scrollTimeout = setTimeout(function () {
         scroll = true;
       }, 1500);
@@ -115,20 +152,38 @@ function mainTitleScroll() {
 
     // Проверяем, был ли свайп вправо или влево
     if (Math.abs(diffX) > Math.abs(diffY)) {
-        if (scroll) {
-            clearTimeout(scrollTimeout);
-            scroll = false;
-            if (diffX > 0) {
-                // Свайп влево
-                swipeLeft();
-            } else {
-                // Свайп вправо
-                swipeRight();
-            }
-            scrollTimeout = setTimeout(function () {
-                scroll = true;
-            }, 1500);
+      if (scroll) {
+        clearTimeout(scrollTimeout);
+        scroll = false;
+        if (diffX > 0) {
+            // Свайп влево
+            swipeLeft();
+        } else {
+            // Свайп вправо
+            swipeRight();
         }
+          
+        mainImgs.forEach((img, index) => {
+          if (index === currentMainIndex) {
+            img.classList.add('active');
+          } else {
+            img.classList.remove('active');
+          }
+          if (index === currentMainIndex + 1) {
+            img.classList.add('next-active');
+          } else {
+            img.classList.remove('next-active');
+          }
+          if (index === currentMainIndex - 1) {
+            img.classList.add('pre-active');
+          } else {
+            img.classList.remove('pre-active');
+          }
+        });
+        scrollTimeout = setTimeout(function () {
+            scroll = true;
+        }, 1500);
+      }
     }
     
   });
@@ -152,7 +207,7 @@ function mainTitleScroll() {
       descStep = 0;
     }
     // Ваш код для обработки свайпа влево
-    if (currentMainIndex < mainImgs.length - 1) {
+    if (nextDescElement) {
         currentMainIndex += 1;
         mlMain += mainStep;
         if (!mainImgs[currentMainIndex + 1 + 1] && nextMainElement) {
@@ -160,7 +215,7 @@ function mainTitleScroll() {
         }
         mainContainer.style.transform = `translate(-${mlMain}px,0)`;
     }
-    if (currentDescIndex < descItems.length - 1) {
+    if (nextDescElement) {
         currentDescIndex += 1;
         mlDesc += descStep;
         if (!descItems[currentDescIndex + 1 + 1] && nextDescElement) {
@@ -195,7 +250,7 @@ function mainTitleScroll() {
           mlMain -= lastMainStep;
         }
         mainContainer.style.transform = `translate(-${mlMain}px,0)`;
-    } else {
+    } else if (prevMainElement){
         currentMainIndex -= 1;
         mlMain = 0; // Установка в 0, если предыдущий элемент - первый элемент
         mainContainer.style.transform = `translate(-${mlMain}px,0)`;
@@ -207,7 +262,7 @@ function mainTitleScroll() {
             mlDesc -= lastDescStep;
         }
         descriptionContainer.style.transform = `translate(-${mlDesc}px,0)`;
-    } else {
+    } else if (prevMainElement) {
         currentDescIndex -= 1;
         mlDesc = 0; // Установка в 0, если предыдущий элемент - первый элемент
         descriptionContainer.style.transform = `translate(-${mlDesc},0)`;
