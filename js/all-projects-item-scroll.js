@@ -49,6 +49,7 @@ function projectsTitleScroll() {
       } else {
         projectsStep = 0;
       }
+
       if (e.deltaY >= 0) {
         // 'scroll down'
         if (nextProjectsElement) {
@@ -60,6 +61,7 @@ function projectsTitleScroll() {
           projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
         }
       }
+
       if (e.deltaY <= 0) {
         // 'scroll up'
         if (prevProjectsElement && prevProjectsElement !== projectsImgs[0]) {
@@ -69,7 +71,7 @@ function projectsTitleScroll() {
             mlProjects -= lastProjectsStep;
           }
           projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
-        } else {
+        } else if (prevProjectsElement) {
           currentProjectsIndex -= 1;
           mlProjects = 0; // Установка в 0, если предыдущий элемент - первый элемент
           projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
@@ -108,6 +110,8 @@ function projectsTitleScroll() {
 
   // Обработчик события окончания касания
   window.addEventListener('touchend', function (event) {
+
+    // Проверяем, был ли свайп вправо или влево
     var endX = event.changedTouches[0].clientX;
     var endY = event.changedTouches[0].clientY;
 
@@ -115,47 +119,51 @@ function projectsTitleScroll() {
     var diffX = startX - endX;
     var diffY = startY - endY;
 
-    // Проверяем, был ли свайп вправо или влево
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-        if (scroll) {
-            clearTimeout(scrollTimeout);
-            scroll = false;
-            if (diffX > 0) {
-                // Свайп влево
-                swipeLeft();
-            } else {
-                // Свайп вправо
-                swipeRight();
-            }
-
-            projectsImgs.forEach((img, index) => {
-              if (index === currentProjectsIndex) {
-                img.classList.add('active');
-              } else {
-                img.classList.remove('active');
-              }
-              if (index === currentProjectsIndex + 1) {
-                img.classList.add('next-active');
-              } else {
-                img.classList.remove('next-active');
-              }
-              if (index === currentProjectsIndex - 1) {
-                img.classList.add('pre-active');
-              } else {
-                img.classList.remove('pre-active');
-              }
-            });
-
-            scrollTimeout = setTimeout(function () {
-                scroll = true;
-            }, 1500);
+    // Проверяем, был ли свайп вверх или вниз
+    if (Math.abs(diffX) < Math.abs(diffY)) {
+      if (scroll) {
+        clearTimeout(scrollTimeout);
+        scroll = false;
+        
+        
+        if (diffY > 0) {
+          // Свайп вверх
+          
+          swipeUp();
+        } else {
+          // Свайп вниз
+          swipeDown();
         }
+
+
+        projectsImgs.forEach((img, index) => {
+          if (index === currentProjectsIndex) {
+            img.classList.add('active');
+          } else {
+            img.classList.remove('active');
+          }
+          if (index === currentProjectsIndex + 1) {
+            img.classList.add('next-active');
+          } else {
+            img.classList.remove('next-active');
+          }
+          if (index === currentProjectsIndex - 1) {
+            img.classList.add('pre-active');
+          } else {
+            img.classList.remove('pre-active');
+          }
+        });
+
+        scrollTimeout = setTimeout(function () {
+          scroll = true;
+            
+        }, 1500);
+      }
     }
     
   });
 
-  // Функция для обработки свайпа влево
-  function swipeLeft() {
+  function swipeUp() {
 
     nextProjectsElement = projectsImgs[currentProjectsIndex + 1];
     prevProjectsElement = projectsImgs[currentProjectsIndex - 1];
@@ -167,19 +175,19 @@ function projectsTitleScroll() {
     } else {
       projectsStep = 0;
     }
-    // Ваш код для обработки свайпа влево
-    if (currentProjectsIndex < projectsImgs.length - 1) {
-        currentProjectsIndex += 1;
-        mlProjects += projectsStep;
-        if (!projectsImgs[currentProjectsIndex + 1 + 1] && nextProjectsElement) {
-            lastProjectsStep = projectsStep;
-        }
-        projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
+    
+    if (nextProjectsElement) {
+      currentProjectsIndex += 1;
+      mlProjects += projectsStep;
+      if (!projectsImgs[currentProjectsIndex + 1 + 1] && nextProjectsElement) {
+          lastProjectsStep = projectsStep;
+      }
+      projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
     }
   }
 
   // Функция для обработки свайпа вправо
-  function swipeRight() {
+  function swipeDown() {
     nextProjectsElement = projectsImgs[currentProjectsIndex + 1];
     prevProjectsElement = projectsImgs[currentProjectsIndex - 1];
 
@@ -192,16 +200,16 @@ function projectsTitleScroll() {
     }
     // Ваш код для обработки свайпа вправо
     if (prevProjectsElement && prevProjectsElement !== projectsImgs[0]) {
-        currentProjectsIndex -= 1;
-        mlProjects -= projectsStep;
-        if (!nextProjectsElement) {
-          mlProjects -= lastProjectsStep;
-        }
-        projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
-    } else {
-        currentProjectsIndex -= 1;
-        mlProjects = 0; // Установка в 0, если предыдущий элемент - первый элемент
-        projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
+      currentProjectsIndex -= 1;
+      mlProjects -= projectsStep;
+      if (!nextProjectsElement) {
+        mlProjects -= lastProjectsStep;
+      }
+      projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
+    } else if (prevProjectsElement) {
+      currentProjectsIndex -= 1;
+      mlProjects = 0; // Установка в 0, если предыдущий элемент - первый элемент
+      projectsContainer.style.transform = `translate(0, -${mlProjects}px)`;
     }
   }
 }
