@@ -54,6 +54,7 @@
         position: relative;
         height: 66px;
         border-bottom: 1px solid #B24201;
+        border-top: 1px solid #B24201;
         align-items: center;
 
       }

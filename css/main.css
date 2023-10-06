@@ -28,9 +28,15 @@ body{
         height: 100vh;
         /* overflow: hidden; */
 }
+
+
+#main-container, #description-container {
+  transition: 1.5s;
+}
+
 .main-title__img {
-  width: 700px;
-  height: 620px;
+  width: 400px;
+  height: 265px;
   overflow: hidden;
 }
 
@@ -79,6 +85,7 @@ body{
   position: relative;
   height: 67px;
   border-bottom: 1px solid #DDD0BD;
+  border-top: 1px solid #DDD0BD;
   align-items: center;
 }
 .header__logo{
@@ -592,9 +599,6 @@ svg {
     .wrapper {
           overflow: hidden;
     }
-#main-container, #description-container {
-  transition: 1.5s;
-}
     .container{
      height: calc(100dvh - 86px - 67px);       
      overflow-y: unset;
