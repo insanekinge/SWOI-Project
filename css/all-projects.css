@@ -68,6 +68,7 @@ span{
   position: relative;
   height: 66px;
   border-bottom: 1px solid #DDD0BD;
+  border-top: 1px solid #DDD0BD;
   align-items: center;
 }
 .header__logo{

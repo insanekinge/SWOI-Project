@@ -58,6 +58,7 @@ span{
         height: 7dvh;
         height: 67px;
         border-bottom: 1px solid #C1803E;
+        border-top: 1px solid #C1803E;
         align-items: center;
 }
 .header__logo{
