@@ -1,7 +1,5 @@
 let modal = document.getElementById("myModal");
-
 let btn = document.getElementById("myBtn");
-
 var ishidden = false;
 
 let top_slower_text = modal.querySelector('#top-slower-text');
@@ -17,11 +15,10 @@ if (window.innerWidth <= 1024) {
       modal.style.display = "block";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#B24201";
+        element.classList.add('modal-color');
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #B24201";
+      document.querySelector('.header').classList.add('modal-border');
 
-      // document.querySelector('.header__menu-open').style.color = "#B24201";
       document.querySelector('.header__menu-open').style.display = "none";
       document.querySelector('.header__menu-close').style.display = "block";
       document.querySelector('.header__menu-button-top').style.marginRight = '22px';
@@ -48,21 +45,17 @@ if (window.innerWidth <= 1024) {
 
 
       }, 400);
-      // modal.style.display = "none";
       pathes = document.querySelectorAll('.header path');
       pathes.forEach(element => {
-        element.style.fill = "#DDD0BD";
+        element.classList.add('modal-color');
       });
-      document.querySelector('.header').style.borderBottom  = "1px solid #DDD0BD";
-      // document.querySelector('.header__menu-open').style.color = "#B24201";
+      document.querySelector('.header').classList.add('modal-border');
+
       document.querySelector('.header__menu-open').style.display = "block";
       document.querySelector('.header__menu-close').style.display = "none";
       document.querySelector('.header__menu-button-top').style.marginRight = '0';
       ishidden = false;
-
-      
     }
-
   });
 }
 

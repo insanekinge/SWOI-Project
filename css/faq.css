@@ -1,6 +1,7 @@
 :root {
         --bgColor: #0D100E;
         --fontColor: #A83E3E;
+        --modal-color: #A83E3E;
       }
       
       .page-contacts {
@@ -456,6 +457,9 @@ li::marker{
                 align-self: self-start;
         }
         .accordion__content-list_first{
+                align-self: self-start;
+        }
+        .accordion__content-list_second{
                 align-self: self-start;
         }
         .accordion__content-list{
