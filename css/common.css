@@ -690,11 +690,11 @@ svg {
       }
       
       .modal-color {
-        fill: var(--modal-color);
+        fill: var(--fontColor);
       }
       
       .modal-border {
-        border-bottom: 1px solid var(--modal-color);
+        border-bottom: 1px solid var(--fontColor);
       }
       
       .header__menu-open {

@@ -37,7 +37,6 @@ html::-webkit-scrollbar { width: 0; }
 :root {
   --bgColor: #B24201;
   --fontColor: #DDD0BD;
-  --modal-color: #DDD0BD;
 }
 
 .page-contacts {
@@ -485,7 +484,7 @@ html::-webkit-scrollbar { width: 0; }
     width: 74px;
     height: 74px;
     font-size: 14px;
-    border: #DDD0BD 1px solid;
+    border: var(--fontColor) 1px solid;
     border-radius: 40px;
     margin-right: -5px;
   }
@@ -498,7 +497,7 @@ html::-webkit-scrollbar { width: 0; }
     width: 74px;
     height: 74px;
     font-size: 14px;
-    border: #DDD0BD 1px solid;
+    border: var(--fontColor) 1px solid;
     border-radius: 40px;
     margin-left: -5px;
   }
