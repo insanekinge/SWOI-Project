@@ -97,6 +97,7 @@ span{
   border-bottom: 1px solid var(--fontColor);
   border-top: 1px solid var(--fontColor);
   align-items: center;
+  background-color: var(--bgColor);
 
 }
 .header__logo{
