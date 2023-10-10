@@ -1,6 +1,7 @@
 :root {
         --bgColor: #1E2C14;
         --fontColor: #A39E8F;
+        --modal-color: #A39E8F;
       }
       
       .page-contacts {
@@ -1769,7 +1770,7 @@
 
         .specification__type-text{
                 font-size: 24px;
-                max-height: 104px;
+                max-height: 138px;
                 grid-area: 2 / 10 / 3 / 13;
                 padding-bottom: 80px;
         }
@@ -1783,11 +1784,11 @@
                 grid-template-rows: 1fr;
                 grid-column-gap: 20px;
                 grid-row-gap: 0px;
-                border-bottom: 1px solid #DDD0BD;
+                border-bottom: 1px solid var(--fontColor);
                 padding-bottom: 15px;
         }
         .specification__type-table_item:nth-child(1){
-                border-top: 1px solid #DDD0BD;
+                border-top: 1px solid var(--fontColor);
                 padding-top: 15px;
         }
         .specification__type-table_text{
@@ -1809,7 +1810,7 @@
         
         .specification__type-table_text-maps{
                 display: block;
-                color: #A39E8F;
+                color: var(--fontColor);
                 grid-area: 1 / 6 / 2 / 7;
                 font-size: 18px;
                 align-self: center;
@@ -1873,7 +1874,7 @@
                 border-top: none;
                 align-self: self-start;
                 justify-self: self-start;
-                border-bottom: 1px#A39E8F solid;
+                border-bottom: 1pxvar(--fontColor) solid;
                 
         }
         
@@ -1918,7 +1919,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px #A39E8F solid;
+                border: 1px var(--fontColor) solid;
                 border-radius: 50px;
                 font-size: 16px;
                 height: 80px;
@@ -1929,7 +1930,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px #A39E8F solid;
+                border: 1px var(--fontColor) solid;
                 border-radius: 50px;
                 font-size: 16px;
                 height: 80px;
@@ -1948,25 +1949,21 @@
                 font-size: 90px;
                 font-weight: 400;
         }
-        
         .gallery__top-number{
                 font-size: 90px;
                 font-weight: 400;
 
         }
-
         .gallery__slider{
                 gap: 20px;
                 grid-area: 4 / 1 / 5 / 13;
         }
-        
         .gallery__slider-photo{
                 width: 100%;
                 height: auto;
                 width: 835px;
                 height: 495px;
         }
-
         .gallery__bottom{
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
@@ -1976,7 +1973,6 @@
                 grid-area: 5 / 1 / 6 / 13;
                 border-top: none;
         }
-
         .gallery__bottom-button{
                 display: flex;
                 flex-direction: row;
@@ -1984,14 +1980,13 @@
                 min-width: 210px;
                 grid-area: 1 / 1 / 2 / 2;
         }
-
         .gallery__bottom-button_prev{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 100px;
                 width: 100px;
-                border: 1px #A39E8F solid;
+                border: 1px var(--fontColor) solid;
                 border-radius: 50px;
         }
         .gallery__bottom-button_next{
@@ -2000,19 +1995,15 @@
                 justify-content: center;
                 height: 100px;
                 width: 100px;
-                border: 1px #A39E8F solid;
+                border: 1px var(--fontColor) solid;
                 border-radius: 50px;
         }
-
         .gallery__bottom-next{
                 display: block;
                 align-self: self-end;
                 grid-area: 1 / 4 / 2 / 5;
                 font-size: 24px;
         }
-
-       
-
         .gallery__bottom-link{
                 display: block;
                 font-size: 48px;
@@ -2020,12 +2011,10 @@
                 justify-self: end;
                 grid-area: 1 / 6 / 2 / 7;
         }
-        
         .gallery__next-text{
                 font-size: 15px;
                 font-weight: 400;
         }
-        
         .gallery__next-name{
                 font-size: 24px;
                 font-weight: 400;
