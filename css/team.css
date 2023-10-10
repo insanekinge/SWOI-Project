@@ -1,7 +1,6 @@
 :root {
         --bgColor: #172431;
         --fontColor: #C1803E;
-        --modal-color: #C1803E;
       }
       
       .page-contacts {
@@ -1394,7 +1393,7 @@ padding: 0px 0 0px 0;
                         gap: 30px;
                         min-width: 330px;
                         width: 100%;
-                        border-bottom: 1px solid #C1803E;
+                        border-bottom: 1px solid var(--fontColor);
                         
                         }
                         .accordion__header {
@@ -1443,7 +1442,7 @@ padding: 0px 0 0px 0;
                                 align-self: self-start;
                                 justify-self: self-start;
                                 display: flex;
-                                border: 1px #C1803E solid;
+                                border: 1px var(--fontColor) solid;
                                 border-radius: 25px;
                                 height: 58px;
                                 width: 169px;

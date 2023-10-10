@@ -1,7 +1,6 @@
 :root {
         --bgColor: #0D100E;
         --fontColor: #A83E3E;
-        --modal-color: #A83E3E;
       }
       
       .page-contacts {
@@ -29,7 +28,7 @@ overflow-x: hidden;
         grid-template-rows: repeat(2, auto);
         grid-column-gap: 15px;
         grid-row-gap: 291px;
-        border-bottom: 1px #A83E3E solid ;
+        border-bottom: 1px var(--fontColor) solid ;
         padding-bottom: 15px;
 
 }
