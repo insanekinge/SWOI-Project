@@ -16,6 +16,33 @@ html{
   scroll-behavior: smooth;
 }
 html::-webkit-scrollbar { width: 0; }
+
+:root {
+  --bgColor: #0D100E;
+  --fontColor: #A83E3E;
+}
+
+[data-page="faq"] {
+  --bgColor: #0D100E;
+  --fontColor: #A83E3E;
+}
+
+[data-page="berava"] {
+  --bgColor: #1E2C14;
+  --fontColor: #A39E8F;
+}
+
+[data-page="team"] {
+  --bgColor: #172431;
+  --fontColor: #C1803E;
+}
+
+[data-page="contacts"] {
+  --bgColor: #DDD0BD;
+  --fontColor: #B24201;
+}
+
+
 body{
   font-family: "HelveticaNeueCyr-Roman";
   background-color: var(--bgColor);
@@ -47,7 +74,7 @@ span{
   letter-spacing: -2px;
   text-transform: uppercase;
   font-family: "DrukCyr-Bold";
-  transition: .5s;
+  /* transition: .5s; */
 }
 .preloader__inner {
   margin-bottom: 15px;
@@ -233,7 +260,7 @@ svg {
                 text-transform: uppercase;
                 text-transform: uppercase;
                 font-family: "DrukCyr-Bold";
-                transition: .5s;
+                /* transition: .5s; */
               }
               .preloader__inner {
                 margin-bottom: 20px;
@@ -355,7 +382,7 @@ svg {
                         letter-spacing: -6.6px;
                         text-transform: uppercase;
                         font-family: "DrukCyr-Bold";
-                        transition: .5s;
+                        /* transition: .5s; */
                 }
 
                 .header {
@@ -482,7 +509,7 @@ svg {
                   letter-spacing: -12px;
                   text-transform: uppercase;
                   font-family: "DrukCyr-Bold";
-                  transition: .5s;
+                  /* transition: .5s; */
                 }
 
                 .header {

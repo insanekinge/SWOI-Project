@@ -1,16 +1,5 @@
-:root {
-        --bgColor: #0D100E;
-        --fontColor: #A83E3E;
-      }
-      
-      .page-contacts {
-        --bgColor: #0D100E;
-        --fontColor: #A83E3E;
-      }
-      .page-projects {
-        --bgColor: #0D100E;
-        --fontColor: #A83E3E;
-      }
+
+
 .container {
 display: flex;
 flex-direction: column;
