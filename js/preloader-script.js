@@ -6,6 +6,9 @@ const preloaderProgress = document.querySelector('.prealoader-num')
 setTimeout(()=> {
   body.classList.remove('loaded')
 }, interval)
+setTimeout(()=> {
+  preloaderProgress.innerHTML = '0%'
+}, interval + 500)
 let counter = 0;
 const step = 10;
 preloaderProgress.innerHTML = counter + '%'

@@ -1,19 +1,4 @@
-body{
-  --bgColor: #DDD0BD;
-  --fontColor: #B24201;
-}
-:root {
-        --bgColor: #DDD0BD;
-        --fontColor: #B24201;
-      }
-      .page-contacts {
-        --bgColor: #DDD0BD;
-        --fontColor: #B24201;
-      }
-      .page-projects {
-        --bgColor: #DDD0BD;
-        --fontColor: #B24201;
-      }
+
 
       .container {
         display: flex;
