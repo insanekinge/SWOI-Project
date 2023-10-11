@@ -37,6 +37,11 @@ html::-webkit-scrollbar { width: 0; }
   --fontColor: #C1803E;
 }
 
+[data-page="contacts"] {
+  --bgColor: #DDD0BD;
+  --fontColor: #B24201;
+}
+
 
 body{
   font-family: "HelveticaNeueCyr-Roman";
@@ -69,7 +74,7 @@ span{
   letter-spacing: -2px;
   text-transform: uppercase;
   font-family: "DrukCyr-Bold";
-  transition: .5s;
+  /* transition: .5s; */
 }
 .preloader__inner {
   margin-bottom: 15px;
@@ -255,7 +260,7 @@ svg {
                 text-transform: uppercase;
                 text-transform: uppercase;
                 font-family: "DrukCyr-Bold";
-                transition: .5s;
+                /* transition: .5s; */
               }
               .preloader__inner {
                 margin-bottom: 20px;
@@ -377,7 +382,7 @@ svg {
                         letter-spacing: -6.6px;
                         text-transform: uppercase;
                         font-family: "DrukCyr-Bold";
-                        transition: .5s;
+                        /* transition: .5s; */
                 }
 
                 .header {
@@ -504,7 +509,7 @@ svg {
                   letter-spacing: -12px;
                   text-transform: uppercase;
                   font-family: "DrukCyr-Bold";
-                  transition: .5s;
+                  /* transition: .5s; */
                 }
 
                 .header {

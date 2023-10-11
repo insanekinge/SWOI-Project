@@ -11,14 +11,24 @@ function redirect() {
     body.setAttribute('data-page', `${myParam}`)
 
     setTimeout(function() {
+      const preloader = document.getElementById('preloader')
+
+      preloader.style.transition = '.5s'
+    }, 500)
+
+    setTimeout(function() {
       body.setAttribute('data-page', `${pageName}`)
     }, 1200)
   }
 
   links.forEach(function(el) {
     el.onclick = () => {
-      const redirectLink = el.getAttribute('href') 
-      window.location = `${redirectLink}?lastpagename=${pageName}`
+      body.classList.add('loaded')
+
+      setTimeout(function() {
+        const redirectLink = el.getAttribute('href') 
+        window.location = `${redirectLink}?lastpagename=${pageName}`
+      }, 600)
     }
   })
 }
