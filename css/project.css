@@ -79,12 +79,22 @@
         padding-bottom: 15px;
 }
 
-.about__text-first{
+.about__text-top{
         grid-area: 2 / 1 / 3 / 7;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         font-size: 16px;
         font-weight: 400; 
 }
 
+.about__text-placeholder{
+        display: none;
+}
+
+.about__text-placeholder:nth-child(1){
+        display: block;
+}
 
 
 .about__slider {
@@ -139,19 +149,24 @@
         
       }
 
-.about__text-second{
-        padding: 45px 0 60px 0;
+.about__text-bottom{
         grid-area: 6 / 1 / 7 / 7;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 45px 0 60px 0;
         font-size: 16px;
         font-weight: 400; 
+        
 }
-.about__text-third{
-        display: none;
-}
-.about__text-fourth{
+
+.about__text-placeholder{
         display: none;
 }
 
+.about__text-placeholder:nth-child(1){
+        display: block;
+}
 
 
 .specification{
@@ -181,6 +196,73 @@
        
 }
 
+.specification__top-folder{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+}
+
+.specification__top-folder_text{
+        display: none;
+}
+
+.specification__top-folder_text:nth-child(1){
+        display: block;
+}
+
+
+.specification__top-table{
+        width: 100%;
+        grid-area: 5 / 1 / 6 / 3;
+}
+.specification__top-table_item{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        border-bottom: 1px solid var(--fontColor);
+        padding-bottom: 15px;
+}
+.specification__top-table_item:nth-child(1){
+        border-top: 1px solid var(--fontColor);
+        padding-top: 15px;
+}
+.specification__top-table_text{
+        font-size: 16px;
+        grid-area: 1 / 1 / 2 / 4;
+        
+}
+.specification__top-table_numb{
+        font-size: 16px;
+        grid-area: 1 / 4 / 2 / 6;
+        
+}
+.specification__top-type_table-tab{
+        display: flex;
+        flex-direction: column;
+        min-width: 330px;
+        width: 100%;
+        gap: 15px; 
+}
+
+.specification__top-table_text-maps{
+        display: none;
+}
+
+.specification__top-table_text-arrow{
+        grid-area: 1 / 6 / 2 / 7;
+        justify-self: self-end;
+        align-self: center;
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url(/img/project-berava-arrow.png);
+        background-size: cover;
+        right: 5px;
+}
 
 
 .specification__type{
@@ -219,6 +301,7 @@
 
 .specification__type-table{
         grid-area: 5 / 1 / 6 / 3;
+        
 }
 .specification__type-table_item{
         display: grid;
@@ -540,42 +623,6 @@
         font-weight: 400;
 }
 
-.footer{
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        padding: 15px 0 15px 0;
-        border-top: 1px solid var(--fontColor);
-        font-size: 16px;
-        height: 38px;
-      }
-      
-      .footer__date{
-        grid-area: 1 / 1 / 2 / 2;
-      }
-      
-      
-      
-      .footer__rights{
-        grid-area: 1 / 2 / 2 / 5;
-      }
-      .footer__image{
-        display: none;
-      }
-      .footer__link{
-        display: none;
-      }
-      .footer__projects{
-        display: none;
-      }
-      .footer__studio{
-        grid-area: 1 / 5 / 2 / 7;
-        align-self: end;
-        justify-self: end;
-      }
-
 @media (min-width: 1024px){
                 .container{
                         height: calc(100vh - 86px);
@@ -602,21 +649,21 @@
                         padding: 0;
                 }
                 
-                .about__text-first{
+                .about__text-top{
+                        gap: 20px;
                         padding: 0;
                         align-self: end;
                         justify-self: start;
                         font-size: 18px;
-                        grid-area: 1 / 4 / 2 / 7; 
+                        grid-area: 1 / 4 / 3 / 7; 
                 }
 
-                .about__text-second{
-                        padding: 0;
-                        align-self: end;
-                        justify-self: start;
-                        font-size: 18px;
-                        grid-area: 2 / 4 / 3 / 7;
+                .about__text-placeholder{
+                        display: block;
+                        flex-basis: 50%;
                 }
+
+                
                 
                 .about__slider {
                         align-self: center;
@@ -681,20 +728,20 @@
                                 
                         } 
                 
-                .about__text-third{            
-                        display: block;  
-                        padding-top: 60px;        
-                        font-size: 18px;
-                        grid-area: 5 / 4 / 6 / 7;
-                        justify-self: end;
 
-                }
-                .about__text-fourth{
-                        display: block;  
-                        font-size: 18px;
-                        grid-area: 6 / 4 / 7 / 7;
-                        justify-self: end;
-                }
+                        .about__text-bottom{
+                                gap: 20px;
+                                padding: 0;
+                                align-self: end;
+                                justify-self: start;
+                                font-size: 18px;
+                                grid-area:  5 / 4 / 7 / 7;
+                        }
+        
+                        .about__text-placeholder{
+                                display: block;
+                                flex-basis: 50%;
+                        }
                                 
                 .specification{
                         display: flex;
@@ -708,7 +755,7 @@
                         display: grid;
                         grid-template-columns: repeat(6, 1fr);
                         width: 100%;
-                        grid-template-rows: 1fr;
+                        grid-template-rows: repeat(5, auto);
                         grid-column-gap: 20px;
                         grid-row-gap: 20px;
 
@@ -729,6 +776,78 @@
                         font-size: 24px;
                         font-weight: 400;
                 }
+
+                .specification__top-folder{
+                        gap: 20px;
+                        padding: 0;
+                        align-self: end;
+                        justify-self: start;
+                        font-size: 18px;
+                        grid-area: 3 / 4 / 4 / 7;
+                }
+
+                .specification__top-folder_text{
+                        display: block;
+                        flex-basis: 50%;
+                }
+
+
+                
+.specification__top-table{
+        grid-area: 4 / 1 / 5 / 7;
+}
+.specification__top-table_item{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        border-bottom: 1px solid var(--fontColor);
+        padding-bottom: 20px;
+}
+.specification__top-table_item:nth-child(1){
+        border-top: 1px solid var(--fontColor);
+        padding-top: 15px;
+}
+.specification__top-table_text{
+        font-size: 24px;
+        grid-area: 1 / 1 / 2 / 4;
+        
+}
+.specification__top-table_numb{
+        grid-area: 1 / 4 / 2 / 5;
+        font-size: 24px;
+        
+}
+.specification__top-type_table-tab{
+        display: flex;
+        flex-direction: column;
+        min-width: 330px;
+        width: 100%;
+        gap: 20px; 
+}
+
+.specification__top-table_text-maps{
+        display: block;
+        color: var(--fontColor);
+        grid-area: 1 / 6 / 2 / 7;
+        font-size: 18px;
+        align-self: center;
+}
+
+.specification__top-table_text-arrow{
+        grid-area: 1 / 6 / 2 / 7;
+        justify-self: self-end;
+        align-self: center;
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url(/img/project-berava-arrow.png);
+        background-size: cover;
+        right: 5px;
+}
 
 
                 .specification__text{
@@ -785,7 +904,7 @@
                         grid-column-gap: 20px;
                         grid-row-gap: 0px;
                         border-bottom: 1px solid var(--fontColor);
-                        padding-bottom: 15px;
+                        padding-bottom: 20px;
                 }
                 .specification__type-table_item:nth-child(1){
                         border-top: 1px solid var(--fontColor);
@@ -805,7 +924,7 @@
                         flex-direction: column;
                         min-width: 330px;
                         width: 100%;
-                        gap: 15px; 
+                        gap: 20px; 
                 }
                 
                 .specification__type-table_text-maps{
@@ -1019,7 +1138,7 @@
 
 }
 
-@media (min-width: 1600px){
+@media (min-width: 1400px){
         .main {
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
@@ -1089,22 +1208,17 @@
                 padding: 0;
         }
         
-        .about__text-first{
-                padding: 0;
-                align-self: start;
-                justify-self: start;
+
+        .about__text-top{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: minmax(auto, max-content);
                 font-size: 16px;
-                max-height: 107px;
-                grid-area: 1 / 7 / 2 / 10;
+                grid-area: 1 / 7 / 2 / 13;
         }
 
-        .about__text-second{
-                padding: 0;
-                align-self: start;
-                justify-self: start;
-                font-size: 16px;
-                max-height: 107px;
-                grid-area: 1 / 10 / 2 / 13;
+        .about__text-placeholder{
+                display: flex;
         }
 
         .about__slider{
@@ -1159,22 +1273,16 @@
                 
         }
         
-        .about__text-third{            
-                grid-area: 4 / 7 / 5 / 10;
-                padding: 0;
-                align-self: start;
-                justify-self: start;
+        .about__text-bottom{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: minmax(auto, max-content);
                 font-size: 16px;
-                max-height: 107px;
-
+                grid-area: 4 / 7 / 5 / 13;
         }
-        .about__text-fourth{
-                display: block;  
-                font-size: 16px;
-                max-height: 107px;
-                grid-area: 4 / 10 / 5 / 13;
-                justify-self: end;                
-                align-self: start;
+
+        .about__text-placeholder{
+                display: flex;
         }
 
         .specification{
@@ -1212,6 +1320,78 @@
                 font-weight: 400;
         }
 
+        .specification__top-folder{
+                grid-area: 3 / 7 / 2 / 13;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: minmax(auto, max-content);
+                font-size: 16px;
+        }
+
+        .specification__top-folder_text{
+                display: flex;
+        }
+
+
+                
+        .specification__top-table{
+                grid-area: 3 / 7 / 4 / 13;
+        }
+        .specification__top-table_item{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0px;
+                border-bottom: 1px solid var(--fontColor);
+                padding-bottom: 20px;
+        }
+        .specification__top-table_item:nth-child(1){
+                border-top: 1px solid var(--fontColor);
+                padding-top: 15px;
+        }
+        .specification__top-table_text{
+                font-size: 24px;
+                grid-area: 1 / 1 / 2 / 4;
+                
+        }
+        .specification__top-table_numb{
+                grid-area: 1 / 4 / 2 / 5;
+                font-size: 24px;
+                
+        }
+        .specification__top-type_table-tab{
+                display: flex;
+                flex-direction: column;
+                min-width: 330px;
+                width: 100%;
+                gap: 20px; 
+        }
+        
+        .specification__top-table_text-maps{
+                display: block;
+                color: var(--fontColor);
+                grid-area: 1 / 6 / 2 / 7;
+                font-size: 18px;
+                align-self: center;
+        }
+        
+        .specification__top-table_text-arrow{
+                grid-area: 1 / 6 / 2 / 7;
+                justify-self: self-end;
+                align-self: center;
+                content: "";
+                position: relative;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-image: url(/img/project-berava-arrow.png);
+                background-size: cover;
+                right: 5px;
+        }
+
+
+        
 
         .specification__text{
                 display: none;
@@ -1261,7 +1441,7 @@
                 grid-column-gap: 20px;
                 grid-row-gap: 0px;
                 border-bottom: 1px solid var(--fontColor);
-                padding-bottom: 15px;
+                padding-bottom: 20px;
         }
         .specification__type-table_item:nth-child(1){
                 border-top: 1px solid var(--fontColor);
@@ -1281,7 +1461,7 @@
                 flex-direction: column;
                 min-width: 330px;
                 width: 100%;
-                gap: 15px; 
+                gap: 20px; 
         }
         
         .specification__type-table_text-maps{

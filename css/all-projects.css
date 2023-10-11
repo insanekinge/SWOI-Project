@@ -246,7 +246,7 @@
                       }
         }      
 
-        @media (min-width: 1600px){
+        @media (min-width: 1400px){
             .container{
               height: unset;
             }
