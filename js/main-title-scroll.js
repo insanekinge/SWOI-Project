@@ -37,18 +37,18 @@ function mainLocomotiveScroll() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    direction: 'horizontal'
+    direction: 'horizontal',
+    lerp: 0.02
   });
   
   // changeScale()
   // Добавляем обработчик события прокрутки страницы через Locomotive Scroll
-  scroll.on("scroll", function() {
+  // scroll.on("scroll", function() {
     // Вызываем функцию changeScale для изменения значений "scale"
     // changeScale();
-  });
+  // });
 }
+mainLocomotiveScroll();
 
 setTimeout(function(){
-  mainLocomotiveScroll();
 }, 1500)
-
