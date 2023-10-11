@@ -339,7 +339,7 @@ svg {
 
 
         }      
-        @media (min-width: 1600px){
+        @media (min-width: 1400px){
                 .preloader {
                         overflow: hidden;
                         margin-top: calc(-100dvh + 86px);
