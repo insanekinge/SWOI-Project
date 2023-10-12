@@ -1,0 +1,31 @@
+.container {
+        width: fit-content;
+        height: calc(100vh - 67px - 38px);
+        overflow: hidden;
+}
+      
+        .main{
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                justify-content: start;
+                height: 630px;
+                white-space: nowrap;
+                width: fit-content;
+        }
+
+        .main__title{
+                font-family: "DrukCyr-Bold";
+                font-size: 356px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 75%;
+                letter-spacing: -3.56px;
+                text-transform: uppercase;
+              }
+
+        .description {
+                display: flex;
+                width: fit-content;
+                white-space: nowrap;
+        }

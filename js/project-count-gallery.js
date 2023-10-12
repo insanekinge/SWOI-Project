@@ -1,3 +1,4 @@
+function galleryCount() {
 let sliderGallery = document.querySelector('.gallery__slider');
 let prevButtonGallery = document.querySelector('.gallery__bottom-button_prev');
 let nextButtonGallery = document.querySelector('.gallery__bottom-button_next');
@@ -26,4 +27,6 @@ nextButtonGallery.addEventListener('click', function() {
 });
 
 updateSlider();
+}
 
+galleryCount();
