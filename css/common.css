@@ -42,6 +42,11 @@ html::-webkit-scrollbar { width: 0; }
   --fontColor: #B24201;
 }
 
+[data-page="all-projects"] {
+  --bgColor: #B24201;
+  --fontColor: #DDD0BD;
+}
+
 
 body{
   font-family: "HelveticaNeueCyr-Roman";
@@ -52,7 +57,6 @@ body{
 .wrapper{
   margin:0 15px 0 15px;
   place-items: center;
-  height: 100vh;
 }
 span{
 }
@@ -63,7 +67,6 @@ span{
   overflow: hidden;
   margin-top: calc(-100dvh + 67px);
   color: var(--fontColor);
-  background: var(--bgColor);
   display: flex;
   align-items: flex-end;
   min-height: calc(100dvh - 67px);
@@ -74,7 +77,7 @@ span{
   letter-spacing: -2px;
   text-transform: uppercase;
   font-family: "DrukCyr-Bold";
-  transition: .5s;
+  /* transition: .5s; */
 }
 .preloader__inner {
   margin-bottom: 15px;
@@ -84,16 +87,15 @@ span{
   justify-content: space-between;
   align-items: flex-end;
 }
-.prealoader-num {
-}
-
-.prealoader-title {
-}
 .loaded {
   overflow: hidden;
 }
 .loaded .preloader {
   margin-top: 0dvh;
+  background-color: rgba(0, 0, 0, 0);
+}
+.loaded .header {
+  background-color: rgba(0, 0, 0, 0);
 }
 /*Анимация появления элементов на странице*/
 .element-animation.element-show {
@@ -124,8 +126,6 @@ span{
   border-bottom: 1px solid var(--fontColor);
   border-top: 1px solid var(--fontColor);
   align-items: center;
-  background-color: var(--bgColor);
-
 }
 .header__logo{
 align-self: center;
@@ -248,7 +248,6 @@ svg {
                 overflow: hidden;
                 margin-top: calc(-100dvh + 86px);
                 color: var(--fontColor);
-                background: var(--bgColor);
                 display: flex;
                 align-items: flex-end;
                 min-height: calc(100dvh - 86px);
@@ -371,7 +370,6 @@ svg {
                         overflow: hidden;
                         margin-top: calc(-100dvh + 86px);
                         color: var(--fontColor);
-                        background: var(--bgColor);
                         display: flex;
                         align-items: flex-end;
                         min-height: calc(100dvh - 86px);
@@ -401,7 +399,7 @@ svg {
                     grid-area: 1 / 1 / 2 / 3;
                   }
                   .container{
-                    height: calc(100vh - 86px);
+                    /* height: calc(100vh - 86px); */
       
                   }
                   .header__menu {
@@ -498,7 +496,6 @@ svg {
                   overflow: hidden;
                   margin-top: calc(-100dvh + 87px);
                   color: var(--fontColor);
-                  background: var(--bgColor);
                   display: flex;
                   align-items: flex-end;
                   min-height: calc(100dvh - 87px);

@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/locomotive-scroll.min.css"> 
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="css/common.css"/>
   <link rel="stylesheet" href="css/project.css">
   <link rel="icon" href="img/" type="">
   <title>SWOI</title>
-  <script src="js/project-count-gallery.js"></script> 
+  <script src="js/project-count-gallery.js" defer></script> 
+  <script src="js/locomotive-scroll.min.js"></script>
 </head>
+
 
 
 <body class="loaded"  data-page="berava">
@@ -82,7 +85,7 @@
                 </div>
 
 
-        <div class="container">
+        <div class="container" data-scroll-container data-scroll-section>
         
                 <section class="main">
                         <h1 class="main__title">berava</h1>
@@ -351,7 +354,6 @@
                                 <img class="gallery__slider-photo" src="/img/gallery-first-pic-4k.png">
                                 <img class="gallery__slider-photo" src="/img/gallery-second-pic-4k.png">
                                 <img class="gallery__slider-photo" src="/img/gallery-third-pic-4k.png">
-                                
                         </div>
                               
                         <div class="gallery__bottom">
@@ -407,5 +409,6 @@
         <script src="js/project-main-title.js"></script>
         <script src="js/project-count-slider.js"></script>
         <script src="js/project-count-gallery.js"></script>
+        <script src="js/locomotive-scroll-allPages.js"></script>
   </body>
 </html>
