@@ -1,23 +1,10 @@
-:root {
-        --bgColor: #1E2C14;
-        --fontColor: #A39E8F;
-      }
-      
-      .page-contacts {
-        --bgColor: #1E2C14;
-        --fontColor: #A39E8F;
-      }
-      .page-projects {
-        --bgColor: #1E2C14;
-        --fontColor: #A39E8F;
-      }
+
 
         .container {
         display: flex;
         flex-direction: column;
         justify-content: start;
         width: 100%;
-        height: calc(100vh - 67px);
         overflow-x: hidden;
         }
         .container::-webkit-scrollbar {
@@ -624,7 +611,6 @@
 
 @media (min-width: 1024px){
                 .container{
-                        height: calc(100vh - 86px);
                       }
                 .main__title{
                         font-size: 650px;
@@ -1738,7 +1724,6 @@
 @media (min-width: 2400px){
        
         .container{
-                height: 94vh;
 
         }
 

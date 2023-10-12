@@ -1,16 +1,4 @@
-:root {
-  --bgColor: #B24201;
-  --fontColor: #DDD0BD;
-}
 
-.page-contacts {
-  --bgColor: #DDD0BD;
-  --fontColor: #B24201;
-}
-.page-projects {
-  --bgColor: #DDD0BD;
-  --fontColor: #B24201;
-}
 .wrapper::-webkit-scrollbar{
   width: 0;
 }

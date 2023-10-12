@@ -16,19 +16,34 @@ function changeScale() {
 
     let elementCenter = elementOffsetTop + elementHeight / 2;
 
-    if (elementCenter < 0) {
-      elements[i].style.transform = "scale(1)";
-    }
-    if ( elementCenter > windowHeight) {
-      elements[i].style.transform = "scale(1)";
-    } 
-
-    if (elementCenter < windowHeight && elementCenter > 0) {
-      elements[i].style.transform = "scale(1.5)";
-    } else if ((elementCenter / 2) < windowHeight && elementCenter > 0) {
-      elements[i].style.transform = "scale(1.25)";
-    } else if ((elementCenter / 3) < windowHeight && elementCenter > 0) {
-      elements[i].style.transform = "scale(1.1)";
+    if(window.innerWidth < 1024) {
+      if (elementCenter < 0) {
+        elements[i].style.transform = "scale(0.5)";
+      }
+      if ( elementCenter > windowHeight) {
+        elements[i].style.transform = "scale(0.5)";
+      } 
+      if (elementCenter < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(1)";
+      } else if ((elementCenter / 2) < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(0.75)";
+      } else if ((elementCenter / 3) < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(0.6)";
+      }
+    } else {
+      if (elementCenter < 0) {
+        elements[i].style.transform = "scale(1)";
+      }
+      if ( elementCenter > windowHeight) {
+        elements[i].style.transform = "scale(1)";
+      } 
+      if (elementCenter < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(1.5)";
+      } else if ((elementCenter / 2) < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(1.25)";
+      } else if ((elementCenter / 3) < windowHeight && elementCenter > 0) {
+        elements[i].style.transform = "scale(1.1)";
+      }
     }
   }
 }

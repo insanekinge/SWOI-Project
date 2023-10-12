@@ -60,15 +60,5 @@ function mainLocomotiveScroll() {
   });
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-  const wefwefwef = document.getElementById('description-skin')
-  const wefwefwef2 = document.getElementById('main-skin')
-
-  wefwefwef.style.width = `${wefwefwef.offsetWidth / 1.75 }px`
-  wefwefwef2.style.width = `${wefwefwef.offsetWidth / 1.7 }px`
-
-  mainLocomotiveScroll();
-})
-
 setTimeout(function(){
 }, 1500)
