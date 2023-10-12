@@ -4,7 +4,8 @@ html{
 html::-webkit-scrollbar { width: 0; }
 
 #main-container, #description-container {
-  transition: 1.5s;
+  transition: 3s;
+  transition-timing-function: ease-in-out;
 }
 
 .main-title__img {
@@ -18,6 +19,7 @@ html::-webkit-scrollbar { width: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition-timing-function: ease-in-out;
 }
 
 
