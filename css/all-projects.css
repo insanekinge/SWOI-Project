@@ -1,16 +1,4 @@
-:root {
-  --bgColor: #B24201;
-  --fontColor: #DDD0BD;
-}
 
-.page-contacts {
-  --bgColor: #DDD0BD;
-  --fontColor: #B24201;
-}
-.page-projects {
-  --bgColor: #DDD0BD;
-  --fontColor: #B24201;
-}
 .wrapper::-webkit-scrollbar{
   width: 0;
 }
@@ -51,6 +39,7 @@
   grid-area: 1 / 1 / 2 / 4;
   transition: transform 0.5s ease-in-out;
   transform: scale(1);   
+  overflow: hidden;
 }
 .project-item__image-pic {
   transition: .8s;

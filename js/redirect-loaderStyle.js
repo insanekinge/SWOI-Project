@@ -14,11 +14,16 @@ function redirect() {
       const preloader = document.getElementById('preloader')
 
       preloader.style.transition = '.5s'
+      body.style.transition = '.5s'
     }, 500)
 
     setTimeout(function() {
       body.setAttribute('data-page', `${pageName}`)
     }, 1200)
+
+    setTimeout(function() {
+      document.querySelector('.header').style.background = 'var(--bgColor)'
+    }, 1700)
   }
 
   links.forEach(function(el) {
