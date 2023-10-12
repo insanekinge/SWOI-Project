@@ -56,7 +56,7 @@ body{
 }
 .wrapper{
   margin:0 15px 0 15px;
-  place-items: center;
+  /* place-items: center; */
 }
 span{
 }
