@@ -1,51 +1,42 @@
-/* html, body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-} */
-
-
 .container {
         height: calc(100vh - 67px - 80px);
-        width: 100vw;
-       
-      }
-      .container::-webkit-scrollbar {
-        width: 0;
-      }
-
-      .scroll-section{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
-        min-width: 5424px;
+        overflow-x: hidden;
+        overflow-y: hidden;
         width: 100%;
+      }
+      
+      .container::-webkit-scrollbar {
+        width: 0;
       }
       
       .main {
         display: flex;
-        width: 100vw;
+        width: 100%;
+        white-space: nowrap;
+        transition: transform 0.5s ease;
       }
       
-      .main__title{
+      .main__title {
         display: flex;
         flex-direction: row;
         font-family: "DrukCyr-Bold";
-        font-size: 484px;
+        font-size: 356px;
         font-style: normal;
         font-weight: 700;
-        line-height: 75%; /* 484px */
-        letter-spacing: -4.84px;
+        line-height: 75%;
+        letter-spacing: -3.56px;
         text-transform: uppercase;
-        align-self: self-start;
       }
-
-      .main-title__img{
-        width: fit-content;
-        height:auto;
+      
+      .main-title__img {
+        width: 583px;
+        height: auto;
       }
-      .main-title__img-pic{
+      
+      .main-title__img-pic {
         width: 583px;
         height: auto;
       }
@@ -55,10 +46,10 @@
         flex-direction: row;
         height: auto;
         padding: 0;
-        margin:0 0 15px 0;  
+        margin: 0 0 15px 0;
         flex-wrap: nowrap;
-        width: 100%;
-        justify-content: space-between;
+        width: min-content;
+        transition: transform 0.5s ease;
       }
       
       .description__scroll {
@@ -71,14 +62,9 @@
       }
       
       .description__scroll-title {
-        width:296px;
-
         align-self: end;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100%; /* 32px */
-        letter-spacing: -1.28px;
+        font-weight: 100;
+        font-size: 24px;
         padding: 0;
         margin: 0;
         grid-row: 2 / 2;
@@ -86,30 +72,18 @@
       }
       
       .description__scroll-num {
-        width:296px;
-
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 120%; /* 19.2px */
-        letter-spacing: -0.32px;
         align-self: end;
         grid-row: 1 / 2;
         grid-column: 2 / 3;
       }
       
       .description__scroll-text {
-        width:296px;
+        width: 482px;
         overflow: hidden;
-        font-size: 16px;
-        font-style: normal;
         font-weight: 400;
-        line-height: 120%; /* 19.2px */
-        letter-spacing: -0.32px;
+        font-size: 14px;
         padding: 0;
         margin: 0;
         grid-row: 2 / 3;
         grid-column: 2 / 3;
       }
-      
-      @media (min-width: 1024px){}
