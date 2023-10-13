@@ -159,7 +159,7 @@ html::-webkit-scrollbar { width: 0; }
     margin:0 20px 0 20px;
   }
           .container{
-            height: calc(100vh - 86px - 66px);
+            height: calc(100vh - 86px - 67px);
           }
 
           .main {
@@ -384,7 +384,7 @@ html::-webkit-scrollbar { width: 0; }
   }
 }
 
-@media (min-width: 2400px){
+@media (min-width: 3000px){
 
   .container{
     height: calc(100vh - 86px - 67px);
