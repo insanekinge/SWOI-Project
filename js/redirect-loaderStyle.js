@@ -11,20 +11,19 @@ function redirect() {
     body.setAttribute('data-page', `${myParam}`)
 
     setTimeout(function() {
-      const preloader = document.getElementById('preloader')
-
-      preloader.style.transition = '.5s'
-      body.style.transition = '.5s'
-    }, 500)
-
-    setTimeout(function() {
       body.setAttribute('data-page', `${pageName}`)
     }, 1200)
 
-    setTimeout(function() {
-      document.querySelector('.header').style.background = 'var(--bgColor)'
-    }, 1700)
   }
+  setTimeout(function() {
+    const preloader = document.getElementById('preloader')
+
+    preloader.style.transition = '.5s'
+    body.style.transition = '.5s'
+  }, 500)
+  setTimeout(function() {
+    document.querySelector('.header').style.background = 'var(--bgColor)'
+  }, 1700)
 
   links.forEach(function(el) {
     el.onclick = () => {
@@ -37,6 +36,7 @@ function redirect() {
     }
   })
 }
+
 window.addEventListener('DOMContentLoaded', function() {
   redirect()
 })
