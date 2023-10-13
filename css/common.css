@@ -46,6 +46,10 @@ html::-webkit-scrollbar { width: 0; }
   --bgColor: #B24201;
   --fontColor: #DDD0BD;
 }
+[data-page="main"] {
+  --bgColor: #B24201;
+  --fontColor: #DDD0BD;
+}
 
 
 body{
