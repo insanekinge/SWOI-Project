@@ -39,7 +39,7 @@ html::-webkit-scrollbar { width: 0; }
 
 .container {
   width: fit-content;
-  height: calc(100vh - 67px - 38px);
+  height: calc(100vh - 67px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
