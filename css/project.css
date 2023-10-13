@@ -4,6 +4,7 @@
         justify-content: start;
         width: 100%;
         overflow-x: hidden;
+        height: calc(100vh - 67px);
         }
         .container::-webkit-scrollbar {
                 width: 0;
@@ -650,7 +651,9 @@
 
 @media (min-width: 1024px){
                 .container{
-                      }
+                        height: calc(100vh - 86px);
+
+                }
                 .main__title{
                         font-size: 650px;
                         line-height: 460px;

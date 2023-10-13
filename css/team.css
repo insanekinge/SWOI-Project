@@ -4,7 +4,7 @@
         flex-direction: column;
         justify-content: start;
         width: 100%;
-        height: calc(100vh - 67px - 38px);
+        height: calc(100vh - 67px);
 }
 .container::-webkit-scrollbar {
         width: 0;
@@ -400,7 +400,7 @@ transition: max-height 0.4s ease-out; /* Плавное открытие */
 
 @media (min-width: 1024px){
                 .container{
-                        height: calc(100vh - 86px- 68px);
+                        height: calc(100vh - 86px);
                 }
                 .main{
                         padding-bottom: 277px;
