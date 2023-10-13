@@ -1201,7 +1201,7 @@
 
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1600px){
         .main {
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
@@ -1799,7 +1799,7 @@
         }
 
 }
-@media (min-width: 2400px){
+@media (min-width: 3000px){
        
         .container{
 

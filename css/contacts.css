@@ -5,6 +5,7 @@
         flex-direction: column;
         justify-content: start;
         width: 100%;
+        height: calc(100vh - 67px);
         overflow-y: auto;
       }
       .container::-webkit-scrollbar {
@@ -154,7 +155,7 @@
       
       @media (min-width: 1024px){
                 .container{
-
+                  height: calc(100vh - 86px);
                 }
                 .main{
                   min-height: 532px;
@@ -265,7 +266,7 @@
                   align-self: self-end;
                 }
         }      
-        @media (min-width: 1400px){
+        @media (min-width: 1600px){
           
     
             .main{
@@ -313,10 +314,11 @@
                   
                   
           }
-@media (min-width: 2400px){
+@media (min-width: 3000px){
             
             .container{
-
+              overflow-y: scroll;
+              scroll-behavior: smooth;
             }
             
             .main{

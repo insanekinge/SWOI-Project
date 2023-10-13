@@ -56,7 +56,8 @@ body{
 }
 .wrapper{
   margin:0 15px 0 15px;
-  /* place-items: center; */
+  overflow: hidden;
+  place-items: center;
 }
 span{
 }
@@ -209,6 +210,12 @@ svg {
   fill: var(--fontColor);
 }
 
+  .container{
+    height: calc(100vh - 66px - 38px);
+    overflow: auto;
+  }
+
+
       .footer{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -322,6 +329,11 @@ svg {
                         display: none;
                 }
 
+                              
+                .container{
+                  height: calc(100vh - 86px - 67px);
+                }
+
 
                 .footer{
                   display: grid;
@@ -365,7 +377,7 @@ svg {
 
 
         }      
-        @media (min-width: 1400px){
+        @media (min-width: 1600px){
                 .preloader {
                         overflow: hidden;
                         margin-top: calc(-100dvh + 86px);
@@ -399,7 +411,7 @@ svg {
                     grid-area: 1 / 1 / 2 / 3;
                   }
                   .container{
-                    /* height: calc(100vh - 86px); */
+                    height: calc(100vh - 86px - 67px);
       
                   }
                   .header__menu {
@@ -465,7 +477,7 @@ svg {
                     display: block;
                     align-self: center;
                     justify-self: center;
-                    grid-area: 1 / 1 / 2 / 3;
+                    grid-area: 1 / 1 / 2 / 4;
                   }
                   .footer__projects{
                     display: block;
@@ -491,7 +503,7 @@ svg {
                  }
         }
 
-        @media (min-width: 2400px){
+        @media (min-width: 3000px){
                 .preloader {
                   overflow: hidden;
                   margin-top: calc(-100dvh + 87px);
@@ -533,7 +545,7 @@ svg {
                   display: block;
                   align-self: center;
                   justify-self: center;
-                  grid-area: 1 / 1 / 2 / 3;
+                  grid-area: 1 / 1 / 2 / 4;
                 }
                 .footer__projects{
                   display: block;
