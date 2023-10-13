@@ -180,6 +180,7 @@ top: -14px;
   justify-self: end;
   justify-content: end;
   gap: 7px;
+  padding-top: 15px;
 }
 
 .header__menu-open{
@@ -212,6 +213,15 @@ svg {
   margin: 0 0 0 auto;
   transform: translateY(-15px);
   fill: var(--fontColor);
+  height: 26px;
+  width: 24px;
+}
+
+      
+.header__menu-button-top {
+  margin-right: 0;
+  height: 26px;
+  width: 24px;
 }
 
   .container{
@@ -300,7 +310,9 @@ svg {
                     display: flex;
                     justify-self: self-end;
                     align-self: center;
+                    padding-top: 20px;
                     gap: 7px;
+                    padding-top: 15px;
                     }
                     .header__menu-open{
                       display: none;
@@ -331,6 +343,18 @@ svg {
                 }
                 .header__tab-conacts{
                         display: none;
+                }
+
+                .header__menu-button-down {
+                  transform: translateY(-20px);
+                  height: 33px;
+                  width: 32px;
+                }
+                
+                      
+                .header__menu-button-top {
+                  height: 33px;
+                  width: 32px;
                 }
 
                               
@@ -423,6 +447,7 @@ svg {
                           display: flex;
                           justify-self: self-end;
                           gap: 7px;
+                          padding-top: 15px;
                       }
                       .header__menu-open{
                         display: none;
@@ -742,10 +767,6 @@ svg {
       
       .header__menu-close {
         display: none;
-      }
-      
-      .header__menu-button-top {
-        margin-right: 0;
       }
 
       
