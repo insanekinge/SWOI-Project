@@ -1,99 +1,110 @@
-$(document).ready(function() {
-  // setScale()
-  function setScale() {
-    const windowRight = window.innerWidth;
-    const windowLeft = 0;
-    const imgElements = document.querySelectorAll('.main-title__img');
+function init(){
+	new SmoothScroll(document.querySelector('.container'),120,30)
+}
 
-    imgElements.forEach((imgElement) => {
-      const imgPicElement = imgElement.querySelector('.main-title__img-pic');
-      const imgLeft = imgElement.getBoundingClientRect().left;
+function SmoothScroll(target, speed, smooth) {
+	if (target === document)
+		target = (document.scrollingElement 
+              || document.documentElement 
+              || document.body.parentNode 
+              || document.body) // cross browser support for document scrolling
       
-      const windowCenter = window.innerWidth / 2;
-
-      if (windowRight < imgLeft) {
-        imgPicElement.style.transform = 'scale(1)';
-      } else if (windowLeft < windowCenter) {
-        imgPicElement.style.transform = 'scale(1.5)';
-      } 
-      if (imgLeft < windowCenter) {
-        imgPicElement.style.transform = 'scale(1)';
-      } else if (imgLeft < windowCenter && windowLeft < windowCenter) {
-        imgPicElement.style.transform = 'scale(1.5)';
-      }
-    });
-  }
+	var moving = false
+	var pos = target.scrollTop
+  var frame = target === document.body 
+              && document.documentElement 
+              ? document.documentElement 
+              : target // safari is the new IE
   
-  // window.addEventListener('resize', setScale);
+	target.addEventListener('mousewheel', scrolled, { passive: false })
+	target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
 
-  // Set the scroll speed for the main and description sections
-let mainScrollSpeed = 2.3;
+	function scrolled(e) {
+		e.preventDefault(); // disable default scrolling
 
-// Get the container element
-let container = $('.container');
+		var delta = normalizeWheelDelta(e)
 
-// Get the main and description sections
-let mainSection = $('#scrollpwoefpaowef');
+		pos += -delta * speed
+		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
 
-// Calculate the maximum scrollable height
-let maxScrollHeight = mainSection.outerHeight() - container.outerHeight();
+		if (!moving) update()
+	}
 
-// Set the initial scroll position
-let scrollPosition = 0;
+	function normalizeWheelDelta(e){
+		if(e.detail){
+			if(e.wheelDelta)
+				return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
+			else
+				return -e.detail/3 // Firefox
+		}else
+			return e.wheelDelta/120 // IE,Safari,Chrome
+	}
 
-// Handle the mouse wheel event
-container.on('mousewheel', function(event) {
-  // Calculate the new scroll position based on the scroll speed and the mouse wheel delta
-  let scrollSpeed = event.deltaY > 0 ? mainScrollSpeed : mainScrollSpeed;
-  scrollPosition += scrollSpeed;
+	function update() {
+		moving = true
+    
+		var delta = (pos - target.scrollTop) / smooth
+    
+		target.scrollTop += delta
+    
+		if (Math.abs(delta) > 0.5)
+			requestFrame(update)
+		else
+			moving = false
+	}
 
-  // Limit the scroll position within the maximum scrollable height
-  scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollHeight));
+	var requestFrame = function() { // requestAnimationFrame cross browser
+		return (
+			window.requestAnimationFrame ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame ||
+			window.oRequestAnimationFrame ||
+			window.msRequestAnimationFrame ||
+			function(func) {
+				window.setTimeout(func, 1000 / 50);
+			}
+		);
+	}()
+}
 
-  // Calculate the scroll position for the main section
-  let mainScrollPosition = -scrollPosition;
 
-  // Update the scroll position of the main section
-  mainSection.css('transform', 'translateY(' + mainScrollPosition + 'px)');
 
-  // Prevent the default scrolling behavior
-  event.preventDefault();
-});
 
-  // Handle the touchstart event
-  // container.on('touchstart', function(event) {
-  //   // Store the initial touch position
-  //   let touchStartX = event.touches[0].clientX;
+// // Set the scroll speed for the main and description sections
+// let mainScrollSpeed = 2.3;
 
-  //   // Handle the touchmove event
-  //   container.on('touchmove', function(event) {
-  //     // Calculate the distance moved
-  //     let touchMoveX = event.touches[0].clientX;
-  //     let touchDeltaX = touchMoveX - touchStartX;
+// // Get the container element
+// let container = $('.container');
 
-  //     // Calculate the new scroll position based on the scroll speed and the touch delta
-  //     scrollPosition -= touchDeltaX * (touchDeltaX > 0 ? mainScrollSpeed : descriptionScrollSpeed);
+// // Get the main and description sections
+// let mainSection = $('#scrollpwoefpaowef');
 
-  //     // Limit the scroll position within the maximum scrollable width
-  //     scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollWidth));
+// // Calculate the maximum scrollable height
+// let maxScrollHeight = mainSection.outerHeight() - document.querySelector('body').outerHeight();
 
-  //     // Calculate the scroll position for the main and description sections
-  //     let mainScrollPosition = -scrollPosition / mainScrollSpeed;
-  //     let descriptionScrollPosition = -scrollPosition / descriptionScrollSpeed;
+// // Set the initial scroll position
+// let scrollPosition = 0;
 
-  //     // Update the scroll position of the main and description sections
-  //     mainSection.css('transform', 'translateX(' + mainScrollPosition + 'px)');
-  //     descriptionSection.css('transform', 'translateX(' + descriptionScrollPosition + 'px)');
+// // Handle the mouse wheel event
+// window.addEventListener('wheel', function(event) {
+//   // Calculate the new scroll position based on the scroll speed and the mouse wheel delta
+//   scrollPosition -= -1 * (event.deltaY * (-1 > 0 ? mainScrollSpeed : mainScrollSpeed));
 
-  //     // Prevent the default scrolling behavior
-  //     setScale()
-  //     event.preventDefault();
-  //   });
-  // });
+//   // Limit the scroll position within the maximum scrollable height
+//   scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollHeight));
 
-  // Handle the touchend event
-  // container.on('touchend', function(event) {
-  //   // Remove the touchmove event handler
-  //   container.off('touchmove');
-  // });
-});
+//   // Calculate the scroll position for the main and description sections
+//   let mainScrollPosition = -scrollPosition / mainScrollSpeed;
+
+//   // Update the scroll position of the main and description sections
+//   mainSection.css('transform', 'translateY(' + mainScrollPosition + 'px)');
+
+//   let scrollOffset = 0; // Adjust this value to control the distance scrolled
+
+//   // Scroll the main and description sections a little bit up and down
+//   mainSection.css('transform', 'translateY(' + (mainScrollPosition + scrollOffset) + 'px)');
+//   scrollOffset = 50; // Adjust this value to control the distance scrolled
+
+//   // Prevent the default scrolling behavior
+//   event.preventDefault();
+// }, { passive: false });

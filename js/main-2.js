@@ -48,6 +48,8 @@ $(document).ready(function() {
     // Calculate the new scroll position based on the scroll speed and the mouse wheel delta
     scrollPosition -= event.deltaY * (event.deltaFactor * (event.deltaY > 0 ? mainScrollSpeed : descriptionScrollSpeed));
 
+    console.log(event.deltaY)
+
     // Limit the scroll position within the maximum scrollable width
     scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollWidth));
 
