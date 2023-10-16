@@ -15,7 +15,11 @@
 html{
   scroll-behavior: smooth;
 }
-html::-webkit-scrollbar { width: 0; }
+html::-webkit-scrollbar { 
+  width: 0; 
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 :root {
   --bgColor: #0D100E;
@@ -57,14 +61,21 @@ body{
   background-color: var(--bgColor);
   color: var(--fontColor);
   margin: 0;
+  overflow: hidden;
+  -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 body::-webkit-scrollbar { width: 0; }
-.wrapper::-webkit-scrollbar { width: 0; }
+
 .wrapper{
   margin:0 15px 0 15px;
-  overflow: hidden;
+  /* overflow-x: hidden; */
+  overflow-y: hidden;
   place-items: center;
+  -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+.wrapper::-webkit-scrollbar { width: 0; }
 span{
 }
 
@@ -228,8 +239,14 @@ svg {
 
   .container{
     height: calc(100vh - 66px - 38px);
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
   }
-  .container::-webkit-scrollbar { width: 0; }
+  .container::-webkit-scrollbar {
+    width: 0;
+  }
 
 
       .footer{
