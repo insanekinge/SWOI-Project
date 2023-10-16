@@ -122,8 +122,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                overflow-x: hidden;
-                overflow-y: hidden;
                 width: 100%;
         }
         
@@ -155,7 +153,6 @@
         .main-title__img {
                 width: 831.366px;
                 height: 513px;
-                overflow: hidden;
                 align-self: self-end;
                 justify-self: self-end;
         }
@@ -231,8 +228,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                overflow-x: hidden;
-                overflow-y: hidden;
                 width: 100%;
         }
         
@@ -264,7 +259,6 @@
         .main-title__img {
                 width: 583.415px;
                 height: 360px;
-                overflow: hidden;
                 align-self: self-end;
                 justify-self: self-end;
         }

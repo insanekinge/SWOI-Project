@@ -11,6 +11,10 @@
       .container::-webkit-scrollbar {
         width: 0;
       }
+      .container::-moz-scrollbar{
+        width: 0px;
+        height: 0px;
+      }
       .aside{
         width: 100%;
       }

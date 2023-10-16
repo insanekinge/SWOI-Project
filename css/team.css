@@ -639,7 +639,6 @@ grid-template-rows: repeat(6, 1fr);
 grid-column-gap: 20px;
 grid-row-gap: 0px;
 max-height: 0;
-overflow: hidden;
 transition: max-height 0.4s ease-out; /* Плавное открытие */
 padding: 0px 0 0px 0;
 }
@@ -1037,7 +1036,6 @@ padding: 0px 0 0px 0;
                         grid-column-gap: 20px;
                         grid-row-gap: 0px;
                         max-height: 0;
-                        overflow: hidden;
                         transition: max-height 0.4s ease-out; /* Плавное открытие */
                         }
                         
@@ -1430,7 +1428,6 @@ padding: 0px 0 0px 0;
                         grid-column-gap: 20px;
                         grid-row-gap: 0px;
                         max-height: 0;
-                        overflow: hidden;
                         transition: max-height 0.4s ease-out; /* Плавное открытие */
                         }
                         

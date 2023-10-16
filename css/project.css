@@ -696,7 +696,6 @@
                         align-self: center;
                         justify-self: center;
                         grid-area: 3 / 1 / 4 / 7;
-                        overflow: hidden;
                       }
                       
                       .slider-wrapper {

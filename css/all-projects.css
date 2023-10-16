@@ -25,7 +25,6 @@
   justify-content: start;
   width: 100%;
   /* height: calc(100dvh - 66px); */
-  /* overflow: hidden; */
 }
 .container::-webkit-scrollbar{
   width: 0;
