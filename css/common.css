@@ -58,6 +58,8 @@ body{
   color: var(--fontColor);
   margin: 0;
 }
+body::-webkit-scrollbar { width: 0; }
+.wrapper::-webkit-scrollbar { width: 0; }
 .wrapper{
   margin:0 15px 0 15px;
   overflow: hidden;
@@ -226,8 +228,8 @@ svg {
 
   .container{
     height: calc(100vh - 66px - 38px);
-    overflow: auto;
   }
+  .container::-webkit-scrollbar { width: 0; }
 
 
       .footer{
@@ -266,7 +268,6 @@ svg {
 
       @media (min-width: 1024px){
         .preloader {
-                overflow: hidden;
                 margin-top: calc(-100dvh + 86px);
                 color: var(--fontColor);
                 display: flex;
@@ -407,7 +408,6 @@ svg {
         }      
         @media (min-width: 1600px){
                 .preloader {
-                        overflow: hidden;
                         margin-top: calc(-100dvh + 86px);
                         color: var(--fontColor);
                         display: flex;
@@ -534,7 +534,6 @@ svg {
 
         @media (min-width: 3000px){
                 .preloader {
-                  overflow: hidden;
                   margin-top: calc(-100dvh + 87px);
                   color: var(--fontColor);
                   display: flex;
