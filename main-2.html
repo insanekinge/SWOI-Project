@@ -12,7 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
-<body class="loaded" data-page="main">
+<body class="loaded" data-page="main" onload="init()">
 <div class="wrapper">
         <div class="preloader" id="preloader">
                 <div class="preloader__inner">
@@ -76,7 +76,7 @@
 
 
         <div class="container">
-                <section class="main">
+                <section class="main" id="main" style="overflow-x: auto;overflow-y: hidden;">
                         <div class="main__title">
                                 <span>Smart</span> 
                                 <div class="main-title__img">
@@ -96,7 +96,9 @@
                                 </div> 
                         </div>
                 </section>
-                <section class="description">
+                <div class="desc-skin" id="description" style="overflow-x: auto; overflow-y: hidden;">
+
+                <section class="description" >
                         <div class="description__scroll" >
                                 <h2 class="description__scroll-title">Философия</h2>
                                 <h3 class="description__scroll-num">01</h3>
@@ -139,6 +141,8 @@
                                 <div class="description__button-next">Next</div>
                               </div> -->
                 </section>
+                </div>
+
         </div>
         
         <div class="footer">

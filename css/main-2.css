@@ -20,6 +20,10 @@
         transition: transform 0.5s ease;
 }
 
+#main::-webkit-scrollbar, #description::-webkit-scrollbar {
+        /* width: 0; */
+}
+
 .main__title {
         display: flex;
         flex-direction: row;
