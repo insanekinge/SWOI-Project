@@ -33,12 +33,24 @@
   font-size: 356px;
   font-style: normal;
   font-weight: 700;
-  line-height: 66%; /* 689px */
+  line-height: 63%; /* 689px */
   letter-spacing: -3.56px;
   gap: 38px;
   text-transform: uppercase;
   padding-top: 20px;
 }
+.main__title> *:not(.main-title__img) {
+  margin: 0 -17px 0 -17px; 
+}
+.main__title-letter:nth-child(1){
+  margin: 0 -17px 0 0; 
+}
+.main__title::-webkit-scrollbar {
+  width: 0;     
+}
+
+
+
 
 .main-title__img {
   width: 429.458px;
@@ -58,6 +70,9 @@
 .desc-skin{
   overflow-x: auto; 
   overflow-y: hidden;
+}
+.main__title::-webkit-scrollbar {
+  width: 0;     
 }
 
 .description {
@@ -154,13 +169,19 @@
           font-size: 689px;
           font-style: normal;
           font-weight: 700;
-          line-height: 66%; /* 689px */
+          line-height: 63%; /* 689px */
           letter-spacing: -6.89px;
           gap: 60px;
           text-transform: uppercase;
           padding-top: 20px;
   }
-        
+  .main__title> *:not(.main-title__img) {
+    margin: 0 -28px 0 -28px; 
+  }
+  .main__title-letter:nth-child(1){
+    margin: 0 -28px 0 0; 
+  }
+  
   .main-title__img {
           width: 831.366px;
           height: 513px;
@@ -260,13 +281,18 @@
           font-size: 484px;
           font-style: normal;
           font-weight: 700;
-          line-height: 66%;
+          line-height: 63%;
           letter-spacing: -4.84px;
           gap: 40px;
           text-transform: uppercase;
           padding-top: 20px;
   }
-        
+  .main__title> *:not(.main-title__img) {
+    margin: 0 -18px 0 -18px; 
+  }
+  .main__title-letter:nth-child(1){
+    margin: 0 -18px 0 0; 
+  }  
   .main-title__img {
           width: 583.415px;
           height: 360px;
@@ -350,12 +376,18 @@
           font-size: 840px;
           font-style: normal;
           font-weight: 700;
-          line-height: 66%;
+          line-height: 63%;
           letter-spacing: -4.84px;
           text-transform: uppercase;
           padding-top: 20px;
           gap: 100px;
   }
+  .main__title> *:not(.main-title__img) {
+    margin: 0 -48px 0 -48px; 
+  }
+  .main__title-letter:nth-child(1){
+    margin: 0 -48px 0 0; 
+  }  
         
   .main-title__img {
           width: 1013.672px;
