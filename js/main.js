@@ -29,8 +29,8 @@ window.addEventListener('resize', setScale);
 window.addEventListener('resize', setScale);
 function init() {
   new SmoothScroll(document.querySelector('.container'), {
-    main: { speed: 120, smooth: 30 },
-    description: { speed: 200, smooth: 30 }
+    main: { speed: 150, smooth: 40 },
+    description: { speed: 150, smooth: 20 }
   });
 }
 
