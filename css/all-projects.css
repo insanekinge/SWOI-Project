@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: start;
   width: 100%;
+  padding-bottom: 70px;
   /* height: calc(100dvh - 66px); */
 }
 .container::-webkit-scrollbar{
@@ -51,8 +52,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  scroll-behavior: smooth;
-  transition: 1.5s;
+  /* scroll-behavior: smooth; */
+  /* transition: 1.5s; */
 }
       
       .project-item{
@@ -236,7 +237,7 @@
 
         @media (min-width: 1600px){
             .container{
-              height: unset;
+              /* height: unset; */
             }
                         .project {
         
