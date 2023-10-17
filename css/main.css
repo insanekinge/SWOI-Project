@@ -7,6 +7,8 @@
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .container::-webkit-scrollbar {
@@ -20,10 +22,14 @@
   transition: transform 0.5s ease;
   overflow-x: auto;
   overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #main::-webkit-scrollbar, #description::-webkit-scrollbar {
   width: 0;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .main__title {
@@ -70,9 +76,13 @@
 .desc-skin{
   overflow-x: auto; 
   overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .main__title::-webkit-scrollbar {
   width: 0;     
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .description {
@@ -84,6 +94,7 @@
   width: min-content;
   transition: transform 0.5s ease;
   gap: 72px;
+  margin-bottom: 15px;
 }
 
 .description__scroll {
@@ -205,6 +216,7 @@
           width: min-content;
           transition: transform 0.5s ease;
           gap: 187px;
+          margin-bottom: 20px;
   }
   
   .description__scroll {
