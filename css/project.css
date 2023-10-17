@@ -41,8 +41,12 @@
         }
         .main__button{           
         }
-        .main__button-prev{}
-        .main__button-next{}
+        .main__button-prev{
+                display: none;
+        }
+        .main__button-next{
+                display: none;
+        }
 
 .about{
         display: grid;
@@ -131,6 +135,7 @@
         border-bottom: 1px var(--fontColor) solid;
         padding: 15px 0 15px 0;
         grid-area: 5 / 1 / 6 / 7;
+        cursor: pointer;
         
       }
 
@@ -448,6 +453,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
 }
 
 .gallery__text{
@@ -533,6 +539,7 @@
         background-color: var(--fontColor);
         border-radius: 3px;
         margin-bottom: 60px;
+        cursor: pointer;
 }
 
 .gallery__request-bottom_mob{
@@ -620,6 +627,8 @@
         background-color: var(--fontColor);
         border-radius: 3px;
         margin-bottom: 60px;
+        cursor: pointer;
+
 }
 
 .gallery__bottom-next{
@@ -741,6 +750,8 @@
                         width: 80px;
                         border: 1px var(--fontColor) solid;
                         border-radius: 50px;
+                        cursor: pointer;
+
                         
                         }
                         .about__button-next{
@@ -751,6 +762,8 @@
                                 width: 80px;
                                 border: 1px var(--fontColor) solid;
                                 border-radius: 50px;
+                                cursor: pointer;
+
                                 
                         } 
                 
@@ -1055,6 +1068,8 @@
                         border-radius: 50px;
                         height: 80px;
                         width: 80px;
+                        cursor: pointer;
+
                 }
 
                 .gallery__bottom-button_prev{
@@ -1065,6 +1080,8 @@
                         border-radius: 50px;
                         height: 80px;
                         width: 80px;
+                        cursor: pointer;
+
                 }
                 
                 
@@ -1262,6 +1279,7 @@
                 grid-area: 1 / 10 / 3 / 11;
         }
         .main__button-prev{
+                display: block;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1272,6 +1290,7 @@
                 width: 80px;
         }
         .main__button-next{
+                display: block;
                 display: flex;
                 align-items: center;
                 justify-content: center;

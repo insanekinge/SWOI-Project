@@ -63,7 +63,7 @@ body{
   margin: 0;
   overflow: hidden;
   -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
+  scrollbar-width: none;  /* Firefox */
 }
 body::-webkit-scrollbar { width: 0; }
 
@@ -73,7 +73,7 @@ body::-webkit-scrollbar { width: 0; }
   overflow-y: hidden;
   place-items: center;
   -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
+  scrollbar-width: none;  /* Firefox */
 }
 .wrapper::-webkit-scrollbar { width: 0; }
 span{
@@ -152,6 +152,8 @@ width:80px;
 height: 34px;
 grid-area: 1 / 1 / 2 / 3;
 fill: var(--fontColor);
+cursor: pointer;
+
 }
 
 .header__tab{
@@ -215,6 +217,7 @@ top: -14px;
   flex-direction: column;
   width: fit-content;
   fill: var(--fontColor);
+  cursor: pointer;
 }
 
 svg {
@@ -238,7 +241,7 @@ svg {
 }
 
   .container{
-    height: calc(100vh - 66px - 38px);
+    height: calc(100vh - 66px);
     overflow-x: hidden;
     /* overflow-y: hidden; */
     -ms-overflow-style: none;  /* IE и Edge */
@@ -322,6 +325,7 @@ svg {
                   width: 107px;
                   height: 46px;
                   grid-area: 1 / 1 / 2 / 3;
+                  cursor: pointer;
                 }
                 .header__menu {
                     grid-area: 1 / 6 / 2 / 7;
@@ -388,6 +392,7 @@ svg {
                   grid-column-gap: 20px;
                   grid-row-gap: 0px;
                   width: 100%;
+                  align-items: self-start;
                   height: 67px;
 
                 }
@@ -710,6 +715,8 @@ svg {
         align-self: start;
         justify-self: start;
         align-items: start;
+        cursor: pointer;
+
       }
       
       .modal-header__language{
