@@ -156,6 +156,7 @@ height: 34px;
 grid-area: 1 / 1 / 2 / 3;
 fill: var(--fontColor);
 cursor: pointer;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -174,9 +175,11 @@ display: none;
 
 .header__menu-language_en{
         display: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .header__menu-language_ru{
         display: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .header__language{
@@ -199,6 +202,7 @@ top: -14px;
   justify-content: end;
   gap: 7px;
   padding-top: 15px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .header__menu-open{
@@ -206,6 +210,7 @@ top: -14px;
   font-weight: 400;
   color: var(--fontColor);
   transition: 1s all;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .header__menu-close{
   display: none;
@@ -213,6 +218,7 @@ top: -14px;
   font-size: 15px;
   font-weight: 400;
   transition: 1s all;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .header__menu-button {
@@ -462,6 +468,7 @@ svg {
                     grid-area: 1 / 1 / 2 / 3;
                   }
                   .container{
+                    height: calc(100vh - 86px - 67px);
       
                   }
                   .header__menu {
@@ -716,6 +723,7 @@ svg {
         justify-self: start;
         align-items: start;
         cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
       }
       

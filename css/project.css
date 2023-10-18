@@ -39,7 +39,8 @@
                 display: none;
         
         }
-        .main__button{           
+        .main__button{          
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
         }
         .main__button-prev{
                 display: none;
@@ -454,6 +455,7 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .gallery__text{
@@ -540,6 +542,7 @@
         border-radius: 3px;
         margin-bottom: 60px;
         cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .gallery__request-bottom_mob{
@@ -628,6 +631,7 @@
         border-radius: 3px;
         margin-bottom: 60px;
         cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 }
 
