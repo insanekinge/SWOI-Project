@@ -1,14 +1,18 @@
 function init(){
-	new SmoothScroll(document.querySelector('.container'),120,30)
+	new SmoothScroll(document.querySelector('.container'),120,30, document.querySelector('.header'))
 }
 
-function SmoothScroll(target, speed, smooth) {
+function SmoothScroll(target, speed, smooth, header) {
 	if (target === document)
 		target = (document.scrollingElement 
               || document.documentElement 
               || document.body.parentNode 
               || document.body) // cross browser support for document scrolling
       
+	if (header) {
+		headerHeight = header.offsetHeight
+	}
+
 	var moving = false
 	var pos = target.scrollTop
   var frame = target === document.body 
@@ -25,8 +29,7 @@ function SmoothScroll(target, speed, smooth) {
 		var delta = normalizeWheelDelta(e)
 
 		pos += -delta * speed
-		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
-
+		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.offsetHeight + headerHeight)) // limit scrolling
 		if (!moving) update()
 	}
 
