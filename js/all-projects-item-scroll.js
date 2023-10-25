@@ -52,8 +52,7 @@ function allProjectsLocomotiveScroll() {
   const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    lerp: .02,
-    smoothMobile: true
+    lerp: .02
   });
   
   changeScale()

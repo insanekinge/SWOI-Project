@@ -29,8 +29,8 @@ window.addEventListener('resize', setScale);
 window.addEventListener('resize', setScale);
 function init() {
   new SmoothScroll(document.querySelector('.container'), {
-    main: { speed: 150, smooth: 40 },
-    description: { speed: 150, smooth: 20 }
+    main: { speed: 210, smooth: 40 },
+    description: { speed: 210, smooth: 20 }
   });
 }
 
@@ -135,7 +135,7 @@ function SmoothScroll(target, options) {
           (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1)
         ); // Opera
       else return -e.detail / 3; // Firefox
-    } else return e.wheelDelta / 120; // IE, Safari, Chrome
+    } else return e.wheelDelta / 200; // IE, Safari, Chrome
   }
 
   function update() {

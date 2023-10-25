@@ -468,7 +468,7 @@ svg {
                     grid-area: 1 / 1 / 2 / 3;
                   }
                   .container{
-                    height: calc(100vh - 86px - 67px);
+                    /* height: calc(100vh - 86px - 67px); */
       
                   }
                   .header__menu {

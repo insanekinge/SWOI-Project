@@ -30,6 +30,40 @@
 .container::-webkit-scrollbar{
   width: 0;
 }
+
+.portfolio{
+  padding-top: 15px;
+}
+.portfolio__title{
+  font-family: "DrukCyr-Bold";  
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80%; /* 120px */
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(90deg);
+}
+
+.portfolio__number{
+  font-family: "DrukCyr-Bold";  
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80%; /* 120px */
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.portfolio__text{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 16.1px */
+  letter-spacing: -0.28px;
+}
+
 .project-item__image{
   height: 600px;
   width: 100%;

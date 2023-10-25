@@ -1,3 +1,4 @@
+init()
 function init(){
 	new SmoothScroll(document.querySelector('.container'),120,30, document.querySelector('.header'))
 }
